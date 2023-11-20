@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizygo/features/ask/parter/presentation/parterview.dart';
 import 'package:quizygo/features/home/presentation/home_view.dart';
 
 class MyApp extends StatelessWidget {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       // applies this theme if the device theme is dark mode
       darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
+      routes: {PartnerView.id: (context) => const PartnerView()},
     );
   }
 }

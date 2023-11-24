@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/features/ask/parter/presentation/parterview.dart';
-import 'package:quizygo/features/home/presentation/home_view.dart';
+import 'package:quizygo/features/ask/frinds/presentation/frinds_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp._();
@@ -12,13 +11,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'َQuizyGo',
-      home: const HomeView(),
+      home: const FriendsView(),
       // applies this theme if the device theme is light mode
       theme: ThemeData.light(),
       // applies this theme if the device theme is dark mode
       darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      routes: {PartnerView.id: (context) => const PartnerView()},
+      routes: {FriendsView.id: (context) => const FriendsView()},
     );
   }
 }

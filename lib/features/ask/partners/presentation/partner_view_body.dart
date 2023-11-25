@@ -3,8 +3,8 @@ import 'package:quizygo/features/ask/frinds/presentation/widgets/name_text_feild
 import 'package:quizygo/features/ask/frinds/presentation/widgets/start_frinds_button.dart';
 import 'package:quizygo/features/ask/frinds/presentation/widgets/tips.dart';
 
-class FriendsViewbody extends StatelessWidget {
-  const FriendsViewbody({super.key});
+class PartnerViewbody extends StatelessWidget {
+  const PartnerViewbody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,21 +14,21 @@ class FriendsViewbody extends StatelessWidget {
         height: MediaQuery.sizeOf(context).height * 0.60,
         width: MediaQuery.sizeOf(context).width * 0.60,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-        ),
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white.withOpacity(0.3)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              "😍 Test Your Friendship 😉",
+              "😍 Test Your Partnership 😉",
               style: TextStyle(
                 fontSize: 18,
               ),
             ),
             const SizedBox(height: 16),
             const Text(
-              "Do your friends actually KNOW YOU?",
+              "Do your Partner actually KNOW YOU?",
               style: TextStyle(
                 fontSize: 18,
               ),

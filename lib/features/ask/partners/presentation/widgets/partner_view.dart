@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:quizygo/core/app_background.dart';
 import 'package:quizygo/core/appbar_logo.dart';
 import 'package:quizygo/core/widgets/menu_button.dart';
-import 'package:quizygo/features/ask/frinds/presentation/widgets/friends_view_body.dart';
+import 'package:quizygo/features/ask/partners/presentation/partner_view_body.dart';
 import 'package:quizygo/core/constants/colors.dart';
-class FriendsView extends StatelessWidget {
-  const FriendsView({super.key});
-  static const String id = "Partner View";
+
+class PartnerView extends StatelessWidget {
+  const PartnerView({super.key});
+  static const String id = "PartnerView";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +16,7 @@ class FriendsView extends StatelessWidget {
           leading: const AppBarLogo(),
           actions: const [MenuButton()],
           backgroundColor: ColorManager.primary),
-      body: const Background(child: FriendsViewbody()),
+      body: const Background(child: PartnerViewbody()),
     );
   }
 }

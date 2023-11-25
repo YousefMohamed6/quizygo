@@ -12,7 +12,7 @@ class CustomImage extends StatelessWidget {
       children: [
         Image.asset(
           path,
-          width: MediaQuery.sizeOf(context).width * 0.3,
+          width: MediaQuery.sizeOf(context).width * 0.4,
         ),
         Align(
           alignment: Alignment.bottomCenter,

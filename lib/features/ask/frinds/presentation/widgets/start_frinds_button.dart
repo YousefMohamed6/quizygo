@@ -4,7 +4,6 @@ class StartFriendsButton extends StatelessWidget {
   const StartFriendsButton({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     return MaterialButton(

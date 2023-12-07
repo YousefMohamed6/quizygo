@@ -7,7 +7,11 @@ class NameTextFeild extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       validator: (value) {
-        return null;
+        if (value == null || value.isEmpty) {
+          return "Enter Your Name";
+        } else {
+          return null;
+        }
       },
       textAlign: TextAlign.center,
       controller: controller,

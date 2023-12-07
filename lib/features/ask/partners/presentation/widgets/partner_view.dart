@@ -15,7 +15,7 @@ class PartnerView extends StatelessWidget {
           leading: const AppBarLogo(),
           actions: const [MenuButton()],
           backgroundColor: ColorManager.primary),
-      body: const PartnerViewbody(),
+      body: PartnerViewbody(formKey: GlobalKey<FormState>()),
     );
   }
 }

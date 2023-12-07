@@ -15,7 +15,7 @@ class FriendsView extends StatelessWidget {
           leading: const AppBarLogo(),
           actions: const [MenuButton()],
           backgroundColor: ColorManager.primary),
-      body: const FriendsViewbody(),
+      body:  FriendsViewbody(formKey: GlobalKey<FormState>()),
     );
   }
 }

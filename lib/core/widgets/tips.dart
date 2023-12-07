@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/features/ask/frinds/presentation/widgets/tips_text.dart';
+import 'package:quizygo/core/widgets/tips_text.dart';
 
 class Tips extends StatelessWidget {
   const Tips({super.key});

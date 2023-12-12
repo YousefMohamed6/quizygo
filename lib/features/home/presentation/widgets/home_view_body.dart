@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/features/ask/frinds/presentation/frinds_view.dart';
-import 'package:quizygo/features/ask/partners/presentation/widgets/partner_view.dart';
+import 'package:quizygo/features/ask/frinds/presentation/intro_view.dart';
+import 'package:quizygo/features/ask/partners/presentation/partner_view.dart';
 import 'package:quizygo/features/home/presentation/widgets/custom_image.dart';
 import 'package:quizygo/features/home/presentation/widgets/title_and_subtitle.dart';
 
@@ -18,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
         CustomImage(
           path: "assats/images/partner.jpg",
           onPressed: () {
-            Navigator.pushNamed(context, PartnerView.id);
+            Navigator.pushNamed(context, PartnerIntroView.id);
           },
         ),
         const SizedBox(
@@ -31,7 +31,7 @@ class HomeViewBody extends StatelessWidget {
         CustomImage(
           path: "assats/images/friends.png",
           onPressed: () {
-            Navigator.pushNamed(context, FriendsView.id);
+            Navigator.pushNamed(context, FriendsIntroView.id);
           },
         ),
         const SizedBox(

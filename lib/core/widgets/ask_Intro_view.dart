@@ -4,8 +4,17 @@ import 'package:quizygo/core/widgets/start_ask_button.dart';
 import 'package:quizygo/core/widgets/tips.dart';
 
 class IntroAskView extends StatelessWidget {
-  const IntroAskView({super.key, required this.formKey});
+  const IntroAskView(
+      {super.key,
+      required this.formKey,
+      required this.title,
+      required this.subTitle,
+      required this.onPressed});
   final GlobalKey<FormState> formKey;
+  final String title;
+  final String subTitle;
+  final VoidCallback onPressed;
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -17,23 +26,26 @@ class IntroAskView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              "😍 Test Your Friendship 😉",
-              style: TextStyle(
+            Text(
+              title,
+              style: const TextStyle(
                 fontSize: 18,
               ),
             ),
             const SizedBox(height: 16),
-            const Text(
-              "Do your friends actually KNOW YOU?",
-              style: TextStyle(
+            Text(
+              subTitle,
+              style: const TextStyle(
                 fontSize: 18,
               ),
             ),
             const SizedBox(height: 32),
             NameTextFeild(controller: TextEditingController()),
             const SizedBox(height: 16),
-            StartAskButton(formKey: formKey),
+            StartAskButton(
+              formKey: formKey,
+              onPressed: onPressed,
+            ),
             const SizedBox(height: 16),
             const Tips(),
           ],

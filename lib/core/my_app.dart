@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/features/ask/frinds/presentation/frinds_view.dart';
-import 'package:quizygo/features/ask/partners/presentation/widgets/partner_view.dart';
+import 'package:quizygo/features/ask/frinds/presentation/ask_view.dart';
+import 'package:quizygo/features/ask/frinds/presentation/intro_view.dart';
+import 'package:quizygo/features/ask/partners/presentation/partner_ask_view.dart';
+import 'package:quizygo/features/ask/partners/presentation/partner_view.dart';
 import 'package:quizygo/features/home/presentation/home_view.dart';
 import 'package:quizygo/features/menu/presentation/views/about_us.dart';
 import 'package:quizygo/features/menu/presentation/views/contact.dart';
@@ -25,11 +27,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         HomeView.id: (context) => const HomeView(),
-        FriendsView.id: (context) => const FriendsView(),
-        PartnerView.id: (context) => const PartnerView(),
+        FriendsIntroView.id: (context) => const FriendsIntroView(),
+        PartnerIntroView.id: (context) => const PartnerIntroView(),
         AboutUs.id: (context) => const AboutUs(),
         Contact.id: (context) => const Contact(),
         PrivatePolicy.id: (context) => const PrivatePolicy(),
+        FriendsAskView.id: (context) => const FriendsAskView(),
+        PartnerAskView.id: (context) => const PartnerAskView(),
       },
     );
   }

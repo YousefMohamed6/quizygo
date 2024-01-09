@@ -27,4 +27,3 @@ class Tips extends StatelessWidget {
     );
   }
 }
-

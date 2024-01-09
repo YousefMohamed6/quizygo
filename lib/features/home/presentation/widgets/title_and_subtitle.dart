@@ -9,14 +9,13 @@ class TitleAndSubTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(
-          height: 16,
-        ),
+        const SizedBox(height: 16),
         Text(
           title,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: MediaQuery.sizeOf(context).width * 0.02,
+            fontWeight: FontWeight.w500,
           ),
         ),
         Text(
@@ -24,6 +23,7 @@ class TitleAndSubTitle extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: MediaQuery.sizeOf(context).width * 0.02,
+            fontWeight: FontWeight.w500,
             color: Colors.red,
           ),
         ),

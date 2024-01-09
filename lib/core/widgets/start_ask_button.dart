@@ -1,26 +1,37 @@
 import 'package:flutter/material.dart';
 
 class StartAskButton extends StatelessWidget {
-  const StartAskButton(
-      {super.key, required this.formKey, required this.onPressed});
-  final GlobalKey<FormState> formKey;
   final VoidCallback onPressed;
+
+  const StartAskButton({super.key, required this.onPressed});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      onPressed: onPressed,
-      color: Colors.red,
-      height: 56,
-      minWidth: MediaQuery.sizeOf(context).width,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(16),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Colors.blue, Color.fromRGBO(144, 202, 249, 1)],
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
         ),
+        borderRadius: BorderRadius.circular(8.0),
       ),
-      child: const Text(
-        'Start',
-        style: TextStyle(
-          fontSize: 16,
+      child: MaterialButton(
+        height: 56,
+        minWidth: MediaQuery.sizeOf(context).width,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(8),
+          ),
+        ),
+        onPressed: onPressed,
+        child: Text(
+          'START',
+          style: TextStyle(
+            fontSize: MediaQuery.sizeOf(context).height * 0.030,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
         ),
       ),
     );

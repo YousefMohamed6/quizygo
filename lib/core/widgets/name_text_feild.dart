@@ -15,13 +15,18 @@ class NameTextFeild extends StatelessWidget {
       },
       textAlign: TextAlign.center,
       controller: controller,
-      decoration: const InputDecoration(
-        border: OutlineInputBorder(
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      decoration: InputDecoration(
+        border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(8),
           ),
         ),
         hintText: "Enter your Name",
+        hintStyle: TextStyle(
+          fontSize: MediaQuery.sizeOf(context).height * 0.030,
+          fontWeight: FontWeight.w500,
+        ),
         alignLabelWithHint: true,
       ),
     );

@@ -10,9 +10,16 @@ class CustomImage extends StatelessWidget {
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
-        Image.asset(
-          path,
-          width: MediaQuery.sizeOf(context).width * 0.4,
+        Container(
+          width: MediaQuery.sizeOf(context).width * 0.40,
+          height: MediaQuery.sizeOf(context).height * 0.40,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            image: DecorationImage(
+              image: AssetImage(path),
+              fit: BoxFit.fill,
+            ),
+          ),
         ),
         Align(
           alignment: Alignment.bottomCenter,

@@ -10,7 +10,7 @@ class PartnerIntroBody extends StatelessWidget {
     return IntroAskView(
       formKey: formKey,
       title: "😍 Test Your Partnership 😉",
-      subTitle: "Do your Partner actually KNOW YOU?",
+      subTitle: "Do your Partner actually know you?",
       onPressed: () {
         if (formKey.currentState!.validate()) {
           Navigator.pushNamed(context, PartnerAskView.id);

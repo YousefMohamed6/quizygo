@@ -10,7 +10,10 @@ class MenuButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
-      icon: const Icon(Icons.menu),
+      icon: const Icon(
+        Icons.menu,
+        color: Colors.white,
+      ),
       onSelected: (value) {
         switch (value) {
           case "hello":

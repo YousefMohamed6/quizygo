@@ -8,7 +8,7 @@ class StartButton extends StatelessWidget {
     return MaterialButton(
       onPressed: onPressed,
       color: Colors.red,
-      height: 44,
+      height: 50,
       minWidth: MediaQuery.sizeOf(context).width * 0.405,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
@@ -19,7 +19,7 @@ class StartButton extends StatelessWidget {
       child: Text(
         'Start',
         style: TextStyle(
-          fontSize: MediaQuery.sizeOf(context).width * 0.016,
+          fontSize: MediaQuery.sizeOf(context).width * 0.020,
         ),
       ),
     );

@@ -11,7 +11,7 @@ class FriendsIntroBody extends StatelessWidget {
     return IntroAskView(
       formKey: formKey,
       title: "😍 Test Your Friendship 😉",
-      subTitle: "Do your friends actually KNOW YOU?",
+      subTitle: "Do your friends actually know you?",
       onPressed: () {
         if (formKey.currentState!.validate()) {
           Navigator.pushNamed(context, FriendsAskView.id);

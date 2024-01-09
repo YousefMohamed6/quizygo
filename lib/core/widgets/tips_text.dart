@@ -8,7 +8,8 @@ class TipsText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        fontSize: MediaQuery.sizeOf(context).width * 0.015,
+        fontSize: MediaQuery.sizeOf(context).height * 0.025,
+        fontWeight: FontWeight.bold,
       ),
     );
   }

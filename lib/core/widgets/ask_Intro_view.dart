@@ -17,38 +17,49 @@ class IntroAskView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: formKey,
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.sizeOf(context).width * 0.25),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 18,
+    return Center(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        margin: EdgeInsets.symmetric(
+          horizontal: MediaQuery.sizeOf(context).width * 0.05,
+          vertical: MediaQuery.sizeOf(context).height * 0.05,
+        ),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          border: Border.all(width: 0.5),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Form(
+          key: formKey,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: MediaQuery.sizeOf(context).height * 0.030,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              subTitle,
-              style: const TextStyle(
-                fontSize: 18,
+              const SizedBox(height: 16),
+              Text(
+                subTitle,
+                style: TextStyle(
+                  fontSize: MediaQuery.sizeOf(context).height * 0.035,
+                  color: Colors.blue[400],
+                  fontWeight: FontWeight.w900,
+                ),
               ),
-            ),
-            const SizedBox(height: 32),
-            NameTextFeild(controller: TextEditingController()),
-            const SizedBox(height: 16),
-            StartAskButton(
-              formKey: formKey,
-              onPressed: onPressed,
-            ),
-            const SizedBox(height: 16),
-            const Tips(),
-          ],
+              const SizedBox(height: 32),
+              NameTextFeild(controller: TextEditingController()),
+              const SizedBox(height: 16),
+              StartAskButton(
+                onPressed: onPressed,
+              ),
+              const SizedBox(height: 16),
+              const Tips(),
+            ],
+          ),
         ),
       ),
     );

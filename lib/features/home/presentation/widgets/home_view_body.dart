@@ -13,7 +13,7 @@ class HomeViewBody extends StatelessWidget {
       children: [
         const TitleAndSubTitle(
           title: 'Real partner 🗝❤',
-          subtitle: 'How well do you know your partner',
+          subtitle: 'How well does you partner know you ?',
         ),
         CustomImage(
           path: "assats/images/partner.jpg",
@@ -21,12 +21,10 @@ class HomeViewBody extends StatelessWidget {
             Navigator.pushNamed(context, PartnerIntroView.id);
           },
         ),
-        const SizedBox(
-          height: 16,
-        ),
+        const SizedBox(height: 16),
         const TitleAndSubTitle(
           title: 'Test your friends ✌🏻❤',
-          subtitle: 'How well do your friends know you',
+          subtitle: 'How well does your friends know you ?',
         ),
         CustomImage(
           path: "assats/images/friends.png",
@@ -34,9 +32,7 @@ class HomeViewBody extends StatelessWidget {
             Navigator.pushNamed(context, FriendsIntroView.id);
           },
         ),
-        const SizedBox(
-          height: 48,
-        ),
+        const SizedBox(height: 48),
       ],
     );
   }

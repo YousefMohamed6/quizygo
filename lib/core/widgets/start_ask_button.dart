@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/constants/colors.dart';
 
 class StartAskButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -10,7 +11,7 @@ class StartAskButton extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Colors.blue, Color.fromRGBO(144, 202, 249, 1)],
+          colors: [Color.fromRGBO(229, 57, 53, 1), ColorManager.primary],
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
         ),

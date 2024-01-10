@@ -9,6 +9,8 @@ class AppBarLogo extends StatelessWidget {
       child: Image.asset(
         "assats/images/appbar_logo.jpg",
         fit: BoxFit.fill,
+        height: MediaQuery.sizeOf(context).height * 0.5,
+        width: MediaQuery.sizeOf(context).width * 0.5,
       ),
     );
   }

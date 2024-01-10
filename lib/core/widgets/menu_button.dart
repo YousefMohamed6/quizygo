@@ -12,7 +12,7 @@ class MenuButton extends StatelessWidget {
     return PopupMenuButton(
       icon: const Icon(
         Icons.menu,
-        color: Colors.white,
+        color: Colors.red,
       ),
       onSelected: (value) {
         switch (value) {

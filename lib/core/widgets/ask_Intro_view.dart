@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/constants/colors.dart';
 import 'package:quizygo/core/widgets/name_text_feild.dart';
 import 'package:quizygo/core/widgets/start_ask_button.dart';
 import 'package:quizygo/core/widgets/tips.dart';
@@ -26,7 +27,10 @@ class IntroAskView extends StatelessWidget {
         ),
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          border: Border.all(width: 0.5),
+          border: Border.all(
+            width: 0.5,
+            color: ColorManager.borderSideColor,
+          ),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Form(
@@ -46,7 +50,7 @@ class IntroAskView extends StatelessWidget {
                 subTitle,
                 style: TextStyle(
                   fontSize: MediaQuery.sizeOf(context).height * 0.035,
-                  color: Colors.blue[400],
+                  color: Colors.red,
                   fontWeight: FontWeight.w900,
                 ),
               ),

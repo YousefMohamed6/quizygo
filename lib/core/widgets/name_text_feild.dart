@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/constants/colors.dart';
 
 class NameTextFeild extends StatelessWidget {
   const NameTextFeild({super.key, required this.controller});
@@ -20,6 +21,17 @@ class NameTextFeild extends StatelessWidget {
         border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(8),
+          ),
+          borderSide: BorderSide(
+            color: ColorManager.borderSideColor,
+          ),
+        ),
+        enabledBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(8),
+          ),
+          borderSide: BorderSide(
+            color: ColorManager.borderSideColor,
           ),
         ),
         hintText: "Enter your Name",

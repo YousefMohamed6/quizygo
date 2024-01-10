@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/constants/colors.dart';
 import 'package:quizygo/core/constants/friends.dart';
 
 class FriendsAskBody extends StatelessWidget {
@@ -36,10 +37,10 @@ class FriendsAskBody extends StatelessWidget {
   }
 }
 
-class CustomImage extends StatelessWidget {
-  const CustomImage({super.key, required this.path, required this.imageName});
+class ImageCard extends StatelessWidget {
+  const ImageCard({super.key, required this.path, required this.answer});
   final String path;
-  final String imageName;
+  final String answer;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -47,24 +48,31 @@ class CustomImage extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: Colors.blue,
+          color: ColorManager.borderSideColor,
         ),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(
-            path,
-            width: MediaQuery.sizeOf(context).width * 0.20,
-            height: MediaQuery.sizeOf(context).height * 0.20,
-            fit: BoxFit.fill,
+          Container(
+            width: MediaQuery.sizeOf(context).width * 0.25,
+            height: MediaQuery.sizeOf(context).height * 0.25,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              image: DecorationImage(
+                fit: BoxFit.fill,
+                image: AssetImage(
+                  path,
+                ),
+              ),
+            ),
           ),
           const SizedBox(height: 8),
           Text(
-            imageName,
+            answer,
             style: TextStyle(
-              fontSize: MediaQuery.sizeOf(context).width * 0.015,
-              fontWeight: FontWeight.w300,
+              fontSize: MediaQuery.sizeOf(context).width * 0.025,
+              fontWeight: FontWeight.w600,
             ),
           )
         ],
@@ -89,9 +97,9 @@ class DoubleImage extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        CustomImage(path: fristPath, imageName: fristName),
+        ImageCard(path: fristPath, answer: fristName),
         const SizedBox(width: 32),
-        CustomImage(path: secondPath, imageName: secondName),
+        ImageCard(path: secondPath, answer: secondName),
       ],
     );
   }
@@ -105,8 +113,8 @@ class QuetionText extends StatelessWidget {
     return Text(
       quetionText,
       style: TextStyle(
-        fontSize: MediaQuery.sizeOf(context).width * 0.025,
-        fontWeight: FontWeight.w300,
+        fontSize: MediaQuery.sizeOf(context).width * 0.035,
+        fontWeight: FontWeight.w600,
       ),
     );
   }

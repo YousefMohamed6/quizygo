@@ -37,10 +37,6 @@ class MenuButton extends StatelessWidget {
             child: Text("Hello"),
           ),
           PopupMenuItem(
-            value: 'about',
-            child: Text("About"),
-          ),
-          PopupMenuItem(
             value: 'contact',
             child: Text("Contact"),
           ),
@@ -51,7 +47,11 @@ class MenuButton extends StatelessWidget {
           PopupMenuItem(
             value: 'Terms',
             child: Text("Terms Of Use"),
-          )
+          ),
+          PopupMenuItem(
+            value: 'about',
+            child: Text("About"),
+          ),
         ];
       },
     );

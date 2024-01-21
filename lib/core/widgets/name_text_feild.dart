@@ -36,7 +36,7 @@ class NameTextFeild extends StatelessWidget {
         ),
         hintText: "Enter your Name",
         hintStyle: TextStyle(
-          fontSize: MediaQuery.sizeOf(context).height * 0.030,
+          fontSize: MediaQuery.sizeOf(context).height * 0.024,
           fontWeight: FontWeight.w500,
         ),
         alignLabelWithHint: true,

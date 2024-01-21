@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/features/ask/frinds/presentation/intro_view.dart';
-import 'package:quizygo/features/ask/partners/presentation/partner_view.dart';
 import 'package:quizygo/features/home/presentation/widgets/custom_image.dart';
 import 'package:quizygo/features/home/presentation/widgets/title_and_subtitle.dart';
+import 'package:quizygo/features/intro/friends/presentation/friends_intro_view.dart';
+import 'package:quizygo/features/intro/partners/presentation/partner_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

@@ -1,6 +1,100 @@
+import 'package:quizygo/core/constants/friends.dart';
+
 class PartnerAssets {
   PartnerAssets._();
-  
+  static const Map<String, List<String>> partnerImage = {
+    "1": [
+      imagesPartnerFancy,
+      imagesPartnerFastCasual,
+      imagesPartnerFoodTruck,
+      imagesPartnerCafe,
+    ],
+    "2": [
+      imagesPartnerFacebook,
+      imagesPartnerInstagram,
+      imagesPartnerTicTok,
+      imagesPartnerSnapChat,
+    ],
+    "3": [
+      imagesPartnerClassic,
+      imagesPartnerCasual,
+      imagesPartnerSport,
+      imagesPartnerBohemian,
+    ],
+    "4": [
+      imagesPartnerClassic,
+      imagesPartnerCasual,
+      imagesPartnerSport,
+      imagesPartnerBohemian,
+    ],
+    "5": [
+      imagesPartnerAlone,
+      imagesPartnerWithFriends,
+      FriendsAssets.imagesFriendsWithFamily,
+      imagesPartnerWithYourLover,
+    ],
+    "6": [
+      imagesPartnerAlone,
+      imagesPartnerWithFriends,
+      FriendsAssets.imagesFriendsWithFamily,
+      imagesPartnerWithYourLover,
+    ],
+    "7": [
+      imagesPartnerDog,
+      imagesPartnerCat,
+      imagesPartnerBaghbhans,
+      imagesPartnerBirds,
+    ],
+    "8": [
+      imagesPartnerAlone,
+      imagesPartnerWithFriends,
+      FriendsAssets.imagesFriendsWithFamily,
+      imagesPartnerWithYourLover,
+    ],
+    "9": [
+      imagesPartnerAlone,
+      imagesPartnerWithFriends,
+      FriendsAssets.imagesFriendsWithFamily,
+      imagesPartnerWithYourLover,
+    ],
+    "10": [
+      imagesPartnerArt,
+      imagesPartnerSport,
+      imagesPartnerPolitics,
+      imagesPartnerFashion,
+    ],
+    "11": [
+      imagesPartnerArt,
+      imagesPartnerSport,
+      imagesPartnerPolitics,
+      imagesPartnerFashion,
+    ],
+    "12": [
+      imagesPartnerArt,
+      imagesPartnerSport,
+      imagesPartnerPolitics,
+      imagesPartnerFashion,
+    ],
+    "13": [
+      imagesPartnerWork,
+      imagesPartnerGym,
+      imagesPartnerJogging,
+      imagesPartnerJogging
+    ],
+    "14": [
+      imagesPartnerFastFood,
+      imagesPartnerHomeCookedFood,
+      imagesPartnerArt,
+      imagesPartnerSport,
+    ],
+    "15": [
+      imagesPartnerFastFood,
+      imagesPartnerHomeCookedFood,
+      imagesPartnerArt,
+      imagesPartnerSport,
+    ],
+  };
+
   /// Assets for imagesPartnerAlone
   /// assats/images/partner/Alone.jpg
   static const String imagesPartnerAlone = "assats/images/partner/Alone.jpg";
@@ -15,7 +109,22 @@ class PartnerAssets {
 
   /// Assets for imagesPartnerBohemian
   /// assats/images/partner/Bohemian.jpg
-  static const String imagesPartnerBohemian = "assats/images/partner/Bohemian.jpg";
+  static const String imagesPartnerBohemian =
+      "assats/images/partner/Bohemian.jpg";
+
+  /// Assets for imagesPartnerWithYourLover
+  /// assats/images/partner/with your lover.jpeg
+  static const String imagesPartnerWithYourLover =
+      "assats/images/partner/with your lover.jpeg";
+
+  /// Assets for imagesPartnerBaghbhans
+  /// assats/images/partner/Baghbhans.jpeg
+  static const String imagesPartnerBaghbhans =
+      "assats/images/partner/Baghbhans.jpeg";
+
+  /// Assets for imagesPartnerBaghbhans
+  /// assats/images/partner/Baghbhans.jpeg
+  static const String imagesPartnerBirds = "assats/images/partner/birds.jpeg";
 
   /// Assets for imagesPartnerCafe
   /// assats/images/partner/Cafe.jpg
@@ -31,7 +140,8 @@ class PartnerAssets {
 
   /// Assets for imagesPartnerClassic
   /// assats/images/partner/Classic.jpg
-  static const String imagesPartnerClassic = "assats/images/partner/Classic.jpg";
+  static const String imagesPartnerClassic =
+      "assats/images/partner/Classic.jpg";
 
   /// Assets for imagesPartnerDog
   /// assats/images/partner/Dog.jpg
@@ -39,7 +149,8 @@ class PartnerAssets {
 
   /// Assets for imagesPartnerFacebook
   /// assats/images/partner/Facebook.jpg
-  static const String imagesPartnerFacebook = "assats/images/partner/Facebook.jpg";
+  static const String imagesPartnerFacebook =
+      "assats/images/partner/Facebook.jpg";
 
   /// Assets for imagesPartnerFancy
   /// assats/images/partner/Fancy.jpg
@@ -47,19 +158,23 @@ class PartnerAssets {
 
   /// Assets for imagesPartnerFashion
   /// assats/images/partner/Fashion.jpg
-  static const String imagesPartnerFashion = "assats/images/partner/Fashion.jpg";
+  static const String imagesPartnerFashion =
+      "assats/images/partner/Fashion.jpg";
 
   /// Assets for imagesPartnerFast casual
   /// assats/images/partner/Fast casual.jpg
-  static const String imagesPartnerFastCasual = "assats/images/partner/Fast casual.jpg";
+  static const String imagesPartnerFastCasual =
+      "assats/images/partner/Fast casual.jpg";
 
   /// Assets for imagesPartnerFast food
   /// assats/images/partner/Fast food.jpg
-  static const String imagesPartnerFastFood = "assats/images/partner/Fast food.jpg";
+  static const String imagesPartnerFastFood =
+      "assats/images/partner/Fast food.jpg";
 
   /// Assets for imagesPartnerFood truck
   /// assats/images/partner/Food truck.jpg
-  static const String imagesPartnerFoodTruck = "assats/images/partner/Food truck.jpg";
+  static const String imagesPartnerFoodTruck =
+      "assats/images/partner/Food truck.jpg";
 
   /// Assets for imagesPartnerGo out
   /// assats/images/partner/Go out.jpg
@@ -71,19 +186,23 @@ class PartnerAssets {
 
   /// Assets for imagesPartnerHome cooked food
   /// assats/images/partner/Home cooked food.jpg
-  static const String imagesPartnerHomeCookedFood = "assats/images/partner/Home cooked food.jpg";
+  static const String imagesPartnerHomeCookedFood =
+      "assats/images/partner/Home cooked food.jpg";
 
   /// Assets for imagesPartnerInstagram
   /// assats/images/partner/Instagram.jpg
-  static const String imagesPartnerInstagram = "assats/images/partner/Instagram.jpg";
+  static const String imagesPartnerInstagram =
+      "assats/images/partner/Instagram.jpg";
 
   /// Assets for imagesPartnerJogging
   /// assats/images/partner/Jogging.jpg
-  static const String imagesPartnerJogging = "assats/images/partner/Jogging.jpg";
+  static const String imagesPartnerJogging =
+      "assats/images/partner/Jogging.jpg";
 
   /// Assets for imagesPartnerLong hair
   /// assats/images/partner/Long hair.jpg
-  static const String imagesPartnerLongHair = "assats/images/partner/Long hair.jpg";
+  static const String imagesPartnerLongHair =
+      "assats/images/partner/Long hair.jpg";
 
   /// Assets for imagesPartnerMeWe
   /// assats/images/partner/MeWe.jpg
@@ -91,19 +210,23 @@ class PartnerAssets {
 
   /// Assets for imagesPartnerPinterest
   /// assats/images/partner/Pinterest.jpg
-  static const String imagesPartnerPinterest = "assats/images/partner/Pinterest.jpg";
+  static const String imagesPartnerPinterest =
+      "assats/images/partner/Pinterest.jpg";
 
   /// Assets for imagesPartnerPolitics
   /// assats/images/partner/Politics.jpg
-  static const String imagesPartnerPolitics = "assats/images/partner/Politics.jpg";
+  static const String imagesPartnerPolitics =
+      "assats/images/partner/Politics.jpg";
 
   /// Assets for imagesPartnerShort hair
   /// assats/images/partner/Short hair.jpg
-  static const String imagesPartnerShortHair = "assats/images/partner/Short hair.jpg";
+  static const String imagesPartnerShortHair =
+      "assats/images/partner/Short hair.jpg";
 
   /// Assets for imagesPartnerSnapChat
   /// assats/images/partner/SnapChat.jpg
-  static const String imagesPartnerSnapChat = "assats/images/partner/SnapChat.jpg";
+  static const String imagesPartnerSnapChat =
+      "assats/images/partner/SnapChat.jpg";
 
   /// Assets for imagesPartnerSport
   /// assats/images/partner/Sport.jpg
@@ -115,11 +238,13 @@ class PartnerAssets {
 
   /// Assets for imagesPartnerStay at home
   /// assats/images/partner/Stay at home.jpg
-  static const String imagesPartnerStayAtHome = "assats/images/partner/Stay at home.jpg";
+  static const String imagesPartnerStayAtHome =
+      "assats/images/partner/Stay at home.jpg";
 
   /// Assets for imagesPartnerSunrise
   /// assats/images/partner/Sunrise.jpg
-  static const String imagesPartnerSunrise = "assats/images/partner/Sunrise.jpg";
+  static const String imagesPartnerSunrise =
+      "assats/images/partner/Sunrise.jpg";
 
   /// Assets for imagesPartnerSunset
   /// assats/images/partner/Sunset.jpg
@@ -135,7 +260,8 @@ class PartnerAssets {
 
   /// Assets for imagesPartnerWith friends
   /// assats/images/partner/With friends.jpg
-  static const String imagesPartnerWithFriends = "assats/images/partner/With friends.jpg";
+  static const String imagesPartnerWithFriends =
+      "assats/images/partner/With friends.jpg";
 
   /// Assets for imagesPartnerWork
   /// assats/images/partner/Work.jpg

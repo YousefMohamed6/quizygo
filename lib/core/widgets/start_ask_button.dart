@@ -29,7 +29,7 @@ class StartAskButton extends StatelessWidget {
         child: Text(
           'START',
           style: TextStyle(
-            fontSize: MediaQuery.sizeOf(context).height * 0.030,
+            fontSize: MediaQuery.sizeOf(context).height * 0.024,
             fontWeight: FontWeight.w500,
             color: Colors.white,
           ),

@@ -9,7 +9,7 @@ class StartButton extends StatelessWidget {
       onPressed: onPressed,
       color: Colors.red,
       height: 50,
-      minWidth: MediaQuery.sizeOf(context).width * 0.405,
+      minWidth: MediaQuery.sizeOf(context).width * 0.406,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(16),
@@ -19,7 +19,7 @@ class StartButton extends StatelessWidget {
       child: Text(
         'Start',
         style: TextStyle(
-          fontSize: MediaQuery.sizeOf(context).width * 0.020,
+          fontSize: MediaQuery.sizeOf(context).height * 0.030,
         ),
       ),
     );

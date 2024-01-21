@@ -8,7 +8,11 @@ import 'package:flutter/foundation.dart'
 ///
 /// Example:
 /// ```dart
-/// 
+/// import 'firebase_options.dart';
+/// // ...
+/// await Firebase.initializeApp(
+///   options: DefaultFirebaseOptions.currentPlatform,
+/// );
 /// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
@@ -17,10 +21,7 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for ios - '
@@ -49,12 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBQ4oggn0c5juGFnrnTm_JYyeoba-zXNMM',
-    appId: '1:655678862829:web:12dbd75ec06c00f9e463e4',
-    messagingSenderId: '655678862829',
-    projectId: 'quizygo-cdfb8',
-    authDomain: 'quizygo-cdfb8.firebaseapp.com',
-    storageBucket: 'quizygo-cdfb8.appspot.com',
-    measurementId: 'G-Z4P0HS1H4D',
+    apiKey: 'AIzaSyBiNixi1403RhSKSrtAKQOY5n_5xxaWdTM',
+    appId: '1:464910363203:web:e1511e4c78c10401d882f6',
+    messagingSenderId: '464910363203',
+    projectId: 'quizygo-2024',
+    authDomain: 'quizygo-2024.firebaseapp.com',
+    storageBucket: 'quizygo-2024.appspot.com',
+    measurementId: 'G-SX9Y3KWSP7',
+  );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyD0ZNFmaovDgw08cRSvTjgfik9egIXkjpw',
+    appId: '1:464910363203:android:7860398b20e55883d882f6',
+    messagingSenderId: '464910363203',
+    projectId: 'quizygo-2024',
+    storageBucket: 'quizygo-2024.appspot.com',
   );
 }

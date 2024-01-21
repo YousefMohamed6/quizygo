@@ -14,7 +14,7 @@ class TitleAndSubTitle extends StatelessWidget {
           title,
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: MediaQuery.sizeOf(context).width * 0.02,
+            fontSize: MediaQuery.sizeOf(context).height * 0.035,
             fontWeight: FontWeight.w500,
           ),
         ),
@@ -22,7 +22,7 @@ class TitleAndSubTitle extends StatelessWidget {
           subtitle,
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: MediaQuery.sizeOf(context).width * 0.02,
+            fontSize: MediaQuery.sizeOf(context).height * 0.030,
             fontWeight: FontWeight.w500,
             color: Colors.red,
           ),

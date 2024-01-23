@@ -7,6 +7,7 @@ class QuetionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       quetionText,
+      textAlign: TextAlign.center,
       style: TextStyle(
         fontSize: MediaQuery.sizeOf(context).height * 0.030,
         fontWeight: FontWeight.w600,

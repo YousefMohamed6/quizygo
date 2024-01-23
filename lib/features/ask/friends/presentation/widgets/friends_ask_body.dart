@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizygo/core/constants/friends.dart';
-import 'package:quizygo/core/quetions.dart';
+import 'package:quizygo/core/constants/quetions.dart';
 import 'package:quizygo/features/ask/friends/presentation/widgets/numbers_of_quetion.dart';
 import 'package:quizygo/features/ask/friends/presentation/widgets/quetion_view.dart';
 

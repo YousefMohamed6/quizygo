@@ -22,10 +22,10 @@ class PartnerAssets {
       imagesPartnerBohemian,
     ],
     "4": [
-      imagesPartnerClassic,
-      imagesPartnerCasual,
-      imagesPartnerSport,
-      imagesPartnerBohemian,
+      imagesPartnerFood,
+      imagesPartnerCars,
+      imagesPartnerMoney,
+      imagesPartnerTravelling,
     ],
     "5": [
       imagesPartnerAlone,
@@ -34,10 +34,10 @@ class PartnerAssets {
       imagesPartnerWithYourLover,
     ],
     "6": [
-      imagesPartnerAlone,
-      imagesPartnerWithFriends,
-      FriendsAssets.imagesFriendsWithFamily,
-      imagesPartnerWithYourLover,
+      imagesPartnerSunset,
+      imagesPartnerSunrise,
+      imagesPartnerStars,
+      imagesPartnerAurora,
     ],
     "7": [
       imagesPartnerDog,
@@ -46,16 +46,16 @@ class PartnerAssets {
       imagesPartnerBirds,
     ],
     "8": [
-      imagesPartnerAlone,
-      imagesPartnerWithFriends,
-      FriendsAssets.imagesFriendsWithFamily,
-      imagesPartnerWithYourLover,
+      imagesPartnerSleeping,
+      imagesPartnerMeditation,
+      imagesPartnerReading,
+      imagesPartnerPlaying,
     ],
     "9": [
-      imagesPartnerAlone,
-      imagesPartnerWithFriends,
-      FriendsAssets.imagesFriendsWithFamily,
-      imagesPartnerWithYourLover,
+      imagesPartnerSwimming,
+      imagesPartnerFootball,
+      imagesPartnerBasketball,
+      imagesPartnerBoxing,
     ],
     "10": [
       imagesPartnerArt,
@@ -64,44 +64,174 @@ class PartnerAssets {
       imagesPartnerFashion,
     ],
     "11": [
-      imagesPartnerArt,
-      imagesPartnerSport,
-      imagesPartnerPolitics,
-      imagesPartnerFashion,
+      imagesPartnerBlack,
+      imagesPartnerBlue,
+      imagesPartnerPink,
+      imagesPartnerWhite,
     ],
     "12": [
-      imagesPartnerArt,
-      imagesPartnerSport,
-      imagesPartnerPolitics,
-      imagesPartnerFashion,
+      imagesPartnerBali,
+      imagesPartnerMaldives,
+      imagesPartnerKenya,
+      imagesPartnerDubai,
     ],
     "13": [
       imagesPartnerWork,
       imagesPartnerGym,
       imagesPartnerJogging,
-      imagesPartnerJogging
+      imagesPartnerStayAtHome
     ],
     "14": [
-      imagesPartnerFastFood,
-      imagesPartnerHomeCookedFood,
-      imagesPartnerArt,
-      imagesPartnerSport,
+      imagesPartnerDark,
+      imagesPartnerWhiteChocolate,
+      imagesPartnerMilk,
+      imagesPartnerNuts,
     ],
     "15": [
-      imagesPartnerFastFood,
-      imagesPartnerHomeCookedFood,
-      imagesPartnerArt,
-      imagesPartnerSport,
+      imagesPartnerWinter,
+      imagesPartnerAutumn,
+      imagesPartnerSpring,
+      imagesPartnerSummer,
     ],
   };
+
+  /// Assets for imagesPartnerSpring
+  /// assats/images/partner/Spring.jpg
+  static const String imagesPartnerSpring = "assats/images/partner/Spring.jpg";
+
+  /// Assets for imagesPartnerAutumn
+  /// assats/images/partner/Autumn.jpg
+  static const String imagesPartnerAutumn = "assats/images/partner/Autumn.jpg";
+
+  /// Assets for imagesPartnerWinter
+  /// assats/images/partner/Winter.jpg
+  static const String imagesPartnerWinter = "assats/images/partner/Winter.jpg";
+
+  /// Assets for imagesPartnerSummer
+  /// assats/images/partner/Summer.jpg
+  static const String imagesPartnerSummer = "assats/images/partner/Summer.jpg";
+
+  /// Assets for imagesPartnerWhiteChocolate
+  /// assats/images/partner/WhiteChocolate.jpg
+  static const String imagesPartnerWhiteChocolate =
+      "assats/images/partner/WhiteChocolate.jpg";
+
+  /// Assets for imagesPartnerDark
+  /// assats/images/partner/Dark.jpg
+  static const String imagesPartnerDark = "assats/images/partner/Dark.jpg";
+
+  /// Assets for imagesPartnerMilk
+  /// assats/images/partner/Milk.jpg
+  static const String imagesPartnerMilk = "assats/images/partner/Milk.jpg";
+
+  /// Assets for imagesPartnerNuts
+  /// assats/images/partner/Nuts.jpg
+  static const String imagesPartnerNuts = "assats/images/partner/Nuts.jpg";
+
+  /// Assets for imagesPartnerMaldives
+  /// assats/images/partner/Maldives.jpg
+  static const String imagesPartnerMaldives =
+      "assats/images/partner/Maldives.jpg";
+
+  /// Assets for imagesPartnerBali
+  /// assats/images/partner/Bali.jpg
+  static const String imagesPartnerBali = "assats/images/partner/Bali.jpg";
+
+  /// Assets for imagesPartnerDubai
+  /// assats/images/partner/Dubai.jpg
+  static const String imagesPartnerDubai = "assats/images/partner/Dubai.jpg";
+
+  /// Assets for imagesPartnerKenya
+  /// assats/images/partner/Kenya.jpg
+  static const String imagesPartnerKenya = "assats/images/partner/Kenya.jpg";
+
+  /// Assets for imagesPartnerBlack
+  /// assats/images/partner/Black.jpg
+  static const String imagesPartnerBlack = "assats/images/partner/Black.jpg";
+
+  /// Assets for imagesPartnerPink
+  /// assats/images/partner/Pink.jpg
+  static const String imagesPartnerPink = "assats/images/partner/Pink.jpg";
+
+  /// Assets for imagesPartnerWhite
+  /// assats/images/partner/White.jpg
+  static const String imagesPartnerWhite = "assats/images/partner/White.jpg";
+
+  /// Assets for imagesPartnerBlue
+  /// assats/images/partner/Blue.jpg
+  static const String imagesPartnerBlue = "assats/images/partner/Blue.jpg";
+
+  /// Assets for imagesPartnerSleeping
+  /// assats/images/partner/Sleeping.jpg
+  static const String imagesPartnerSleeping =
+      "assats/images/partner/Sleeping.jpg";
+
+  /// Assets for imagesPartnerSwimming
+  /// assats/images/partner/Swimming.jpg
+  static const String imagesPartnerSwimming =
+      "assats/images/partner/Swimming.jpg";
+
+  /// Assets for imagesPartnerFootball
+  /// assats/images/partner/Football.jpg
+  static const String imagesPartnerFootball =
+      "assats/images/partner/Football.jpg";
+
+  /// Assets for imagesPartnerBoxing
+  /// assats/images/partner/Boxing.jpg
+  static const String imagesPartnerBoxing = "assats/images/partner/Boxing.jpg";
+
+  /// Assets for imagesPartnerBasketball
+  /// assats/images/partner/Basketball.jpg
+  static const String imagesPartnerBasketball =
+      "assats/images/partner/Basketball.jpg";
+
+  /// Assets for imagesPartnerMeditation
+  /// assats/images/partner/Meditation.jpg
+  static const String imagesPartnerMeditation =
+      "assats/images/partner/Meditation.jpg";
+
+  /// Assets for imagesPartnerReading
+  /// assats/images/partner/Reading.jpg
+  static const String imagesPartnerReading =
+      "assats/images/partner/Reading.jpg";
+
+  /// Assets for imagesPartnerPlaying
+  /// assats/images/partner/Playing.jpg
+  static const String imagesPartnerPlaying =
+      "assats/images/partner/Playing.jpg";
 
   /// Assets for imagesPartnerAlone
   /// assats/images/partner/Alone.jpg
   static const String imagesPartnerAlone = "assats/images/partner/Alone.jpg";
 
+  /// Assets for imagesPartnerFood
+  /// assats/images/partner/Food.jpg
+  static const String imagesPartnerFood = "assats/images/partner/Food.jpg";
+
+  /// Assets for imagesPartnerCars
+  /// assats/images/partner/Cars.jpg
+  static const String imagesPartnerCars = "assats/images/partner/Cars.jpg";
+
+  /// Assets for imagesPartnerMoney
+  /// assats/images/partner/Money.jpg
+  static const String imagesPartnerMoney = "assats/images/partner/Money.jpg";
+
   /// Assets for imagesPartnerArt
   /// assats/images/partner/Art.jpg
   static const String imagesPartnerArt = "assats/images/partner/Art.jpg";
+
+  /// Assets for imagesPartnerAurora
+  /// assats/images/partner/Aurora.jpg
+  static const String imagesPartnerAurora = "assats/images/partner/Aurora.jpg";
+
+  /// Assets for imagesPartnerStars
+  /// assats/images/partner/Stars.jpg
+  static const String imagesPartnerStars = "assats/images/partner/Stars.jpg";
+
+  /// Assets for imagesPartnerTravelling
+  /// assats/images/partner/Travelling.jpg
+  static const String imagesPartnerTravelling =
+      "assats/images/partner/Travelling.jpg";
 
   /// Assets for imagesPartnerBaaz
   /// assats/images/partner/Baaz.jpg

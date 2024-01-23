@@ -1,3 +1,5 @@
+import 'package:quizygo/core/constants/partner.dart';
+
 class FriendsAssets {
   FriendsAssets._();
   static Map<String, List<String>> friendsImage = {
@@ -8,16 +10,16 @@ class FriendsAssets {
       imagesFriendsMountaineering
     ],
     "2": [
-      imagesFriendsDiving,
-      imagesFriendsSkyDiving,
-      imagesFriendsCamping,
-      imagesFriendsMountaineering
+      PartnerAssets.imagesPartnerBlack,
+      PartnerAssets.imagesPartnerBlue,
+      PartnerAssets.imagesPartnerPink,
+      PartnerAssets.imagesPartnerWhite,
     ],
     "3": [
-      imagesFriendsDiving,
-      imagesFriendsSkyDiving,
-      imagesFriendsCamping,
-      imagesFriendsMountaineering
+      PartnerAssets.imagesPartnerBali,
+      PartnerAssets.imagesPartnerMaldives,
+      PartnerAssets.imagesPartnerKenya,
+      PartnerAssets.imagesPartnerDubai,
     ],
     "4": [
       imagesFriendsSingle,
@@ -32,10 +34,10 @@ class FriendsAssets {
       imagesFriendsChips
     ],
     "6": [
-      imagesFriendsSingle,
-      imagesFriendsWithFamily,
-      imagesFriendsWithFriends,
-      imagesFriendsWithNewPeople
+      PartnerAssets.imagesPartnerFood,
+      PartnerAssets.imagesPartnerCars,
+      PartnerAssets.imagesPartnerMoney,
+      PartnerAssets.imagesPartnerTravelling,
     ],
     "7": [
       imagesFriendsTea,
@@ -44,22 +46,22 @@ class FriendsAssets {
       imagesFriendsMilk
     ],
     "8": [
-      imagesFriendsSingle,
-      imagesFriendsWithFamily,
-      imagesFriendsWithFriends,
-      imagesFriendsWithNewPeople
+      imagesFriendsMeat,
+      imagesFriendsChicken,
+      imagesFriendsSeafood,
+      imagesFriendsVegetables
     ],
     "9": [
-      imagesFriendsSingle,
-      imagesFriendsWithFamily,
-      imagesFriendsWithFriends,
-      imagesFriendsWithNewPeople
+      PartnerAssets.imagesPartnerSummer,
+      PartnerAssets.imagesPartnerWinter,
+      PartnerAssets.imagesPartnerAutumn,
+      PartnerAssets.imagesPartnerSpring
     ],
     "10": [
-      imagesFriendsSingle,
-      imagesFriendsWithFamily,
-      imagesFriendsWithFriends,
-      imagesFriendsWithNewPeople
+      imagesFriendsClowns,
+      imagesFriendsDark,
+      imagesFriendsLoneliness,
+      imagesFriendsHighplaces
     ],
     "11": [
       imagesFriendsWatchingTV,
@@ -68,16 +70,16 @@ class FriendsAssets {
       imagesFriendsTryingSomethingNew
     ],
     "12": [
-      imagesFriendsSingle,
-      imagesFriendsWithFamily,
-      imagesFriendsWithFriends,
-      imagesFriendsWithNewPeople
+      PartnerAssets.imagesPartnerFacebook,
+      PartnerAssets.imagesPartnerInstagram,
+      PartnerAssets.imagesPartnerTicTok,
+      PartnerAssets.imagesPartnerSnapChat,
     ],
     "13": [
-      imagesFriendsSingle,
-      imagesFriendsWithFamily,
-      imagesFriendsWithFriends,
-      imagesFriendsWithNewPeople
+      PartnerAssets.imagesPartnerSwimming,
+      PartnerAssets.imagesPartnerFootball,
+      PartnerAssets.imagesPartnerBasketball,
+      PartnerAssets.imagesPartnerBoxing,
     ],
     "14": [
       imagesFriendsVanilla,
@@ -92,6 +94,43 @@ class FriendsAssets {
       imagesFriendsBohemian
     ],
   };
+
+  /// Assets for imagesFriendsMeat
+  /// assats/images/friends/Meat.jpg
+  static const String imagesFriendsMeat = "assats/images/friends/Meat.jpg";
+
+  /// Assets for imagesFriendsChicken
+  /// assats/images/friends/Chicken.jpg
+  static const String imagesFriendsChicken =
+      "assats/images/friends/Chicken.jpg";
+
+  /// Assets for imagesFriendsSeafood
+  /// assats/images/friends/Seafood.jpg
+  static const String imagesFriendsSeafood =
+      "assats/images/friends/Seafood.jpg";
+
+  /// Assets for imagesFriendsVegetables
+  /// assats/images/friends/Vegetables.jpg
+  static const String imagesFriendsVegetables =
+      "assats/images/friends/Vegetables.jpg";
+
+  /// Assets for imagesFriendsClowns
+  /// assats/images/friends/Clowns.jpg
+  static const String imagesFriendsClowns = "assats/images/friends/Clowns.jpg";
+
+  /// Assets for imagesFriendsDark
+  /// assats/images/friends/Dark.jpg
+  static const String imagesFriendsDark = "assats/images/friends/Dark.jpg";
+
+  /// Assets for imagesFriendsLoneliness
+  /// assats/images/friends/Loneliness.jpg
+  static const String imagesFriendsLoneliness =
+      "assats/images/friends/Loneliness.jpg";
+
+  /// Assets for imagesFriendsHigh places
+  /// assats/images/friends/High places.jpg
+  static const String imagesFriendsHighplaces =
+      "assats/images/friends/High places.jpg";
 
   /// Assets for imagesFriendsBohemian
   /// assats/images/friends/Bohemian.jpg

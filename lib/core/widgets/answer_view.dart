@@ -8,7 +8,7 @@ class AnswerView extends StatelessWidget {
     return Text(
       answer,
       style: TextStyle(
-        fontSize: MediaQuery.sizeOf(context).height * 0.025,
+        fontSize: MediaQuery.sizeOf(context).height * 0.020,
         fontWeight: FontWeight.w600,
       ),
     );

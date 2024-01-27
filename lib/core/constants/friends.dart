@@ -1,8 +1,115 @@
 import 'package:quizygo/core/constants/partner.dart';
 
-class FriendsAssets {
-  FriendsAssets._();
-  static Map<String, List<String>> friendsImage = {
+class Friends {
+  Friends._();
+  static const Map<String, List<String>> quetionAndAnswers = {
+    "1": [
+      "What experience do you want to have?",
+      "Diving",
+      "Sky Diving",
+      "Camping",
+      "Mountaineering"
+    ],
+    "2": [
+      "You wish to travel to ",
+      "Bail",
+      "Maldives",
+      "Kenya",
+      "Dubai",
+    ],
+    "3": [
+      "Your favorite character in SpongeBob",
+      "SpongeBob",
+      "Mr.Krabs",
+      "Plankton",
+      "Squidward",
+    ],
+    "4": [
+      "What charitable work would you like to do?",
+      "Giving Money",
+      "Giving food",
+      "Drilling a well",
+      "Planting a tree"
+    ],
+    "5": [
+      "What kind of snacks do you like most?",
+      "PopCorn",
+      "Nuts",
+      "Candy",
+      "Chips"
+    ],
+    "6": [
+      "Which one do you want to buy?",
+      "Roller Skate",
+      "Bicycle",
+      "Scooter",
+      "Hoverboard",
+    ],
+    "7": [
+      "What is your morning drink?",
+      "Tea",
+      "Coffee",
+      "Matcha",
+      "Milk",
+    ],
+    "8": [
+      "Your favourite mode of travel",
+      "Train",
+      "Bus",
+      "Plane",
+      "Ship",
+    ],
+    "9": [
+      "The view you enjoy",
+      "Greenery",
+      "Sea",
+      "Stars",
+      "Aurora",
+    ],
+    "10": [
+      "Your favorite noodles flavour",
+      "Meat",
+      "Chicken",
+      "Vegetables",
+      "Shrimp",
+    ],
+    "11": [
+      "The pet you want to raise",
+      "Turtle",
+      "Hamster",
+      "Dog",
+      "Cat",
+    ],
+    "12": [
+      "When you are sad, you prefer",
+      "isolation",
+      "Crying",
+      "Go outSide",
+      "Talking to Someone",
+    ],
+    "13": [
+      "The home decor you like the most",
+      "Classic",
+      "Bohemian",
+      "Modern",
+      "New Classic",
+    ],
+    "14": [
+      "Your favorite ice cream flavour",
+      "Vanilla",
+      "Chocolate",
+      "Mango",
+      "Strawberry",
+    ],
+    "15": [
+      "Your favorite style",
+      "Classic",
+      "Casual",
+      "Sport",
+      "Bohemian",
+    ],
+  };
+  static Map<String, List<String>> images = {
     "1": [
       imagesFriendsDiving,
       imagesFriendsSkyDiving,
@@ -10,22 +117,22 @@ class FriendsAssets {
       imagesFriendsMountaineering
     ],
     "2": [
-      PartnerAssets.imagesPartnerBlack,
-      PartnerAssets.imagesPartnerBlue,
-      PartnerAssets.imagesPartnerPink,
-      PartnerAssets.imagesPartnerWhite,
+      Partner.imagesPartnerBali,
+      Partner.imagesPartnerMaldives,
+      Partner.imagesPartnerKenya,
+      Partner.imagesPartnerDubai,
     ],
     "3": [
-      PartnerAssets.imagesPartnerBali,
-      PartnerAssets.imagesPartnerMaldives,
-      PartnerAssets.imagesPartnerKenya,
-      PartnerAssets.imagesPartnerDubai,
+      imagesFriendsSpongeBob,
+      imagesFriendsMrKrabs,
+      imagesFriendsPlankton,
+      imagesFriendsSquidward,
     ],
     "4": [
-      imagesFriendsSingle,
-      imagesFriendsWithFamily,
-      imagesFriendsWithFriends,
-      imagesFriendsWithNewPeople
+      imagesFriendsGivingmoney,
+      imagesFriendsGivingfood,
+      imagesFriendsDrillingawell,
+      imagesFriendsPlantingatree
     ],
     "5": [
       imagesFriendsPopcorn,
@@ -34,10 +141,10 @@ class FriendsAssets {
       imagesFriendsChips
     ],
     "6": [
-      PartnerAssets.imagesPartnerFood,
-      PartnerAssets.imagesPartnerCars,
-      PartnerAssets.imagesPartnerMoney,
-      PartnerAssets.imagesPartnerTravelling,
+      imagesFriendsRollerskate,
+      imagesFriendsBicycle,
+      imagesFriendsScooter,
+      imagesFriendsHoverboard,
     ],
     "7": [
       imagesFriendsTea,
@@ -46,40 +153,40 @@ class FriendsAssets {
       imagesFriendsMilk
     ],
     "8": [
-      imagesFriendsMeat,
-      imagesFriendsChicken,
-      imagesFriendsSeafood,
-      imagesFriendsVegetables
+      imagesFriendsTrain,
+      imagesFriendsBus,
+      imagesFriendsPlane,
+      imagesFriendsShip,
     ],
     "9": [
-      PartnerAssets.imagesPartnerSummer,
-      PartnerAssets.imagesPartnerWinter,
-      PartnerAssets.imagesPartnerAutumn,
-      PartnerAssets.imagesPartnerSpring
+      imagesFriendsGreenery,
+      imagesFriendsSea,
+      Partner.imagesPartnerStars,
+      Partner.imagesPartnerAurora
     ],
     "10": [
-      imagesFriendsClowns,
-      imagesFriendsDark,
-      imagesFriendsLoneliness,
-      imagesFriendsHighplaces
+      imagesFriendsMeat,
+      imagesFriendsChicken,
+      imagesFriendsVegetables,
+      imagesFriendsShrimp,
     ],
     "11": [
-      imagesFriendsWatchingTV,
-      imagesFriendsReading,
-      imagesFriendsSleeping,
-      imagesFriendsTryingSomethingNew
+      Partner.imagesPartnerTurtle,
+      Partner.imagesPartnerHamster,
+      Partner.imagesPartnerDog,
+      Partner.imagesPartnerCat,
     ],
     "12": [
-      PartnerAssets.imagesPartnerFacebook,
-      PartnerAssets.imagesPartnerInstagram,
-      PartnerAssets.imagesPartnerTicTok,
-      PartnerAssets.imagesPartnerSnapChat,
+      imagesFriendsIsolation,
+      imagesFriendsCrying,
+      imagesFriendsGooutside,
+      imagesFriendsTakingtosomeone,
     ],
     "13": [
-      PartnerAssets.imagesPartnerSwimming,
-      PartnerAssets.imagesPartnerFootball,
-      PartnerAssets.imagesPartnerBasketball,
-      PartnerAssets.imagesPartnerBoxing,
+      imagesFriendsDecorClassic,
+      imagesFriendsDecorBohemian,
+      imagesFriendsDecorModern,
+      imagesFriendsNewclassic,
     ],
     "14": [
       imagesFriendsVanilla,
@@ -94,6 +201,137 @@ class FriendsAssets {
       imagesFriendsBohemian
     ],
   };
+
+  /// Assets for imagesFriendsDecorClassic
+  /// assats/images/friends/decorClassic.jpg
+  static const String imagesFriendsDecorClassic =
+      "assats/images/friends/decorClassic.jpg";
+
+  /// Assets for imagesFriendsdecorModern
+  /// assats/images/friends/decorModern.jpg
+  static const String imagesFriendsDecorModern =
+      "assats/images/friends/decorModern.jpg";
+
+  /// Assets for imagesFriendsNew classic
+  /// assats/images/friends/New classic.jpg
+  static const String imagesFriendsNewclassic =
+      "assats/images/friends/New classic.jpg";
+
+  /// Assets for imagesFriendsdecorBohemian
+  /// assats/images/friends/decorBohemian.jpg
+  static const String imagesFriendsDecorBohemian =
+      "assats/images/friends/decorBohemian.jpg";
+
+  /// Assets for imagesFriendsIsolation
+  /// assats/images/friends/Isolation.jpg
+  static const String imagesFriendsIsolation =
+      "assats/images/friends/Isolation.jpg";
+
+  /// Assets for imagesFriendsCrying
+  /// assats/images/friends/Crying.jpg
+  static const String imagesFriendsCrying = "assats/images/friends/Crying.jpg";
+
+  /// Assets for imagesFriendsTakingtosomeone
+  /// assats/images/friends/Taking to someone.jpg
+  static const String imagesFriendsTakingtosomeone =
+      "assats/images/friends/Taking to someone.jpg";
+
+  /// Assets for imagesFriendsGreenery
+  /// assats/images/friends/Greenery.jpg
+  static const String imagesFriendsGreenery =
+      "assats/images/friends/Greenery.jpg";
+
+  /// Assets for imagesFriendsShrimp
+  /// assats/images/friends/Shrimp.jpg
+  static const String imagesFriendsShrimp = "assats/images/friends/Shrimp.jpg";
+
+  /// Assets for imagesFriendsGo outside
+  /// assats/images/friends/Go outside.jpg
+  static const String imagesFriendsGooutside =
+      "assats/images/friends/Go outside.jpg";
+
+  /// Assets for imagesFriendsSea
+  /// assats/images/friends/Sea.jpg
+  static const String imagesFriendsSea = "assats/images/friends/Sea.jpg";
+
+  /// Assets for imagesFriendsTrain
+  /// assats/images/friends/Train.jpg
+
+  /// Assets for imagesFriendsTrain
+  /// assats/images/friends/Train.jpg
+  static const String imagesFriendsTrain = "assats/images/friends/Train.jpg";
+
+  /// Assets for imagesFriendsBus
+  /// assats/images/friends/Bus.jpg
+  static const String imagesFriendsBus = "assats/images/friends/Bus.jpg";
+
+  /// Assets for imagesFriendsPlane
+  /// assats/images/friends/Plane.jpg
+  static const String imagesFriendsPlane = "assats/images/friends/Plane.jpg";
+
+  /// Assets for imagesFriendsShip
+  /// assats/images/friends/Ship.jpg
+  static const String imagesFriendsShip = "assats/images/friends/Ship.jpg";
+
+  /// Assets for imagesFriendsHoverboard
+  /// assats/images/friends/Hoverboard.jpg
+  static const String imagesFriendsHoverboard =
+      "assats/images/friends/Hoverboard.jpg";
+
+  /// Assets for imagesFriendsBicycle
+  /// assats/images/friends/Bicycle.jpg
+  static const String imagesFriendsBicycle =
+      "assats/images/friends/Bicycle.jpg";
+
+  /// Assets for imagesFriendsRoller skate
+  /// assats/images/friends/Roller skate.jpg
+  static const String imagesFriendsRollerskate =
+      "assats/images/friends/Roller skate.jpg";
+
+  /// Assets for imagesFriendsPlankton
+  /// assats/images/friends/Plankton.jpg
+  static const String imagesFriendsPlankton =
+      "assats/images/friends/Plankton.jpg";
+
+  /// Assets for imagesFriendsScooter
+  /// assats/images/friends/Scooter.jpg
+  static const String imagesFriendsScooter =
+      "assats/images/friends/Scooter.jpg";
+
+  /// Assets for imagesFriendsSpongeBob
+  /// assats/images/friends/SpongeBob.jpg
+  static const String imagesFriendsSpongeBob =
+      "assats/images/friends/SpongeBob.jpg";
+
+  /// Assets for imagesFriendsSpongeBob
+  /// assats/images/friends/Squidward.jpg
+  static const String imagesFriendsSquidward =
+      "assats/images/friends/Squidward.jpg";
+
+  /// Assets for imagesFriendsMr. Krabs
+  /// assats/images/friends/Mr. Krabs.jpg
+  static const String imagesFriendsMrKrabs =
+      "assats/images/friends/Mr. Krabs.jpg";
+
+  /// Assets for imagesFriendsPlanting a tree
+  /// assats/images/friends/Planting a tree.jpg
+  static const String imagesFriendsPlantingatree =
+      "assats/images/friends/Planting a tree.jpg";
+
+  /// Assets for imagesFriendsDrilling a well
+  /// assats/images/friends/Drilling a well.jpg
+  static const String imagesFriendsDrillingawell =
+      "assats/images/friends/Drilling a well.jpg";
+
+  /// Assets for imagesFriendsGivingmoney
+  /// assats/images/friends/Givingmoney.jpg
+  static const String imagesFriendsGivingmoney =
+      "assats/images/friends/Giving money.jpg";
+
+  /// Assets for imagesFriendsGivingfood
+  /// assats/images/friends/Giving food.jpg
+  static const String imagesFriendsGivingfood =
+      "assats/images/friends/Giving food.jpg";
 
   /// Assets for imagesFriendsMeat
   /// assats/images/friends/Meat.jpg

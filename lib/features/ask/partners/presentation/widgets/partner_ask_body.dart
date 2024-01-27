@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quizygo/core/constants/partner.dart';
-import 'package:quizygo/core/constants/quetions.dart';
 import 'package:quizygo/features/ask/friends/presentation/widgets/numbers_of_quetion.dart';
 import 'package:quizygo/features/ask/friends/presentation/widgets/quetion_view.dart';
 
@@ -15,8 +14,8 @@ class PartnerAskBody extends StatelessWidget {
         NumbersOfQuetion(),
         Expanded(child: SizedBox()),
         QuetionsView(
-          quetionAndChoices: Quetions.partnerQuetion,
-          quetionImage: PartnerAssets.partnerImage,
+          quetionAndChoices: Partner.quetionsAndAnswer,
+          quetionImage: Partner.images,
         ),
         Expanded(child: SizedBox())
       ],

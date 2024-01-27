@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizygo/core/constants/keys.dart';
+import 'package:quizygo/features/share/presentation/share_view.dart';
 
 part 'anwser_state.dart';
 
@@ -31,7 +33,7 @@ class AnwserCubit extends Cubit<AnwserState> {
     }
   }
 
-  Future<void> checkAnswerState() async {
+  Future<void> checkAnswerState(BuildContext context) async {
     if (numberOfQuetion < 15) {
       await Future.delayed(const Duration(seconds: 1));
       addAnwserToMyAnswers();
@@ -39,6 +41,7 @@ class AnwserCubit extends Cubit<AnwserState> {
       emit(NavigateToNextQuetion());
     } else {
       await addAnwsersToFireBase(myAnswers);
+      Navigator.popAndPushNamed(context, ShareLinkView.id);
     }
   }
 
@@ -55,14 +58,14 @@ class AnwserCubit extends Cubit<AnwserState> {
     //this line because index 16 have no data
     answers.addAll({numberOfQuetion.toString(): answer});
     CollectionReference myAnswers =
-        FirebaseFirestore.instance.collection('Answers');
+        FirebaseFirestore.instance.collection(kCollection);
     documentId = await myAnswers.add(answers).then((value) => value.id);
   }
 
   Future<Map<String, String>> getAnwsersFromFireBase(
       {required String documentId}) async {
     CollectionReference myAnswers =
-        FirebaseFirestore.instance.collection('Answers');
+        FirebaseFirestore.instance.collection(kCollection);
     DocumentSnapshot<Object?> yourAnswer =
         await myAnswers.doc(documentId).get();
     Map<String, String> data = yourAnswer.data() as Map<String, String>;

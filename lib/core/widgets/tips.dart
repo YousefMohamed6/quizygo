@@ -18,11 +18,12 @@ class Tips extends StatelessWidget {
           text: "❓ Answer any 15 questions about yourself.",
         ),
         SizedBox(height: 16),
-        TipsText(text: "📢 Share your quiz-link with your Friends & Family."),
+        TipsText(
+            text: "📢 Share your quiz-link with your Friends\n& Family."),
         SizedBox(height: 16),
         TipsText(text: "🤔 Your friends will try to guess the right answers."),
         SizedBox(height: 16),
-        TipsText(text: "🥇 Check the score of your Friends at your quiz-link!"),
+        TipsText(text: "🥇 Check the score of your Friends at\n your quiz-link!"),
       ],
     );
   }

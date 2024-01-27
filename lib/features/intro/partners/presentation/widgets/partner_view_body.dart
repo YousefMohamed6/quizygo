@@ -14,7 +14,7 @@ class PartnerIntroBody extends StatelessWidget {
     return IntroView(
       formKey: BlocProvider.of<AnwserCubit>(context).formKey,
       title: "😍 Test Your Partnership 😉",
-      subTitle: "Do your Partner actually know you?",
+      subTitle: "Does your Partner really know you?",
       onPressed: () {
         var formKey = BlocProvider.of<AnwserCubit>(context).formKey;
         if (formKey.currentState!.validate()) {

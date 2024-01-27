@@ -1,8 +1,115 @@
 import 'package:quizygo/core/constants/friends.dart';
 
-class PartnerAssets {
-  PartnerAssets._();
-  static const Map<String, List<String>> partnerImage = {
+class Partner {
+  Partner._();
+  static const Map<String, List<String>> quetionsAndAnswer = {
+    "1": [
+      "What kind of restaurants do you prefer?",
+      "Fancy",
+      "Fast Casual",
+      "Food Truck",
+      "Cafe",
+    ],
+    "2": [
+      "What makes you most afraid?",
+      "Clowns",
+      "Dark",
+      "loneliness",
+      "High places",
+    ],
+    "3": [
+      "Your favorite style",
+      "Classic",
+      "Casual",
+      "Sporty",
+      "Bohemian",
+    ],
+    "4": [
+      "You like most",
+      "Food",
+      "Cars",
+      "Money",
+      "Traveling",
+    ],
+    "5": [
+      "You prefer",
+      "Meat",
+      "Chicken",
+      "Seafood",
+      "Vegetables",
+    ],
+    "6": [
+      "You like to watch",
+      "Sunset",
+      "Sunrise",
+      "Stars",
+      "Aurora",
+    ],
+    "7": [
+      "What Do you like most",
+      "Dogs",
+      "Cats",
+      "Hamster",
+      "Turtle",
+    ],
+    "8": [
+      "What do you do in your free time",
+      "Sleep",
+      "Playing",
+      "Reading",
+      "Meditation",
+    ],
+    "9": [
+      "You like to practice",
+      "Swimming",
+      "Football",
+      "Basketball",
+      "Boxing",
+    ],
+    "10": [
+      "You are more interested in news about",
+      "Art",
+      "Sports",
+      "Politics",
+      "Fashion"
+    ],
+    "11": [
+      "Your favorite color",
+      "Black",
+      "Blue",
+      "Pink",
+      "White",
+    ],
+    "12": [
+      "You wish to travel to ",
+      "Bail",
+      "Maldives",
+      "Kenya",
+      "Dubai",
+    ],
+    "13": [
+      "What is the first thing you do in the morning?",
+      "Work",
+      "Gym",
+      "Studying",
+      "Stay at Home",
+    ],
+    "14": [
+      "Your favorite type of chocolate",
+      "Dark",
+      "White",
+      "Milk",
+      "Nuts",
+    ],
+    "15": [
+      "Your favorite season",
+      "Winter",
+      "Autumn",
+      "Spring",
+      "Summer",
+    ],
+  };
+  static const Map<String, List<String>> images = {
     "1": [
       imagesPartnerFancy,
       imagesPartnerFastCasual,
@@ -10,10 +117,10 @@ class PartnerAssets {
       imagesPartnerCafe,
     ],
     "2": [
-      imagesPartnerFacebook,
-      imagesPartnerInstagram,
-      imagesPartnerTicTok,
-      imagesPartnerSnapChat,
+      Friends.imagesFriendsClowns,
+      Friends.imagesFriendsDark,
+      Friends.imagesFriendsLoneliness,
+      Friends.imagesFriendsHighplaces
     ],
     "3": [
       imagesPartnerClassic,
@@ -28,10 +135,10 @@ class PartnerAssets {
       imagesPartnerTravelling,
     ],
     "5": [
-      imagesPartnerAlone,
-      imagesPartnerWithFriends,
-      FriendsAssets.imagesFriendsWithFamily,
-      imagesPartnerWithYourLover,
+      Friends.imagesFriendsMeat,
+      Friends.imagesFriendsChicken,
+      Friends.imagesFriendsSeafood,
+      Friends.imagesFriendsVegetables
     ],
     "6": [
       imagesPartnerSunset,
@@ -42,14 +149,14 @@ class PartnerAssets {
     "7": [
       imagesPartnerDog,
       imagesPartnerCat,
-      imagesPartnerBaghbhans,
-      imagesPartnerBirds,
+      imagesPartnerHamster,
+      imagesPartnerTurtle,
     ],
     "8": [
       imagesPartnerSleeping,
-      imagesPartnerMeditation,
-      imagesPartnerReading,
       imagesPartnerPlaying,
+      imagesPartnerReading,
+      imagesPartnerMeditation,
     ],
     "9": [
       imagesPartnerSwimming,
@@ -78,7 +185,7 @@ class PartnerAssets {
     "13": [
       imagesPartnerWork,
       imagesPartnerGym,
-      imagesPartnerJogging,
+      imagesPartnerStudying,
       imagesPartnerStayAtHome
     ],
     "14": [
@@ -94,6 +201,15 @@ class PartnerAssets {
       imagesPartnerSummer,
     ],
   };
+
+  /// Assets for imagesPartnerHamster
+  /// assats/images/partner/Hamster.jpg
+  static const String imagesPartnerHamster =
+      "assats/images/partner/Hamster.jpg";
+
+  /// Assets for imagesPartnerTurtle
+  /// assats/images/partner/Turtle.jpg
+  static const String imagesPartnerTurtle = "assats/images/partner/Turtle.jpg";
 
   /// Assets for imagesPartnerSpring
   /// assats/images/partner/Spring.jpg
@@ -324,10 +440,10 @@ class PartnerAssets {
   static const String imagesPartnerInstagram =
       "assats/images/partner/Instagram.jpg";
 
-  /// Assets for imagesPartnerJogging
-  /// assats/images/partner/Jogging.jpg
-  static const String imagesPartnerJogging =
-      "assats/images/partner/Jogging.jpg";
+  /// Assets for imagesPartnerStudying
+  /// assats/images/partner/Studying.jpg
+  static const String imagesPartnerStudying =
+      "assats/images/partner/Studying.jpg";
 
   /// Assets for imagesPartnerLong hair
   /// assats/images/partner/Long hair.jpg

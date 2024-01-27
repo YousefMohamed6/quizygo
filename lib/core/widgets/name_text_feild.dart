@@ -7,6 +7,7 @@ class NameTextFeild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
       validator: (value) {
         if (value == null || value.isEmpty) {
           return "Enter Your Name";

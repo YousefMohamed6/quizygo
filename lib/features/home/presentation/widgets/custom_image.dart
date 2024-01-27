@@ -11,8 +11,8 @@ class CustomImage extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       children: [
         Container(
-          width: MediaQuery.sizeOf(context).width * 0.40,
-          height: MediaQuery.sizeOf(context).height * 0.40,
+          width: MediaQuery.sizeOf(context).width * 0.45,
+          height: MediaQuery.sizeOf(context).height * 0.35,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             image: DecorationImage(

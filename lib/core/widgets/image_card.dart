@@ -19,7 +19,7 @@ class ImageCard extends StatelessWidget {
       onTap: () async {
         BlocProvider.of<AnwserCubit>(context).answer = answer;
         BlocProvider.of<AnwserCubit>(context).changeColorOfTheChoise();
-        BlocProvider.of<AnwserCubit>(context).checkAnswerState();
+        BlocProvider.of<AnwserCubit>(context).checkAnswerState(context);
       },
       child: ImageAndAnswer(
         answer: answer,

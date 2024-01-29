@@ -3,6 +3,7 @@ import 'package:quizygo/features/home/presentation/widgets/custom_image.dart';
 import 'package:quizygo/features/home/presentation/widgets/title_and_subtitle.dart';
 import 'package:quizygo/features/intro/friends/presentation/friends_intro_view.dart';
 import 'package:quizygo/features/intro/partners/presentation/partner_view.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -11,9 +12,9 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        const TitleAndSubTitle(
-          title: 'Real partner 🗝❤',
-          subtitle: 'How well does you partner know you ?',
+        TitleAndSubTitle(
+          title: S.of(context).testPartner,
+          subtitle: S.of(context).subTitlePartener,
         ),
         CustomImage(
           path: "assats/images/partner.jpg",
@@ -22,9 +23,9 @@ class HomeViewBody extends StatelessWidget {
           },
         ),
         const SizedBox(height: 16),
-        const TitleAndSubTitle(
-          title: 'Test your friends ✌🏻❤',
-          subtitle: 'How well does your friends know you ?',
+        TitleAndSubTitle(
+          title: S.of(context).testFriend,
+          subtitle: S.of(context).testFriendSubTitle,
         ),
         CustomImage(
           path: "assats/images/friends.png",

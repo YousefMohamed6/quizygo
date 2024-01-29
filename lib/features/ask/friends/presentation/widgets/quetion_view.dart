@@ -11,45 +11,45 @@ class QuetionsView extends StatelessWidget {
   final Map<String, List<String>> quetionImage;
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AnwserCubit, AnwserState>(builder: (context, state) {
+    return BlocBuilder<AnswerCubit, AnswerState>(builder: (context, state) {
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           QuetionText(
-            quetionText: quetionAndChoices[BlocProvider.of<AnwserCubit>(context)
+            quetionText: quetionAndChoices[BlocProvider.of<AnswerCubit>(context)
                 .numberOfQuetion
                 .toString()]![0],
           ),
           const SizedBox(height: 16),
           DoubleImage(
-            fristImagePath: quetionImage[BlocProvider.of<AnwserCubit>(context)
+            fristImagePath: quetionImage[BlocProvider.of<AnswerCubit>(context)
                 .numberOfQuetion
                 .toString()]![0],
-            fristAnswer: quetionAndChoices[BlocProvider.of<AnwserCubit>(context)
+            fristAnswer: quetionAndChoices[BlocProvider.of<AnswerCubit>(context)
                 .numberOfQuetion
                 .toString()]![1],
-            secondImagePath: quetionImage[BlocProvider.of<AnwserCubit>(context)
+            secondImagePath: quetionImage[BlocProvider.of<AnswerCubit>(context)
                 .numberOfQuetion
                 .toString()]![1],
             secondAnswer: quetionAndChoices[
-                BlocProvider.of<AnwserCubit>(context)
+                BlocProvider.of<AnswerCubit>(context)
                     .numberOfQuetion
                     .toString()]![2],
           ),
           const SizedBox(height: 8),
           DoubleImage(
-            fristImagePath: quetionImage[BlocProvider.of<AnwserCubit>(context)
+            fristImagePath: quetionImage[BlocProvider.of<AnswerCubit>(context)
                 .numberOfQuetion
                 .toString()]![2],
-            fristAnswer: quetionAndChoices[BlocProvider.of<AnwserCubit>(context)
+            fristAnswer: quetionAndChoices[BlocProvider.of<AnswerCubit>(context)
                 .numberOfQuetion
                 .toString()]![3],
-            secondImagePath: quetionImage[BlocProvider.of<AnwserCubit>(context)
+            secondImagePath: quetionImage[BlocProvider.of<AnswerCubit>(context)
                 .numberOfQuetion
                 .toString()]![3],
             secondAnswer: quetionAndChoices[
-                BlocProvider.of<AnwserCubit>(context)
+                BlocProvider.of<AnswerCubit>(context)
                     .numberOfQuetion
                     .toString()]![4],
           ),

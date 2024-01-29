@@ -2,7 +2,7 @@ import 'package:quizygo/core/constants/friends.dart';
 
 class Partner {
   Partner._();
-  static const Map<String, List<String>> quetionsAndAnswer = {
+  static const Map<String, List<String>> quetionsAndAnswerEn = {
     "1": [
       "What kind of restaurants do you prefer?",
       "Fancy",
@@ -109,6 +109,108 @@ class Partner {
       "Summer",
     ],
   };
+  static const Map<String, List<String>> quetionsAndAnswerAr = {
+    "1": [
+      "أي نوع من المطاعم تفضل؟",
+      "السريعه",
+      "عربات الطعام",
+      "الفاخرة",
+      "كافيه",
+    ],
+    "2": [
+      "ماالذي يجعلك خائفا أكثر",
+      "المهرجين",
+      "الظلام",
+      "الوحدة",
+      "الأماكن المرتفعة",
+    ],
+    "3": [
+      "ذوقك المفضل",
+      "كلاسيكي",
+      "غير رسمي",
+      "رياضي",
+      "بوهيمي",
+    ],
+    "4": [
+      "تحب اكثر",
+      "الطعام",
+      "السيارات",
+      "المال",
+      "السفر",
+    ],
+    "5": [
+      "انت تفضل",
+      "اللحوم",
+      "الدواجن",
+      "المأكولات البحرية",
+      "الخضروات",
+    ],
+    "6": [
+      "تحب أن تشاهد",
+      "الشروق",
+      "الغروب",
+      "النجوم",
+      "الشفق القطبي",
+    ],
+    "7": [
+      "ماذا تحب أكثر",
+      "القطط",
+      "الكلاب",
+      "السلاحف",
+      "الهامستر",
+    ],
+    "8": [
+      "ماذا تفعل في وقت فراغك؟",
+      "تنام",
+      "تلعب",
+      "تقرأ",
+      "تتأمل",
+    ],
+    "9": [
+      "تحب أن تتدرب",
+      "سباحة ",
+      "كرة قدم",
+      "ملاكمة",
+      "كرة سلة",
+    ],
+    "10": ["انت مهتم أكثر بأخبار", "الفن", "الرياضة", "السياسة", "الموضة"],
+    "11": [
+      "لونك المفضل",
+      "الأسود",
+      "الأزرق",
+      "الوردي",
+      "الأبيض",
+    ],
+    "12": [
+      "التي ترغب في السفر إليها",
+      "بالي",
+      "مالديفز",
+      "كينيا",
+      "دبي",
+    ],
+    "13": [
+      "ما هو أول شيء تفعله في الصباح؟",
+      "العمل",
+      "الچيم",
+      "الدراسة",
+      "البقاء في المنزل",
+    ],
+    "14": [
+      "نوع الشوكولاتة المفضل لديك",
+      "الداكنه",
+      "البيضاء",
+      "الحليب",
+      "المكسرات",
+    ],
+    "15": [
+      "Your favorite season",
+      "الشتاء",
+      "الخريف",
+      "الربيع",
+      "الصيف",
+    ],
+  };
+
   static const Map<String, List<String>> images = {
     "1": [
       imagesPartnerFancy,
@@ -135,10 +237,10 @@ class Partner {
       imagesPartnerTravelling,
     ],
     "5": [
-      Friends.imagesFriendsMeat,
-      Friends.imagesFriendsChicken,
-      Friends.imagesFriendsSeafood,
-      Friends.imagesFriendsVegetables
+      imagesPartnerMeat,
+      imagesPartnerChicken,
+      imagesPartnerSeafood,
+      imagesPartnerVegetables,
     ],
     "6": [
       imagesPartnerSunset,
@@ -201,6 +303,25 @@ class Partner {
       imagesPartnerSummer,
     ],
   };
+
+  /// Assets for imagesPartnerMeat
+  /// assats/imagesPartner/Meat.jpg
+  static const String imagesPartnerMeat = "assats/images/partner/Meat.jpg";
+
+  /// Assets for imagesPartnerChicken
+  /// assats/imagesPartner/Chicken.jpg
+  static const String imagesPartnerChicken =
+      "assats/images/partner/Chicken.jpg";
+
+  /// Assets for imagesPartnerSeafood
+  /// assats/images/Partner/Seafood.jpg
+  static const String imagesPartnerSeafood =
+      "assats/images/partner/Seafood.jpg";
+
+  /// Assets for imagesPartnerVegetables
+  /// assats/images/Partner/Vegetables.jpg
+  static const String imagesPartnerVegetables =
+      "assats/images/partner/Vegetables.jpg";
 
   /// Assets for imagesPartnerHamster
   /// assats/images/partner/Hamster.jpg

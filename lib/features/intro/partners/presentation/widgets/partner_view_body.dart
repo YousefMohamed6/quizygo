@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
 import 'package:quizygo/core/widgets/intro_view.dart';
 import 'package:quizygo/features/ask/partners/presentation/partner_ask_view.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class PartnerIntroBody extends StatelessWidget {
   const PartnerIntroBody({
@@ -12,13 +13,13 @@ class PartnerIntroBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IntroView(
-      formKey: BlocProvider.of<AnwserCubit>(context).formKey,
-      title: "😍 Test Your Partnership 😉",
-      subTitle: "Does your Partner really know you?",
+      formKey: BlocProvider.of<AnswerCubit>(context).formKey,
+      title: S.of(context).testPartnerIntro,
+      subTitle: S.of(context).subTitlePartenerIntro,
       onPressed: () {
-        var formKey = BlocProvider.of<AnwserCubit>(context).formKey;
+        var formKey = BlocProvider.of<AnswerCubit>(context).formKey;
         if (formKey.currentState!.validate()) {
-          BlocProvider.of<AnwserCubit>(context).addUserNameToMyAnswers();
+          BlocProvider.of<AnswerCubit>(context).addUserNameToMyAnswers();
           Navigator.pushNamed(context, PartnerAskView.id);
         }
       },

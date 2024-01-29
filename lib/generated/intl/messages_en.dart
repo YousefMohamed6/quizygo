@@ -21,5 +21,41 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "about": MessageLookupByLibrary.simpleMessage("About"),
+        "answer": MessageLookupByLibrary.simpleMessage(
+            "❓ Answer any 15 questions about yourself."),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "check": MessageLookupByLibrary.simpleMessage(
+            "🥇 Check the score of your Friends at\n your quiz-link!"),
+        "contact": MessageLookupByLibrary.simpleMessage("Contact Us"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "enterName": MessageLookupByLibrary.simpleMessage("✍️ Enter Your Name"),
+        "guess": MessageLookupByLibrary.simpleMessage(
+            "🤔 Your friends will try to guess the right answers."),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "language": MessageLookupByLibrary.simpleMessage("language"),
+        "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "share": MessageLookupByLibrary.simpleMessage(
+            "📢 Share your quiz-link with your Friends\n& Family."),
+        "start": MessageLookupByLibrary.simpleMessage("Start"),
+        "subTitlePartener": MessageLookupByLibrary.simpleMessage(
+            "How well dose you partner know you ?"),
+        "subTitlePartenerIntro": MessageLookupByLibrary.simpleMessage(
+            "Does your Partner really know you?"),
+        "terms": MessageLookupByLibrary.simpleMessage("Terms of Use"),
+        "testFriend":
+            MessageLookupByLibrary.simpleMessage("Test your friends ✌🏻❤"),
+        "testFriendIntro":
+            MessageLookupByLibrary.simpleMessage("😍 Test Your Friendship 😉"),
+        "testFriendSubTitle": MessageLookupByLibrary.simpleMessage(
+            "How well do your friends know you ?"),
+        "testFriendSubTitleIntro": MessageLookupByLibrary.simpleMessage(
+            "Do your friends really know you?"),
+        "testPartner": MessageLookupByLibrary.simpleMessage("Real partner 🗝❤"),
+        "testPartnerIntro":
+            MessageLookupByLibrary.simpleMessage("😍 Test Your Partnership 😉"),
+        "tips": MessageLookupByLibrary.simpleMessage("Tips !"),
+        "validation": MessageLookupByLibrary.simpleMessage("Enter your Name")
+      };
 }

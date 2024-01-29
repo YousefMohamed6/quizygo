@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class StartButton extends StatelessWidget {
   const StartButton({super.key, required this.onPressed});
@@ -17,7 +18,7 @@ class StartButton extends StatelessWidget {
         ),
       ),
       child: Text(
-        'Start',
+        S.of(context).start,
         style: TextStyle(
           fontSize: MediaQuery.sizeOf(context).height * 0.030,
         ),

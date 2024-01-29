@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
+import 'package:quizygo/core/constants/keys.dart';
+import 'package:quizygo/core/url_launcher.dart';
 import 'package:quizygo/features/menu/presentation/widgets/email.dart';
 
 class AboutUsBody extends StatelessWidget {
@@ -8,35 +11,34 @@ class AboutUsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 36),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
         children: [
           const SizedBox(height: 48),
           Text(
             "About Us",
             style: TextStyle(
-              fontSize: MediaQuery.sizeOf(context).width * 0.020,
+              fontSize: MediaQuery.sizeOf(context).height * 0.024,
             ),
           ),
           const SizedBox(height: 16),
           Text(
             "We, Team Quizy Go are dedicated to providing exceptional quizzes for social bonding between friends and loved ones but all the contents are for fun and entertainment purposes only.",
             style: TextStyle(
-              fontSize: MediaQuery.sizeOf(context).width * 0.016,
+              fontSize: MediaQuery.sizeOf(context).height * 0.024,
             ),
           ),
           const SizedBox(height: 16),
           Text(
             "We are thankful to all our users, who supported us and made this a huge success.\nWe welcome to the person who has fantastic new ideas and we would be happier to work with them. You can send us your ideas or suggestions on our email.",
             style: TextStyle(
-              fontSize: MediaQuery.sizeOf(context).width * 0.016,
+              fontSize: MediaQuery.sizeOf(context).height * 0.024,
             ),
           ),
           const SizedBox(height: 16),
           Text(
             "Anyone from our visitors wants to advertise their product and services on our website, please send us an email. Our email ID is ",
             style: TextStyle(
-              fontSize: MediaQuery.sizeOf(context).width * 0.016,
+              fontSize: MediaQuery.sizeOf(context).height * 0.024,
             ),
           ),
           const EMail(),
@@ -57,14 +59,18 @@ class AboutUsInformation extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
       ),
-      child: const Column(children: [
-        SizedBox(height: 32),
-        Divider(
-          thickness: 1,
-          color: Colors.black,
-        ),
-        SizedBox(height: 32),
-      ]),
+      child: const Column(
+        children: [
+          SizedBox(height: 32),
+          SocialMediaAccounts(),
+          SizedBox(height: 32),
+          Divider(
+            thickness: 1,
+            color: Colors.black,
+          ),
+          SizedBox(height: 32),
+        ],
+      ),
     );
   }
 }
@@ -74,9 +80,29 @@ class SocialMediaAccounts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [],
+      children: [
+        Account(
+          onPressed: () async {
+            await urlLauncher(url: kFacebook);
+          },
+          icon: const Icon(
+            FontAwesomeIcons.facebook,
+            size: 36,
+            color: Colors.blue,
+          ),
+        ),
+        Account(
+          onPressed: () async {
+            await urlLauncher(url: kTiktok);
+          },
+          icon: const Icon(
+            FontAwesomeIcons.tiktok,
+            size: 36,
+          ),
+        )
+      ],
     );
   }
 }

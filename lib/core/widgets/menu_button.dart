@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
 import 'package:quizygo/features/home/presentation/home_view.dart';
 import 'package:quizygo/features/menu/presentation/views/about_us.dart';
 import 'package:quizygo/features/menu/presentation/views/contact.dart';
 import 'package:quizygo/features/menu/presentation/views/private_policy.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class MenuButton extends StatelessWidget {
   const MenuButton({super.key});
@@ -16,44 +19,81 @@ class MenuButton extends StatelessWidget {
       ),
       onSelected: (value) {
         switch (value) {
-          case "hello":
+          case "home":
             Navigator.popAndPushNamed(context, HomeView.id);
             break;
           case "about":
-            Navigator.pushNamed(context, AboutUs.id);
+            Navigator.popAndPushNamed(context, AboutUs.id);
             break;
           case "contact":
-            Navigator.pushNamed(context, Contact.id);
+            Navigator.popAndPushNamed(context, Contact.id);
             break;
           case "Privacy":
-            Navigator.pushNamed(context, PrivatePolicy.id);
+            Navigator.popAndPushNamed(context, PrivatePolicy.id);
             break;
         }
       },
       itemBuilder: (BuildContext menu) {
-        return const [
+        return [
           PopupMenuItem(
-            value: 'hello',
-            child: Text("Hello"),
-          ),
-          PopupMenuItem(
-            value: 'contact',
-            child: Text("Contact"),
+            value: 'home',
+            child: Text(S.of(context).home),
           ),
           PopupMenuItem(
             value: 'Privacy',
-            child: Text("Privacy Policy"),
+            child: Text(S.of(context).privacy),
           ),
           PopupMenuItem(
             value: 'Terms',
-            child: Text("Terms Of Use"),
+            child: Text(S.of(context).terms),
+          ),
+          PopupMenuItem(
+            value: 'contact',
+            child: Text(S.of(context).contact),
           ),
           PopupMenuItem(
             value: 'about',
-            child: Text("About"),
+            child: Text(S.of(context).about),
+          ),
+          const PopupMenuItem(
+            value: 'language',
+            child: LanguageMenu(),
           ),
         ];
       },
+    );
+  }
+}
+
+class LanguageMenu extends StatelessWidget {
+  const LanguageMenu({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton(
+      child: Text(S.of(context).language),
+      onSelected: (value) {
+        switch (value) {
+          case "ar":
+            BlocProvider.of<AnswerCubit>(context)
+                .changeLanguage(isArabic: true);
+            break;
+          case "en":
+            BlocProvider.of<AnswerCubit>(context)
+                .changeLanguage(isArabic: false);
+            break;
+        }
+      },
+      itemBuilder: (context) => [
+        PopupMenuItem(
+          value: 'ar',
+          child: Text(S.of(context).arabic),
+        ),
+        PopupMenuItem(
+          value: 'en',
+          child: Text(S.of(context).english),
+        ),
+      ],
     );
   }
 }

@@ -17,9 +17,9 @@ class ImageCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        BlocProvider.of<AnwserCubit>(context).answer = answer;
-        BlocProvider.of<AnwserCubit>(context).changeColorOfTheChoise();
-        BlocProvider.of<AnwserCubit>(context).checkAnswerState(context);
+        BlocProvider.of<AnswerCubit>(context).answer = answer;
+        BlocProvider.of<AnswerCubit>(context).changeColorOfTheChoise();
+        BlocProvider.of<AnswerCubit>(context).checkAnswerState(context);
       },
       child: ImageAndAnswer(
         answer: answer,

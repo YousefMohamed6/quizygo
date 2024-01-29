@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizygo/core/constants/colors.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class NameTextFeild extends StatelessWidget {
   const NameTextFeild({super.key, required this.controller});
@@ -10,7 +11,7 @@ class NameTextFeild extends StatelessWidget {
       onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return "Enter Your Name";
+          return S.of(context).validation;
         } else {
           return null;
         }
@@ -35,7 +36,7 @@ class NameTextFeild extends StatelessWidget {
             color: ColorManager.borderSideColor,
           ),
         ),
-        hintText: "Enter your Name",
+        hintText: S.of(context).enterName,
         hintStyle: TextStyle(
           fontSize: MediaQuery.sizeOf(context).height * 0.024,
           fontWeight: FontWeight.w500,

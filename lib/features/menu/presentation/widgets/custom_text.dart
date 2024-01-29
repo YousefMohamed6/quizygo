@@ -11,7 +11,7 @@ class CustomText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        fontSize: fontSize ?? MediaQuery.sizeOf(context).width * 0.016,
+        fontSize: fontSize ?? MediaQuery.sizeOf(context).height * 0.020,
         fontWeight: fontWeight,
       ),
     );

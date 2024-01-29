@@ -3,15 +3,17 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
 import 'package:quizygo/core/constants/colors.dart';
+import 'package:quizygo/core/constants/keys.dart';
 import 'package:quizygo/core/constants/partner.dart';
+import 'package:quizygo/core/url_launcher.dart';
 
 class ShareLinkViewBody extends StatelessWidget {
   const ShareLinkViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    String documentId = BlocProvider.of<AnwserCubit>(context).documentId;
-    String userName = BlocProvider.of<AnwserCubit>(context).myAnswers["Name"]!;
+    String documentId = BlocProvider.of<AnswerCubit>(context).documentId;
+    String userName = BlocProvider.of<AnswerCubit>(context).myAnswers["Name"]!;
     return Center(
       child: Container(
         padding: const EdgeInsets.all(16),
@@ -67,17 +69,24 @@ class ShareView extends StatelessWidget {
           title: "Share On WhatsApp",
           buttonColor: Colors.green,
           iconPath: "assats/images/whatsapp.png",
-          onPressed: () {},
+          onPressed: () async {
+            await urlLauncher(
+                url: "https://wa.me/?text=$kShareMessage\n$quizLink");
+          },
         ),
         const SizedBox(height: 8),
-        const ShareFaceAndMassenger(),
+        ShareFaceAndMassenger(quizLink: quizLink),
         const SizedBox(height: 8),
         ShareButton(
           title: "Share On Twitter",
           buttonColor: Colors.black,
           textColor: Colors.white,
           iconPath: "assats/images/twitter.png",
-          onPressed: () {},
+          onPressed: () async {
+            await urlLauncher(
+                url:
+                    "https://twitter.com/intent/tweet?text=$kShareMessage\n&url=$quizLink");
+          },
         ),
         const SizedBox(height: 8),
       ],
@@ -208,26 +217,33 @@ class ShareButton extends StatelessWidget {
 }
 
 class ShareFaceAndMassenger extends StatelessWidget {
-  const ShareFaceAndMassenger({super.key});
-
+  const ShareFaceAndMassenger({super.key, required this.quizLink});
+  final String quizLink;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
           child: ShareButton(
-              title: "Share",
-              buttonColor: const Color.fromRGBO(21, 101, 192, 1),
-              iconPath: Partner.imagesPartnerFacebook,
-              onPressed: () {}),
+            title: "Share",
+            buttonColor: const Color.fromRGBO(21, 101, 192, 1),
+            iconPath: Partner.imagesPartnerFacebook,
+            onPressed: () async {
+              await urlLauncher(
+                  url:
+                      "https://www.facebook.com/sharer/sharer.php?u=$quizLink");
+            },
+          ),
         ),
         const SizedBox(width: 8),
         Expanded(
           child: ShareButton(
             title: "Share",
             buttonColor: Colors.purple,
-            iconPath: "assats/images/messangr.jpeg",
-            onPressed: () {},
+            iconPath: "assats/images/messanger.jpeg",
+            onPressed: () async {
+              await urlLauncher(url: "fb-messenger://share/?link=$quizLink");
+            },
           ),
         ),
       ],

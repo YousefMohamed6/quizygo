@@ -6,9 +6,10 @@ import 'package:quizygo/features/share/presentation/share_view.dart';
 
 part 'anwser_state.dart';
 
-class AnwserCubit extends Cubit<AnwserState> {
-  AnwserCubit() : super(AnwserInitial());
+class AnswerCubit extends Cubit<AnswerState> {
+  AnswerCubit() : super(AnwserInitial());
   int numberOfQuetion = 1;
+  bool isArabic = false;
   String documentId = "";
   String answer = "";
   Map<String, String> answersFromFirebase = {};
@@ -17,6 +18,11 @@ class AnwserCubit extends Cubit<AnwserState> {
   Map<String, String> myAnswers = {};
   void changeColorOfTheChoise() {
     emit(AnwserChangeColor());
+  }
+
+  void changeLanguage({required bool isArabic}) {
+   this.isArabic = isArabic;
+    emit(ChangeLanguage());
   }
 
   void addUserNameToMyAnswers() {

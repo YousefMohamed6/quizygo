@@ -21,36 +21,40 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => AnwserCubit(),
-      child: MaterialApp(
-        title: 'َQuizyGo',
-        localizationsDelegates: const [
-          S.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: S.delegate.supportedLocales,
-        home: const HomeView(),
-        initialRoute: HomeView.id,
-        // applies this theme if the device theme is light mode
-        theme: ThemeData.light(),
-        // applies this theme if the device theme is dark mode
-        darkTheme: ThemeData.dark(),
-        debugShowCheckedModeBanner: false,
-        routes: {
-          HomeView.id: (context) => const HomeView(),
-          FriendsIntroView.id: (context) => const FriendsIntroView(),
-          PartnerIntroView.id: (context) => const PartnerIntroView(),
-          AboutUs.id: (context) => const AboutUs(),
-          Contact.id: (context) => const Contact(),
-          PrivatePolicy.id: (context) => const PrivatePolicy(),
-          FriendsAskView.id: (context) => const FriendsAskView(),
-          PartnerAskView.id: (context) => const PartnerAskView(),
-          ShareLinkView.id: (context) => const ShareLinkView(),
-        },
-      ),
-    );
+    return BlocBuilder<AnswerCubit, AnswerState>(
+        buildWhen: (previous, current) => current is ChangeLanguage,
+        builder: (context, state) {
+          return MaterialApp(
+            title: 'َQuizyGo',
+            locale: BlocProvider.of<AnswerCubit>(context).isArabic
+                ? const Locale("ar")
+                : const Locale("en"),
+            localizationsDelegates: const [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+            home: const HomeView(),
+            initialRoute: HomeView.id,
+            // applies this theme if the device theme is light mode
+            theme: ThemeData.light(),
+            // applies this theme if the device theme is dark mode
+            darkTheme: ThemeData.dark(),
+            debugShowCheckedModeBanner: false,
+            routes: {
+              HomeView.id: (context) => const HomeView(),
+              FriendsIntroView.id: (context) => const FriendsIntroView(),
+              PartnerIntroView.id: (context) => const PartnerIntroView(),
+              AboutUs.id: (context) => const AboutUs(),
+              Contact.id: (context) => const Contact(),
+              PrivatePolicy.id: (context) => const PrivatePolicy(),
+              FriendsAskView.id: (context) => const FriendsAskView(),
+              PartnerAskView.id: (context) => const PartnerAskView(),
+              ShareLinkView.id: (context) => const ShareLinkView(),
+            },
+          );
+        });
   }
 }

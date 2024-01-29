@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizygo/core/constants/colors.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class StartAskButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -27,7 +28,7 @@ class StartAskButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: Text(
-          'START',
+          S.of(context).start,
           style: TextStyle(
             fontSize: MediaQuery.sizeOf(context).height * 0.024,
             fontWeight: FontWeight.w500,

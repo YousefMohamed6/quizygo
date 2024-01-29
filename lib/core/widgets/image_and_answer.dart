@@ -19,7 +19,7 @@ class ImageAndAnswer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: BlocProvider.of<AnwserCubit>(context).answer == answer
+        color: BlocProvider.of<AnswerCubit>(context).answer == answer
             ? ColorManager.borderSideColor
             : null,
         borderRadius: BorderRadius.circular(16),

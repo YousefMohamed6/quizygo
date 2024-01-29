@@ -9,16 +9,16 @@ class ContactBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 36),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
         children: [
           const SizedBox(
             height: 32,
           ),
           Text(
             "Contact",
-            style:
-                TextStyle(fontSize: MediaQuery.sizeOf(context).width * 0.020),
+            style: TextStyle(
+              fontSize: MediaQuery.sizeOf(context).height * 0.024,
+            ),
           ),
           const SizedBox(
             height: 32,
@@ -28,7 +28,8 @@ class ContactBody extends StatelessWidget {
               Text(
                 "Send any questions, ideas or suggestions You can send an email at ",
                 style: TextStyle(
-                    fontSize: MediaQuery.sizeOf(context).width * 0.016),
+                  fontSize: MediaQuery.sizeOf(context).height * 0.024,
+                ),
               ),
               const EMail(),
             ],

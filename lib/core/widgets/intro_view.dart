@@ -59,7 +59,7 @@ class IntroView extends StatelessWidget {
               ),
               const SizedBox(height: 32),
               NameTextFeild(
-                  controller: BlocProvider.of<AnwserCubit>(context).userName),
+                  controller: BlocProvider.of<AnswerCubit>(context).userName),
               const SizedBox(height: 16),
               StartAskButton(
                 onPressed: onPressed,

@@ -20,7 +20,8 @@ class PartnerQuetionView extends StatelessWidget {
         CustomImage(
           path: "assats/images/partner.jpg",
           onPressed: () {
-            BlocProvider.of<AnswerCubit>(context).isFriends = false;
+            BlocProvider.of<AnswerCubit>(context)
+                .addQuetionType(isFriends: false);
             Navigator.pushNamed(context, PartnerIntroView.id);
           },
         ),

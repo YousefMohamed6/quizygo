@@ -20,7 +20,7 @@ class FriendsQuetionView extends StatelessWidget {
         CustomImage(
           path: "assats/images/friends.png",
           onPressed: () {
-            BlocProvider.of<AnswerCubit>(context).isFriends = true;
+            BlocProvider.of<AnswerCubit>(context).addQuetionType(isFriends: true);
             Navigator.pushNamed(context, FriendsIntroView.id);
           },
         ),

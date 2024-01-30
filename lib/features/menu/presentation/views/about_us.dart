@@ -6,7 +6,7 @@ import 'package:quizygo/features/menu/presentation/widgets/about_us_body.dart';
 
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});
-  static const String id = "AboutUs";
+  static const String id = "/AboutUs";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

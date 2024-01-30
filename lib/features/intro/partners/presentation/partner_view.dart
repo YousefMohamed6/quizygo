@@ -6,7 +6,7 @@ import 'package:quizygo/features/intro/partners/presentation/widgets/partner_vie
 
 class PartnerIntroView extends StatelessWidget {
   const PartnerIntroView({super.key});
-  static const String id = "Partner";
+  static const String id = "/Partner";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

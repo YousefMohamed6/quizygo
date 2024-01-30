@@ -6,7 +6,7 @@ import 'package:quizygo/features/share/presentation/widgets/shere_link_body.dart
 
 class ShareLinkView extends StatelessWidget {
   const ShareLinkView({super.key});
-  static const String id = "ShareLink";
+  static const String id = "/ShareLink";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

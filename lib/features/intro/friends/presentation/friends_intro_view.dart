@@ -6,7 +6,7 @@ import 'package:quizygo/features/intro/friends/presentation/widgets/friends_intr
 
 class FriendsIntroView extends StatelessWidget {
   const FriendsIntroView({super.key});
-  static const String id = "Friends";
+  static const String id = "/Friends";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

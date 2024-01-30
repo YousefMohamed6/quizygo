@@ -8,14 +8,14 @@ part 'anwser_state.dart';
 
 class AnswerCubit extends Cubit<AnswerState> {
   AnswerCubit() : super(AnwserInitial());
+  TextEditingController userName = TextEditingController();
+  final formKey = GlobalKey<FormState>();
   int numberOfQuetion = 1;
   bool isArabic = false;
   bool isFriends = false;
   String documentId = "";
   String answer = "";
-  Map<String, dynamic> answersFromFirebase = {};
-  var userName = TextEditingController();
-  final formKey = GlobalKey<FormState>();
+
   Map<String, dynamic> myAnswers = {};
 
   Set<int> numbersOfQuetionIsAnwser = {1};
@@ -30,7 +30,8 @@ class AnswerCubit extends Cubit<AnswerState> {
   }
 
   void addQuetionType({required bool isFriends}) {
-    myAnswers.addAll({kQuetionType: isFriends});
+    this.isFriends = isFriends;
+    myAnswers.addAll({kQuetionType: this.isFriends});
   }
 
   void addUserName() {
@@ -78,7 +79,7 @@ class AnswerCubit extends Cubit<AnswerState> {
     CollectionReference myAnswers =
         FirebaseFirestore.instance.collection(kCollection);
     emit(Loading());
-    try {
+    try  {
       documentId = await myAnswers.add(answers).then((value) => value.id);
       emit(Success());
     } on Exception catch (_) {

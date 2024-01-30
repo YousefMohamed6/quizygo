@@ -6,7 +6,7 @@ import 'package:quizygo/features/menu/presentation/widgets/contact_body.dart';
 
 class Contact extends StatelessWidget {
   const Contact({super.key});
-  static const String id = "Contact";
+  static const String id = "/Contact";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

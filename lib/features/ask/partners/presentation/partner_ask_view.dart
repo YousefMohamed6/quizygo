@@ -6,7 +6,7 @@ import 'package:quizygo/features/ask/partners/presentation/widgets/partner_ask_b
 
 class PartnerAskView extends StatelessWidget {
   const PartnerAskView({super.key});
-  static const String id = "PartnerAsk";
+  static const String id = "/PartnerAsk";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

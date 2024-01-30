@@ -6,7 +6,7 @@ import 'package:quizygo/features/menu/presentation/widgets/private_policy_body.d
 
 class PrivatePolicy extends StatelessWidget {
   const PrivatePolicy({super.key});
-  static const String id = "PrivatePolicy";
+  static const String id = "/PrivatePolicy";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
 import 'package:quizygo/core/constants/colors.dart';
+import 'package:quizygo/core/constants/keys.dart';
 import 'package:quizygo/features/share/presentation/widgets/share_contanier_view.dart';
 
 class ShareLinkViewBody extends StatelessWidget {
@@ -10,7 +11,7 @@ class ShareLinkViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String documentId = BlocProvider.of<AnswerCubit>(context).documentId;
-    String userName = BlocProvider.of<AnswerCubit>(context).myAnswers["Name"]!;
+    String userName = BlocProvider.of<AnswerCubit>(context).myAnswers[kUserName]!;
     return Center(
       child: Container(
         padding: const EdgeInsets.all(16),

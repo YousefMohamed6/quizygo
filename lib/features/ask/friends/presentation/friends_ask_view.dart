@@ -6,7 +6,7 @@ import 'package:quizygo/features/ask/friends/presentation/widgets/friends_ask_bo
 
 class FriendsAskView extends StatelessWidget {
   const FriendsAskView({super.key});
-  static const String id = "FriendsAsk";
+  static const String id = "/FriendsAsk";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

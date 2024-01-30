@@ -8,7 +8,7 @@ import 'package:url_strategy/url_strategy.dart';
 import 'firebase_options.dart';
 
 void main() async {
-  //setPathUrlStrategy();
+  setPathUrlStrategy();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

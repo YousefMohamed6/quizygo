@@ -6,9 +6,7 @@ import 'package:quizygo/features/ask/friends/presentation/friends_ask_view.dart'
 import 'package:quizygo/generated/l10n.dart';
 
 class FriendsIntroBody extends StatelessWidget {
-  const FriendsIntroBody({
-    super.key,
-  });
+  const FriendsIntroBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +17,9 @@ class FriendsIntroBody extends StatelessWidget {
       onPressed: () {
         var formKey = BlocProvider.of<AnswerCubit>(context).formKey;
         if (formKey.currentState!.validate()) {
-          BlocProvider.of<AnswerCubit>(context).addUserNameToMyAnswers();
+          BlocProvider.of<AnswerCubit>(context).addUserName();
+          BlocProvider.of<AnswerCubit>(context).addLanguageType();
+          BlocProvider.of<AnswerCubit>(context).isFriends = true;
           Navigator.pushNamed(context, FriendsAskView.id);
         }
       },

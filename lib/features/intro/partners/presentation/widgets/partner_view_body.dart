@@ -19,7 +19,10 @@ class PartnerIntroBody extends StatelessWidget {
       onPressed: () {
         var formKey = BlocProvider.of<AnswerCubit>(context).formKey;
         if (formKey.currentState!.validate()) {
-          BlocProvider.of<AnswerCubit>(context).addUserNameToMyAnswers();
+          BlocProvider.of<AnswerCubit>(context).addUserName();
+          BlocProvider.of<AnswerCubit>(context).addLanguageType();
+          BlocProvider.of<AnswerCubit>(context)
+              .addQuetionType(isFriends: false);
           Navigator.pushNamed(context, PartnerAskView.id);
         }
       },

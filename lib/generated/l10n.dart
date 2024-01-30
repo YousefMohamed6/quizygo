@@ -90,10 +90,10 @@ class S {
     );
   }
 
-  /// `😍 Test Your Partnership 😉`
+  /// `😍 Test Your Partner 😉`
   String get testPartnerIntro {
     return Intl.message(
-      '😍 Test Your Partnership 😉',
+      '😍 Test Your Partner 😉',
       name: 'testPartnerIntro',
       desc: '',
       args: [],
@@ -160,10 +160,10 @@ class S {
     );
   }
 
-  /// `✍️ Enter Your Name`
+  /// `Enter Your Name ✍️`
   String get enterName {
     return Intl.message(
-      '✍️ Enter Your Name',
+      'Enter Your Name ✍️',
       name: 'enterName',
       desc: '',
       args: [],
@@ -181,39 +181,69 @@ class S {
   }
 
   /// `📢 Share your quiz-link with your Friends\n& Family.`
-  String get share {
+  String get shareFriend {
     return Intl.message(
       '📢 Share your quiz-link with your Friends\n& Family.',
-      name: 'share',
+      name: 'shareFriend',
       desc: '',
       args: [],
     );
   }
 
-  /// `🤔 Your friends will try to guess the right answers.`
-  String get guess {
+  /// `🤔 Your friends & Family will try to guess the right answers.`
+  String get guessFriend {
     return Intl.message(
-      '🤔 Your friends will try to guess the right answers.',
-      name: 'guess',
+      '🤔 Your friends & Family will try to guess the right answers.',
+      name: 'guessFriend',
       desc: '',
       args: [],
     );
   }
 
-  /// `🥇 Check the score of your Friends at\n your quiz-link!`
-  String get check {
+  /// `🥇 Check the score of your Friends & Family at\n your quiz-link!`
+  String get checkFriend {
     return Intl.message(
-      '🥇 Check the score of your Friends at\n your quiz-link!',
-      name: 'check',
+      '🥇 Check the score of your Friends & Family at\n your quiz-link!',
+      name: 'checkFriend',
       desc: '',
       args: [],
     );
   }
 
-  /// `language`
+  /// `📢 Share your quiz-link with your Partner.`
+  String get sharePartner {
+    return Intl.message(
+      '📢 Share your quiz-link with your Partner.',
+      name: 'sharePartner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `🤔 Your Partner will try to guess the correct answers.`
+  String get guessPartner {
+    return Intl.message(
+      '🤔 Your Partner will try to guess the correct answers.',
+      name: 'guessPartner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `🥇 Check the score of your Partner at\n quiz-link!`
+  String get checkPartner {
+    return Intl.message(
+      '🥇 Check the score of your Partner at\n quiz-link!',
+      name: 'checkPartner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `language         `
   String get language {
     return Intl.message(
-      'language',
+      'language         ',
       name: 'language',
       desc: '',
       args: [],
@@ -285,6 +315,96 @@ class S {
     return Intl.message(
       'About',
       name: 'about',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Copy link`
+  String get copylink {
+    return Intl.message(
+      'Copy link',
+      name: 'copylink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `link Copied`
+  String get copyLinkMessage {
+    return Intl.message(
+      'link Copied',
+      name: 'copyLinkMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share`
+  String get shareOn {
+    return Intl.message(
+      'Share',
+      name: 'shareOn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share on WhatsApp`
+  String get shareWhats {
+    return Intl.message(
+      'Share on WhatsApp',
+      name: 'shareWhats',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share on Twitter`
+  String get shareTwitter {
+    return Intl.message(
+      'Share on Twitter',
+      name: 'shareTwitter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share this quiz with your friends and family to see who gets maximum score`
+  String get ShareMessagefriend {
+    return Intl.message(
+      'Share this quiz with your friends and family to see who gets maximum score',
+      name: 'ShareMessagefriend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share this quiz with your partner to see what score your partner will get`
+  String get ShareMessagePartner {
+    return Intl.message(
+      'Share this quiz with your partner to see what score your partner will get',
+      name: 'ShareMessagePartner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Quiz link is ready!`
+  String get quizReady {
+    return Intl.message(
+      'Your Quiz link is ready!',
+      name: 'quizReady',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Congrats`
+  String get Congrats {
+    return Intl.message(
+      'Congrats',
+      name: 'Congrats',
       desc: '',
       args: [],
     );

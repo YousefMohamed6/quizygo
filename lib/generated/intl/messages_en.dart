@@ -22,22 +22,41 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Congrats": MessageLookupByLibrary.simpleMessage("Congrats"),
+        "ShareMessagePartner": MessageLookupByLibrary.simpleMessage(
+            "Share this quiz with your partner to see what score your partner will get"),
+        "ShareMessagefriend": MessageLookupByLibrary.simpleMessage(
+            "Share this quiz with your friends and family to see who gets maximum score"),
         "about": MessageLookupByLibrary.simpleMessage("About"),
         "answer": MessageLookupByLibrary.simpleMessage(
             "❓ Answer any 15 questions about yourself."),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
-        "check": MessageLookupByLibrary.simpleMessage(
-            "🥇 Check the score of your Friends at\n your quiz-link!"),
+        "checkFriend": MessageLookupByLibrary.simpleMessage(
+            "🥇 Check the score of your Friends & Family at\n your quiz-link!"),
+        "checkPartner": MessageLookupByLibrary.simpleMessage(
+            "🥇 Check the score of your Partner at\n quiz-link!"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact Us"),
+        "copyLinkMessage": MessageLookupByLibrary.simpleMessage("link Copied"),
+        "copylink": MessageLookupByLibrary.simpleMessage("Copy link"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
-        "enterName": MessageLookupByLibrary.simpleMessage("✍️ Enter Your Name"),
-        "guess": MessageLookupByLibrary.simpleMessage(
-            "🤔 Your friends will try to guess the right answers."),
+        "enterName": MessageLookupByLibrary.simpleMessage("Enter Your Name ✍️"),
+        "guessFriend": MessageLookupByLibrary.simpleMessage(
+            "🤔 Your friends & Family will try to guess the right answers."),
+        "guessPartner": MessageLookupByLibrary.simpleMessage(
+            "🤔 Your Partner will try to guess the correct answers."),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
-        "language": MessageLookupByLibrary.simpleMessage("language"),
+        "language": MessageLookupByLibrary.simpleMessage("language         "),
         "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
-        "share": MessageLookupByLibrary.simpleMessage(
+        "quizReady":
+            MessageLookupByLibrary.simpleMessage("Your Quiz link is ready!"),
+        "shareFriend": MessageLookupByLibrary.simpleMessage(
             "📢 Share your quiz-link with your Friends\n& Family."),
+        "shareOn": MessageLookupByLibrary.simpleMessage("Share"),
+        "sharePartner": MessageLookupByLibrary.simpleMessage(
+            "📢 Share your quiz-link with your Partner."),
+        "shareTwitter":
+            MessageLookupByLibrary.simpleMessage("Share on Twitter"),
+        "shareWhats": MessageLookupByLibrary.simpleMessage("Share on WhatsApp"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "subTitlePartener": MessageLookupByLibrary.simpleMessage(
             "How well dose you partner know you ?"),
@@ -54,7 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Do your friends really know you?"),
         "testPartner": MessageLookupByLibrary.simpleMessage("Real partner 🗝❤"),
         "testPartnerIntro":
-            MessageLookupByLibrary.simpleMessage("😍 Test Your Partnership 😉"),
+            MessageLookupByLibrary.simpleMessage("😍 Test Your Partner 😉"),
         "tips": MessageLookupByLibrary.simpleMessage("Tips !"),
         "validation": MessageLookupByLibrary.simpleMessage("Enter your Name")
       };

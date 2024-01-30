@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizygo/core/constants/keys.dart';
-import 'package:quizygo/features/share/presentation/share_view.dart';
+import 'package:quizygo/model/quetion_model.dart';
 
 part 'anwser_state.dart';
 
@@ -10,26 +10,38 @@ class AnswerCubit extends Cubit<AnswerState> {
   AnswerCubit() : super(AnwserInitial());
   int numberOfQuetion = 1;
   bool isArabic = false;
+  bool isFriends = false;
   String documentId = "";
   String answer = "";
-  Map<String, String> answersFromFirebase = {};
+  Map<String, dynamic> answersFromFirebase = {};
   var userName = TextEditingController();
   final formKey = GlobalKey<FormState>();
-  Map<String, String> myAnswers = {};
+  Map<String, dynamic> myAnswers = {};
+
+  Set<int> numbersOfQuetionIsAnwser = {1};
+
   void changeColorOfTheChoise() {
     emit(AnwserChangeColor());
   }
 
   void changeLanguage({required bool isArabic}) {
-   this.isArabic = isArabic;
+    this.isArabic = isArabic;
     emit(ChangeLanguage());
   }
 
-  void addUserNameToMyAnswers() {
-    myAnswers.addAll({"Name": userName.text});
+  void addQuetionType({required bool isFriends}) {
+    myAnswers.addAll({kQuetionType: isFriends});
   }
 
-  Set<int> numbersOfQuetionIsAnwser = {1};
+  void addUserName() {
+    //add User Name
+    myAnswers.addAll({kUserName: userName.text});
+  }
+
+  void addLanguageType() {
+    //add language type
+    myAnswers.addAll({kLanguage: isArabic});
+  }
 
   bool checkQuetionIsAwnser({required int numberOfQuetion}) {
     if (numbersOfQuetionIsAnwser.contains(numberOfQuetion)) {
@@ -46,8 +58,7 @@ class AnswerCubit extends Cubit<AnswerState> {
       increseAndAddQuetionNumber();
       emit(NavigateToNextQuetion());
     } else {
-      await addAnwsersToFireBase(myAnswers);
-      Navigator.popAndPushNamed(context, ShareLinkView.id);
+      await addAnswersToFireBase(myAnswers);
     }
   }
 
@@ -60,21 +71,32 @@ class AnswerCubit extends Cubit<AnswerState> {
     numbersOfQuetionIsAnwser.add(numberOfQuetion);
   }
 
-  Future<void> addAnwsersToFireBase(Map<String, String> answers) async {
+  Future<void> addAnswersToFireBase(Map<String, dynamic> answers) async {
     //this line because index 16 have no data
+    //add last qurtion number 15
     answers.addAll({numberOfQuetion.toString(): answer});
     CollectionReference myAnswers =
         FirebaseFirestore.instance.collection(kCollection);
-    documentId = await myAnswers.add(answers).then((value) => value.id);
+    emit(Loading());
+    try {
+      documentId = await myAnswers.add(answers).then((value) => value.id);
+      emit(Success());
+    } on Exception catch (_) {
+      emit(Failure());
+    }
   }
 
-  Future<Map<String, String>> getAnwsersFromFireBase(
-      {required String documentId}) async {
+  Future<void> getAnswersFromFireBase({required String documentId}) async {
     CollectionReference myAnswers =
         FirebaseFirestore.instance.collection(kCollection);
-    DocumentSnapshot<Object?> yourAnswer =
-        await myAnswers.doc(documentId).get();
-    Map<String, String> data = yourAnswer.data() as Map<String, String>;
-    return data;
+    emit(Loading());
+    try {
+      DocumentSnapshot<Object?> yourAnswer =
+          await myAnswers.doc(documentId).get();
+      Map<String, dynamic> data = yourAnswer.data() as Map<String, dynamic>;
+      QuetionModel theAnswer = QuetionModel.fromFirebase(data: data);
+    } on Exception catch (_) {
+      emit(Failure());
+    }
   }
 }

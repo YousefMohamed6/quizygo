@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
+import 'package:quizygo/core/widgets/language_menu.dart';
 import 'package:quizygo/features/home/presentation/home_view.dart';
 import 'package:quizygo/features/menu/presentation/views/about_us.dart';
 import 'package:quizygo/features/menu/presentation/views/contact.dart';
@@ -57,43 +56,11 @@ class MenuButton extends StatelessWidget {
           ),
           const PopupMenuItem(
             value: 'language',
+            padding: EdgeInsets.zero,
             child: LanguageMenu(),
           ),
         ];
       },
-    );
-  }
-}
-
-class LanguageMenu extends StatelessWidget {
-  const LanguageMenu({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return PopupMenuButton(
-      child: Text(S.of(context).language),
-      onSelected: (value) {
-        switch (value) {
-          case "ar":
-            BlocProvider.of<AnswerCubit>(context)
-                .changeLanguage(isArabic: true);
-            break;
-          case "en":
-            BlocProvider.of<AnswerCubit>(context)
-                .changeLanguage(isArabic: false);
-            break;
-        }
-      },
-      itemBuilder: (context) => [
-        PopupMenuItem(
-          value: 'ar',
-          child: Text(S.of(context).arabic),
-        ),
-        PopupMenuItem(
-          value: 'en',
-          child: Text(S.of(context).english),
-        ),
-      ],
     );
   }
 }

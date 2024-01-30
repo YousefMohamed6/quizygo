@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/features/home/presentation/widgets/custom_image.dart';
-import 'package:quizygo/features/home/presentation/widgets/title_and_subtitle.dart';
-import 'package:quizygo/features/intro/friends/presentation/friends_intro_view.dart';
-import 'package:quizygo/features/intro/partners/presentation/partner_view.dart';
-import 'package:quizygo/generated/l10n.dart';
+import 'package:quizygo/features/home/presentation/widgets/friends_quetion%20_view.dart';
+import 'package:quizygo/features/home/presentation/widgets/partner_quetion_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -11,29 +8,11 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: [
-        TitleAndSubTitle(
-          title: S.of(context).testPartner,
-          subtitle: S.of(context).subTitlePartener,
-        ),
-        CustomImage(
-          path: "assats/images/partner.jpg",
-          onPressed: () {
-            Navigator.pushNamed(context, PartnerIntroView.id);
-          },
-        ),
-        const SizedBox(height: 16),
-        TitleAndSubTitle(
-          title: S.of(context).testFriend,
-          subtitle: S.of(context).testFriendSubTitle,
-        ),
-        CustomImage(
-          path: "assats/images/friends.png",
-          onPressed: () {
-            Navigator.pushNamed(context, FriendsIntroView.id);
-          },
-        ),
-        const SizedBox(height: 48),
+      children: const [
+        FriendsQuetionView(),
+        SizedBox(height: 16),
+        PartnerQuetionView(),
+        SizedBox(height: 48),
       ],
     );
   }

@@ -11,7 +11,9 @@ class ShareLinkViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String documentId = BlocProvider.of<AnswerCubit>(context).documentId;
-    String userName = BlocProvider.of<AnswerCubit>(context).myAnswers[kUserName]!;
+    String userName =
+        BlocProvider.of<AnswerCubit>(context).myAnswers[kUserName]!;
+    bool isFriends = BlocProvider.of<AnswerCubit>(context).isFriends;
     return Center(
       child: Container(
         padding: const EdgeInsets.all(16),
@@ -24,7 +26,9 @@ class ShareLinkViewBody extends StatelessWidget {
         ),
         child: ShareContainerView(
           userName: userName,
-          quizLink: "https://www.QuizyGo.com/$documentId",
+          quizLink: isFriends
+              ? "https://www.quizygo-2024.wep.app/Friends/$documentId"
+              : "https://www.quizygo-2024.wep.app/Partner/$documentId",
         ),
       ),
     );

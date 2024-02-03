@@ -4,8 +4,8 @@ import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
 import 'package:quizygo/core/widgets/tips_text.dart';
 import 'package:quizygo/generated/l10n.dart';
 
-class Tips extends StatelessWidget {
-  const Tips({super.key});
+class AskTips extends StatelessWidget {
+  const AskTips({super.key});
 
   @override
   Widget build(BuildContext context) {

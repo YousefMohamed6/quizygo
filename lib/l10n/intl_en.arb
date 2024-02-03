@@ -34,5 +34,15 @@
         "ShareMessagefriend": "Share this quiz with your friends and family to see who gets maximum score",
         "ShareMessagePartner": "Share this quiz with your partner to see what score your partner will get",
         "quizReady": "Your Quiz link is ready!",
-        "Congrats": "Congrats"
+        "Congrats": "Congrats",
+        "answerFriend": "Answer questions about your friend",
+        "check": "Check your score in the scoreboard",
+        "startNow": "Start now",
+        "yourScore": "Your score:",
+        "chellange": "It''s your turn! Now you can challenge your friends.",
+        "createQuiz": "Create your own quiz",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "FriendSubTitleAnswer": "How well you know "
 }

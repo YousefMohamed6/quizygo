@@ -12,12 +12,13 @@ class IntroView extends StatelessWidget {
       required this.formKey,
       required this.title,
       required this.subTitle,
-      required this.onPressed});
+      required this.onPressed,
+      this.tipsType});
   final GlobalKey<FormState> formKey;
   final String title;
   final String subTitle;
   final VoidCallback onPressed;
-
+  final Widget? tipsType;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -65,7 +66,7 @@ class IntroView extends StatelessWidget {
                 onPressed: onPressed,
               ),
               const SizedBox(height: 16),
-              const Tips(),
+              tipsType ?? const AskTips(),
             ],
           ),
         ),

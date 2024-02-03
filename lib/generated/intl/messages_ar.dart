@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Congrats": MessageLookupByLibrary.simpleMessage("تهاني"),
+        "FriendSubTitleAnswer":
+            MessageLookupByLibrary.simpleMessage("كيف تعرف جيدا "),
         "ShareMessagePartner": MessageLookupByLibrary.simpleMessage(
             "شارك هذا الاختبار مع شريكك لمعرفة الدرجة التي سيحصل عليها شريكك"),
         "ShareMessagefriend": MessageLookupByLibrary.simpleMessage(
@@ -30,23 +32,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "about": MessageLookupByLibrary.simpleMessage("عنا"),
         "answer":
             MessageLookupByLibrary.simpleMessage("❓ أجب على 15 سؤالاً عن نفسك"),
+        "answerFriend": MessageLookupByLibrary.simpleMessage(
+            "أجب على الأسئلة المتعلقة بصديقك"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "check": MessageLookupByLibrary.simpleMessage(
+            "تحقق من نتيجتك في لوحة النتائج"),
         "checkFriend": MessageLookupByLibrary.simpleMessage(
             "🥇 تحقق من نتائج أصدقائك وعائلتك في رابط الاختبار الخاص بك!"),
         "checkPartner": MessageLookupByLibrary.simpleMessage(
             "🥇 تحقق من نتيجة شريكك في رابط الاختبار الخاص بك!"),
+        "chellange": MessageLookupByLibrary.simpleMessage(
+            "انه دورك! الآن أنت تتحدى أصدقائك"),
         "contact": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "copyLinkMessage": MessageLookupByLibrary.simpleMessage("تم النسخ"),
         "copylink": MessageLookupByLibrary.simpleMessage("نسخ الرابط"),
+        "createQuiz":
+            MessageLookupByLibrary.simpleMessage("إنشئ اختبارك الخاص"),
         "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
         "enterName": MessageLookupByLibrary.simpleMessage("✍️ أدخل اسمك"),
         "guessFriend": MessageLookupByLibrary.simpleMessage(
             "🤔 سيحاول اصدقائك وعائلتك تخمين الاجوبة الصحيحة."),
         "guessPartner": MessageLookupByLibrary.simpleMessage(
             "🤔 سيحاول شريكك تخمين الاجوبة الصحيحة."),
+        "high": MessageLookupByLibrary.simpleMessage("مرتفع"),
         "home": MessageLookupByLibrary.simpleMessage("الصفحة الرئسية"),
         "language": MessageLookupByLibrary.simpleMessage(
             "اللغة                         "),
+        "low": MessageLookupByLibrary.simpleMessage("منخفض"),
+        "medium": MessageLookupByLibrary.simpleMessage("متوسط"),
         "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "quizReady": MessageLookupByLibrary.simpleMessage(
             "رابط الاختبار الخاص بك جاهز!"),
@@ -59,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مشاركة علي تويتر"),
         "shareWhats": MessageLookupByLibrary.simpleMessage("مشاركة علي واتس"),
         "start": MessageLookupByLibrary.simpleMessage("أبدأ"),
+        "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "subTitlePartener":
             MessageLookupByLibrary.simpleMessage("الي أي مدى يعرفك شريكك؟"),
         "subTitlePartenerIntro":
@@ -77,6 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "testPartnerIntro":
             MessageLookupByLibrary.simpleMessage("😍 اختبر شريكك 😉"),
         "tips": MessageLookupByLibrary.simpleMessage("تعليمات!"),
-        "validation": MessageLookupByLibrary.simpleMessage("✍️ أدخل اسمك")
+        "validation": MessageLookupByLibrary.simpleMessage("✍️ أدخل اسمك"),
+        "yourScore": MessageLookupByLibrary.simpleMessage(":نتيجتك")
       };
 }

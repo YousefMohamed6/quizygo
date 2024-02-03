@@ -409,6 +409,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Answer questions about your friend`
+  String get answerFriend {
+    return Intl.message(
+      'Answer questions about your friend',
+      name: 'answerFriend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your score in the scoreboard`
+  String get check {
+    return Intl.message(
+      'Check your score in the scoreboard',
+      name: 'check',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start now`
+  String get startNow {
+    return Intl.message(
+      'Start now',
+      name: 'startNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your score:`
+  String get yourScore {
+    return Intl.message(
+      'Your score:',
+      name: 'yourScore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It''s your turn! Now you can challenge your friends.`
+  String get chellange {
+    return Intl.message(
+      'It\'\'s your turn! Now you can challenge your friends.',
+      name: 'chellange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create your own quiz`
+  String get createQuiz {
+    return Intl.message(
+      'Create your own quiz',
+      name: 'createQuiz',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Low`
+  String get low {
+    return Intl.message(
+      'Low',
+      name: 'low',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medium`
+  String get medium {
+    return Intl.message(
+      'Medium',
+      name: 'medium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `High`
+  String get high {
+    return Intl.message(
+      'High',
+      name: 'high',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How well you know `
+  String get FriendSubTitleAnswer {
+    return Intl.message(
+      'How well you know ',
+      name: 'FriendSubTitleAnswer',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

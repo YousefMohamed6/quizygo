@@ -58,5 +58,6 @@
         "FriendSubTitleAnswer": "How well you know ",
         "enterid": "Enter the id from share message",
         "correctId": "Please Enter Correct id",
-        "noScore": "No Score Found"
+        "noScore": "No Score Found",
+        "noShareLink":"share link is not found create new quiz"
 }

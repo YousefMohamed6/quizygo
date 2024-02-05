@@ -72,6 +72,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "medium": MessageLookupByLibrary.simpleMessage("متوسط"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "noScore": MessageLookupByLibrary.simpleMessage("لا توجد نتائج "),
+        "noShareLink": MessageLookupByLibrary.simpleMessage(
+            "رابط المشاركة غير موجود انشاء اختبار جديد"),
         "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "quizReady": MessageLookupByLibrary.simpleMessage(
             "رابط الاختبار الخاص بك جاهز!"),

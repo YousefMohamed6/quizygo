@@ -75,9 +75,8 @@ class AnswerCubit extends Cubit<AnswerState> {
     myAnswers.addAll({kQuetionType: this.isFriends});
   }
 
-  void addUserName() async {
+  void addUserName() {
     //add User Name
-    await setUserName(userName: userNameCtrl.text);
     myAnswers.addAll({kUserName: userNameCtrl.text});
   }
 
@@ -117,10 +116,10 @@ class AnswerCubit extends Cubit<AnswerState> {
     emit(Loading());
     try {
       await answersRef.add(myAnswers).then((value) async {
-        var prefs = await getPrefs();
-        await prefs.setString(kDocumentId, value.id);
+        await setUserName(userName: userNameCtrl.text);
+        await setDocumentId(documentId: value.id);
+        await getDocumentId();
       });
-      await getDocumentId();
       emit(ShareLink());
     } on Exception catch (_) {
       emit(Failure());
@@ -208,8 +207,9 @@ class AnswerCubit extends Cubit<AnswerState> {
     CollectionReference myAnswers =
         FirebaseFirestore.instance.collection(kCollection);
     List<ScoreModel> allScores = [];
-    await getUserName();
+    
     try {
+      await getUserName();
       var prefs = await getPrefs();
       var collectionScore = await myAnswers
           .doc(prefs.getString(kDocumentId))

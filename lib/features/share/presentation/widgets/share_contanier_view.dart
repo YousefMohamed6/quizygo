@@ -3,6 +3,7 @@ import 'package:QuizyGo/core/constants/keys.dart';
 import 'package:QuizyGo/features/Scoreboard/scoreboard_view.dart';
 import 'package:QuizyGo/features/get%20Answers/get_answers.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/copy_view.dart';
+import 'package:QuizyGo/features/share/presentation/widgets/empty_view.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/facebook_and_messanger_share.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/share_to_twitter_button.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/share_to_whatsapp_button.dart';
@@ -25,15 +26,7 @@ class ShareContainerView extends StatelessWidget {
     bool isFriends = BlocProvider.of<AnswerCubit>(context).isFriends;
 
     return documentId.isEmpty
-        ? const Center(
-            child: Text(
-              "Create new Quiz",
-              style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          )
+        ? const EmptyView()
         : Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,

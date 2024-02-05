@@ -75,6 +75,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "medium": MessageLookupByLibrary.simpleMessage("Medium"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "noScore": MessageLookupByLibrary.simpleMessage("No Score Found"),
+        "noShareLink": MessageLookupByLibrary.simpleMessage(
+            "share link is not found create new quiz"),
         "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "quizReady":
             MessageLookupByLibrary.simpleMessage("Your Quiz link is ready!"),

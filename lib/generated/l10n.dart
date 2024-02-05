@@ -639,6 +639,16 @@ class S {
       args: [],
     );
   }
+
+  /// `share link is not found create new quiz`
+  String get noShareLink {
+    return Intl.message(
+      'share link is not found create new quiz',
+      name: 'noShareLink',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

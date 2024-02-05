@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/constants/colors.dart';
 import 'package:QuizyGo/core/constants/keys.dart';
 import 'package:QuizyGo/features/get%20Answers/get_answers.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/share_contanier_view.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ShareLinkViewBody extends StatelessWidget {
   const ShareLinkViewBody({super.key});
@@ -24,9 +24,10 @@ class ShareLinkViewBody extends StatelessWidget {
             color: ColorManager.borderSideColor,
           ),
         ),
+        alignment: Alignment.center,
         child: ShareContainerView(
           userName: userName,
-          quizLink: kBaseUrl + GetAnswers.id ,
+          quizLink: kBaseUrl + GetAnswers.id,
           documentId: documentId,
         ),
       ),

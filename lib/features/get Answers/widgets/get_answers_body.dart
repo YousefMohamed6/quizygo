@@ -1,6 +1,6 @@
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
-import 'package:QuizyGo/features/answers/friends/friends_answer.dart';
-import 'package:QuizyGo/features/answers/partner/partner_answer.dart';
+import 'package:QuizyGo/features/intro_answers/friends/friends_answer.dart';
+import 'package:QuizyGo/features/intro_answers/partner/partner_answer.dart';
 import 'package:QuizyGo/features/get%20Answers/mangement/cubit/get_answers_cubit.dart';
 import 'package:QuizyGo/features/get%20Answers/widgets/get_answer_initial.dart';
 import 'package:QuizyGo/generated/l10n.dart';
@@ -15,6 +15,7 @@ class GetAnswersBody extends StatelessWidget {
     return BlocListener<GetAnswersCubit, GetAnswersState>(
       listener: (context, state) {
         if (state is GetAnswersSucsses) {
+          BlocProvider.of<AnswerCubit>(context).restView();
           BlocProvider.of<AnswerCubit>(context).answerName =
               state.model.userName;
           BlocProvider.of<AnswerCubit>(context).isFriends =
@@ -22,9 +23,11 @@ class GetAnswersBody extends StatelessWidget {
           BlocProvider.of<AnswerCubit>(context).isArabic = state.model.isArabic;
           BlocProvider.of<AnswerCubit>(context).theAnswers =
               state.model.answers;
-          BlocProvider.of<AnswerCubit>(context).restView();
-          Navigator.pushNamed(context,
-              state.model.isFriends ? FriendsAnswer.id : PartnerAnswer.id);
+          Navigator.pushNamed(
+              context,
+              state.model.isFriends
+                  ? FriendsIntroAnswer.id
+                  : PartnerIntroAnswer.id);
         } else if (state is GetAnswersFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(

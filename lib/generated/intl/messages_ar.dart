@@ -110,6 +110,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("😍 اختبر شريكك 😉"),
         "tips": MessageLookupByLibrary.simpleMessage("تعليمات!"),
         "validation": MessageLookupByLibrary.simpleMessage("✍️ أدخل اسمك"),
+        "welcome":
+            MessageLookupByLibrary.simpleMessage("مرحبا بك في موقع كويز جو"),
         "yourLevel": MessageLookupByLibrary.simpleMessage(":مستواك"),
         "yourScore": MessageLookupByLibrary.simpleMessage(":نتيجتك")
       };

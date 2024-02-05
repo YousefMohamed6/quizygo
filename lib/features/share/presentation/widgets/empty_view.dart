@@ -12,12 +12,22 @@ class EmptyView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const SizedBox(height: 16),
+        Text(
+          S.of(context).welcome,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: MediaQuery.sizeOf(context).height * 0.030,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 16),
         const Logo(),
         const SizedBox(height: 16),
         Text(
           S.of(context).noShareLink,
-          style: const TextStyle(
-            fontSize: 32,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: MediaQuery.sizeOf(context).height * 0.024,
             fontWeight: FontWeight.bold,
           ),
         ),

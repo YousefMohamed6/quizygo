@@ -111,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("😍 Test Your Partner 😉"),
         "tips": MessageLookupByLibrary.simpleMessage("Tips !"),
         "validation": MessageLookupByLibrary.simpleMessage("Enter your Name"),
+        "welcome": MessageLookupByLibrary.simpleMessage(
+            "Welcome to the QuizGo website"),
         "yourLevel": MessageLookupByLibrary.simpleMessage("Your level:"),
         "yourScore": MessageLookupByLibrary.simpleMessage("Your score:")
       };

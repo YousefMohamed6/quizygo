@@ -640,6 +640,16 @@ class S {
     );
   }
 
+  /// `Welcome to the QuizGo website`
+  String get welcome {
+    return Intl.message(
+      'Welcome to the QuizGo website',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `share link is not found create new quiz`
   String get noShareLink {
     return Intl.message(

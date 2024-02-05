@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
-import 'package:quizygo/core/constants/colors.dart';
-import 'package:quizygo/features/ask/friends/presentation/widgets/quetion_number_item.dart';
+import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/core/constants/colors.dart';
+import 'package:QuizyGo/features/ask/friends/presentation/widgets/quetion_number_item.dart';
 
 class NumbersOfQuetion extends StatelessWidget {
   const NumbersOfQuetion({super.key});

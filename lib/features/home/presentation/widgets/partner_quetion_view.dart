@@ -1,10 +1,12 @@
+import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/core/constants/keys.dart';
+import 'package:QuizyGo/core/url_launcher.dart';
+import 'package:QuizyGo/features/home/presentation/widgets/custom_image.dart';
+import 'package:QuizyGo/features/home/presentation/widgets/title_and_subtitle.dart';
+import 'package:QuizyGo/features/intro/partners/presentation/partner_view.dart';
+import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
-import 'package:quizygo/features/home/presentation/widgets/custom_image.dart';
-import 'package:quizygo/features/home/presentation/widgets/title_and_subtitle.dart';
-import 'package:quizygo/features/intro/partners/presentation/partner_view.dart';
-import 'package:quizygo/generated/l10n.dart';
 
 class PartnerQuetionView extends StatelessWidget {
   const PartnerQuetionView({super.key});
@@ -19,10 +21,11 @@ class PartnerQuetionView extends StatelessWidget {
         ),
         CustomImage(
           path: "assats/images/partner.jpg",
-          onPressed: () {
+          onPressed: () async {
             BlocProvider.of<AnswerCubit>(context)
                 .addQuetionType(isFriends: false);
-            Navigator.pushNamed(context, PartnerIntroView.id);
+            BlocProvider.of<AnswerCubit>(context).restView();
+            await urlLauncher(url: kBaseUrl + PartnerIntroView.id);
           },
         ),
       ],

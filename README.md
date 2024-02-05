@@ -1,4 +1,4 @@
-# quizygo
+# QuizyGo
 
 A new Flutter project.
 

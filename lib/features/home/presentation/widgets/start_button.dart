@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/generated/l10n.dart';
+import 'package:QuizyGo/generated/l10n.dart';
 
 class StartButton extends StatelessWidget {
   const StartButton({super.key, required this.onPressed});

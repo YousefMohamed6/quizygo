@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_bloc/flutter_bloc.dart";
-import "package:quizygo/anwser_cubit/anwser_cubit.dart";
-import "package:quizygo/core/widgets/image_and_answer.dart";
+import "package:QuizyGo/anwser_cubit/anwser_cubit.dart";
+import "package:QuizyGo/core/widgets/image_and_answer.dart";
 
 class ImageCard extends StatelessWidget {
   const ImageCard({
@@ -15,17 +15,35 @@ class ImageCard extends StatelessWidget {
   final Color? onPressedColor;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () async {
-        BlocProvider.of<AnswerCubit>(context).answer = answer;
-        BlocProvider.of<AnswerCubit>(context).changeColorOfTheChoise();
-        BlocProvider.of<AnswerCubit>(context).checkAnswerState(context);
+    List<String> answers = BlocProvider.of<AnswerCubit>(context).theAnswers;
+    return BlocBuilder<AnswerCubit, AnswerState>(
+      builder: (context, state) {
+        if (answers.isNotEmpty) {
+          return GestureDetector(
+            onTap: () async {
+              BlocProvider.of<AnswerCubit>(context)
+                  .checkCorrectAnswer(currentAnswer: answer);
+            },
+            child: ImageAndAnswer(
+              answer: answer,
+              imagePath: imagePath,
+              onPressedColor: onPressedColor,
+            ),
+          );
+        } else {
+          return GestureDetector(
+            onTap: () async {
+              BlocProvider.of<AnswerCubit>(context)
+                  .createAnswer(currentAnswer: answer);
+            },
+            child: ImageAndAnswer(
+              answer: answer,
+              imagePath: imagePath,
+              onPressedColor: onPressedColor,
+            ),
+          );
+        }
       },
-      child: ImageAndAnswer(
-        answer: answer,
-        imagePath: imagePath,
-        onPressedColor: onPressedColor,
-      ),
     );
   }
 }

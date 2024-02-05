@@ -23,32 +23,63 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Congrats": MessageLookupByLibrary.simpleMessage("Congrats"),
+        "FriendSubTitleAnswer":
+            MessageLookupByLibrary.simpleMessage("How well you know "),
         "ShareMessagePartner": MessageLookupByLibrary.simpleMessage(
             "Share this quiz with your partner to see what score your partner will get"),
         "ShareMessagefriend": MessageLookupByLibrary.simpleMessage(
             "Share this quiz with your friends and family to see who gets maximum score"),
         "about": MessageLookupByLibrary.simpleMessage("About"),
         "answer": MessageLookupByLibrary.simpleMessage(
-            "❓ Answer any 15 questions about yourself."),
+            "❓ Answer 15 questions about yourself."),
+        "answerFriend": MessageLookupByLibrary.simpleMessage(
+            "Answer questions about your Friend"),
+        "answerPartner": MessageLookupByLibrary.simpleMessage(
+            "Answer questions about your Partner"),
+        "answerid": MessageLookupByLibrary.simpleMessage(
+            "Answer 15 questions about your Friend or Partner."),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "check": MessageLookupByLibrary.simpleMessage(
+            "Check your score in the scoreboard"),
         "checkFriend": MessageLookupByLibrary.simpleMessage(
-            "🥇 Check the score of your Friends & Family at\n your quiz-link!"),
+            "🥇 Check the score of your Friends & Family at your quiz-link!"),
         "checkPartner": MessageLookupByLibrary.simpleMessage(
             "🥇 Check the score of your Partner at\n quiz-link!"),
+        "chellange": MessageLookupByLibrary.simpleMessage(
+            "It\'\'s your turn! Now you can challenge your friends."),
         "contact": MessageLookupByLibrary.simpleMessage("Contact Us"),
-        "copyLinkMessage": MessageLookupByLibrary.simpleMessage("link Copied"),
-        "copylink": MessageLookupByLibrary.simpleMessage("Copy link"),
+        "copyErrorMessage":
+            MessageLookupByLibrary.simpleMessage("Start new Quiz"),
+        "copyId": MessageLookupByLibrary.simpleMessage("Id Copied"),
+        "copyLink": MessageLookupByLibrary.simpleMessage("link Copied"),
+        "correctId":
+            MessageLookupByLibrary.simpleMessage("Please Enter Correct id"),
+        "createQuiz":
+            MessageLookupByLibrary.simpleMessage("Create your own quiz"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "enterId": MessageLookupByLibrary.simpleMessage(
+            "Enter the id of friend or Partner"),
         "enterName": MessageLookupByLibrary.simpleMessage("Enter Your Name ✍️"),
+        "enterid": MessageLookupByLibrary.simpleMessage(
+            "Enter the id from share message"),
         "guessFriend": MessageLookupByLibrary.simpleMessage(
             "🤔 Your friends & Family will try to guess the right answers."),
         "guessPartner": MessageLookupByLibrary.simpleMessage(
             "🤔 Your Partner will try to guess the correct answers."),
+        "high": MessageLookupByLibrary.simpleMessage("High"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
-        "language": MessageLookupByLibrary.simpleMessage("language         "),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "linkSharingPage":
+            MessageLookupByLibrary.simpleMessage("link Sharing Page"),
+        "low": MessageLookupByLibrary.simpleMessage("Low"),
+        "medium": MessageLookupByLibrary.simpleMessage("Medium"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "noScore": MessageLookupByLibrary.simpleMessage("No Score Found"),
         "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "quizReady":
             MessageLookupByLibrary.simpleMessage("Your Quiz link is ready!"),
+        "score": MessageLookupByLibrary.simpleMessage("Score"),
+        "scoreBoardOf": MessageLookupByLibrary.simpleMessage("Score Board Of "),
         "shareFriend": MessageLookupByLibrary.simpleMessage(
             "📢 Share your quiz-link with your Friends\n& Family."),
         "shareOn": MessageLookupByLibrary.simpleMessage("Share"),
@@ -57,24 +88,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "shareTwitter":
             MessageLookupByLibrary.simpleMessage("Share on Twitter"),
         "shareWhats": MessageLookupByLibrary.simpleMessage("Share on WhatsApp"),
+        "showScoreboard": MessageLookupByLibrary.simpleMessage("view Result"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
+        "startNow": MessageLookupByLibrary.simpleMessage("Start now"),
         "subTitlePartener": MessageLookupByLibrary.simpleMessage(
-            "How well dose you partner know you ?"),
+            "How well dose your partner know you ?"),
         "subTitlePartenerIntro": MessageLookupByLibrary.simpleMessage(
             "Does your Partner really know you?"),
         "terms": MessageLookupByLibrary.simpleMessage("Terms of Use"),
         "testFriend":
-            MessageLookupByLibrary.simpleMessage("Test your friends ✌🏻❤"),
+            MessageLookupByLibrary.simpleMessage("Test your Friends ✌🏻❤"),
         "testFriendIntro":
             MessageLookupByLibrary.simpleMessage("😍 Test Your Friendship 😉"),
         "testFriendSubTitle": MessageLookupByLibrary.simpleMessage(
             "How well do your friends know you ?"),
         "testFriendSubTitleIntro": MessageLookupByLibrary.simpleMessage(
             "Do your friends really know you?"),
-        "testPartner": MessageLookupByLibrary.simpleMessage("Real partner 🗝❤"),
+        "testPartner": MessageLookupByLibrary.simpleMessage("Real Partner 🗝❤"),
         "testPartnerIntro":
             MessageLookupByLibrary.simpleMessage("😍 Test Your Partner 😉"),
         "tips": MessageLookupByLibrary.simpleMessage("Tips !"),
-        "validation": MessageLookupByLibrary.simpleMessage("Enter your Name")
+        "validation": MessageLookupByLibrary.simpleMessage("Enter your Name"),
+        "yourLevel": MessageLookupByLibrary.simpleMessage("Your level:"),
+        "yourScore": MessageLookupByLibrary.simpleMessage("Your score:")
       };
 }

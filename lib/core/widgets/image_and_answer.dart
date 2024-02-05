@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
-import 'package:quizygo/core/constants/colors.dart';
-import 'package:quizygo/core/widgets/answer_view.dart';
-import 'package:quizygo/core/widgets/image_view.dart';
+import 'package:QuizyGo/core/constants/colors.dart';
+import 'package:QuizyGo/core/widgets/answer_view.dart';
+import 'package:QuizyGo/core/widgets/image_view.dart';
 
 class ImageAndAnswer extends StatelessWidget {
   const ImageAndAnswer(
@@ -19,9 +17,7 @@ class ImageAndAnswer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: BlocProvider.of<AnswerCubit>(context).answer == answer
-            ? ColorManager.borderSideColor
-            : null,
+        color: onPressedColor,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: ColorManager.borderSideColor,

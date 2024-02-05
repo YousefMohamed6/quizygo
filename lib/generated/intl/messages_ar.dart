@@ -34,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("❓ أجب على 15 سؤالاً عن نفسك"),
         "answerFriend": MessageLookupByLibrary.simpleMessage(
             "أجب على الأسئلة المتعلقة بصديقك"),
+        "answerid": MessageLookupByLibrary.simpleMessage(
+            "أجب على 15 سؤالاً عن صديقك او شريكك"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "check": MessageLookupByLibrary.simpleMessage(
             "تحقق من نتيجتك في لوحة النتائج"),
@@ -42,27 +44,40 @@ class MessageLookup extends MessageLookupByLibrary {
         "checkPartner": MessageLookupByLibrary.simpleMessage(
             "🥇 تحقق من نتيجة شريكك في رابط الاختبار الخاص بك!"),
         "chellange": MessageLookupByLibrary.simpleMessage(
-            "انه دورك! الآن أنت تتحدى أصدقائك"),
+            "انه دورك! الآن أن تتحدى أصدقائك"),
         "contact": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
-        "copyLinkMessage": MessageLookupByLibrary.simpleMessage("تم النسخ"),
-        "copylink": MessageLookupByLibrary.simpleMessage("نسخ الرابط"),
+        "copyErrorMessage":
+            MessageLookupByLibrary.simpleMessage("انشاء اختبار جديد"),
+        "copyId": MessageLookupByLibrary.simpleMessage("تم نسخ المعرف"),
+        "correctId":
+            MessageLookupByLibrary.simpleMessage("من فضلك تحقق من المعرف"),
         "createQuiz":
             MessageLookupByLibrary.simpleMessage("إنشئ اختبارك الخاص"),
         "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
+        "enterId": MessageLookupByLibrary.simpleMessage(
+            "أدخل المعرف الخاص بصديقك او شريكك"),
         "enterName": MessageLookupByLibrary.simpleMessage("✍️ أدخل اسمك"),
+        "enterid": MessageLookupByLibrary.simpleMessage(
+            "ادخل المعرف من رسالة المشاركة"),
         "guessFriend": MessageLookupByLibrary.simpleMessage(
             "🤔 سيحاول اصدقائك وعائلتك تخمين الاجوبة الصحيحة."),
         "guessPartner": MessageLookupByLibrary.simpleMessage(
             "🤔 سيحاول شريكك تخمين الاجوبة الصحيحة."),
         "high": MessageLookupByLibrary.simpleMessage("مرتفع"),
         "home": MessageLookupByLibrary.simpleMessage("الصفحة الرئسية"),
-        "language": MessageLookupByLibrary.simpleMessage(
-            "اللغة                         "),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "linkSharingPage":
+            MessageLookupByLibrary.simpleMessage("صفحة مشاركة الرابط"),
         "low": MessageLookupByLibrary.simpleMessage("منخفض"),
         "medium": MessageLookupByLibrary.simpleMessage("متوسط"),
+        "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "noScore": MessageLookupByLibrary.simpleMessage("لا توجد نتائج "),
         "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "quizReady": MessageLookupByLibrary.simpleMessage(
             "رابط الاختبار الخاص بك جاهز!"),
+        "score": MessageLookupByLibrary.simpleMessage("النتيجة"),
+        "scoreBoardOf":
+            MessageLookupByLibrary.simpleMessage("لوحة النتائج الخاصة ب"),
         "shareFriend": MessageLookupByLibrary.simpleMessage(
             "📢 شارك رابط الاختبار الخاص بك مع أصدقائك وعائلتك."),
         "shareOn": MessageLookupByLibrary.simpleMessage("مشاركة"),
@@ -71,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shareTwitter":
             MessageLookupByLibrary.simpleMessage("مشاركة علي تويتر"),
         "shareWhats": MessageLookupByLibrary.simpleMessage("مشاركة علي واتس"),
+        "showScoreboard": MessageLookupByLibrary.simpleMessage("اعرض النتائج"),
         "start": MessageLookupByLibrary.simpleMessage("أبدأ"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "subTitlePartener":
@@ -92,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("😍 اختبر شريكك 😉"),
         "tips": MessageLookupByLibrary.simpleMessage("تعليمات!"),
         "validation": MessageLookupByLibrary.simpleMessage("✍️ أدخل اسمك"),
+        "yourLevel": MessageLookupByLibrary.simpleMessage(":مستواك"),
         "yourScore": MessageLookupByLibrary.simpleMessage(":نتيجتك")
       };
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/features/menu/presentation/widgets/about_us_body.dart';
-import 'package:quizygo/features/menu/presentation/widgets/email.dart';
+import 'package:QuizyGo/features/menu/presentation/widgets/about_us_body.dart';
+import 'package:QuizyGo/features/menu/presentation/widgets/email.dart';
 
 class ContactBody extends StatelessWidget {
   const ContactBody({super.key});

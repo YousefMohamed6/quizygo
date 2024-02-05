@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/features/home/presentation/widgets/start_button.dart';
+import 'package:QuizyGo/features/home/presentation/widgets/start_button.dart';
 
 class CustomImage extends StatelessWidget {
   const CustomImage({super.key, required this.path, required this.onPressed});

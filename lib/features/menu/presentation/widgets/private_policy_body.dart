@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/features/menu/presentation/widgets/Custom_text.dart';
-import 'package:quizygo/features/menu/presentation/widgets/about_us_body.dart';
+import 'package:QuizyGo/features/menu/presentation/widgets/Custom_text.dart';
+import 'package:QuizyGo/features/menu/presentation/widgets/about_us_body.dart';
 
 class PrivatePolicyBody extends StatelessWidget {
   const PrivatePolicyBody({super.key});

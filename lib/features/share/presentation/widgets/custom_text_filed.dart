@@ -1,9 +1,10 @@
+import 'package:QuizyGo/core/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:quizygo/core/constants/colors.dart';
 
-class LinkTextFiled extends StatelessWidget {
-  const LinkTextFiled({super.key, required this.quizLink});
-  final String quizLink;
+class CustomTextFiled extends StatelessWidget {
+  const CustomTextFiled({super.key, required this.textController});
+  final String textController;
+
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -13,7 +14,8 @@ class LinkTextFiled extends StatelessWidget {
         fontSize: MediaQuery.sizeOf(context).height * 0.024,
         fontWeight: FontWeight.w500,
       ),
-      controller: TextEditingController(text: quizLink),
+      enableInteractiveSelection: true,
+      controller: TextEditingController(text: textController),
       enabled: false,
       textAlign: TextAlign.center,
       decoration: const InputDecoration(

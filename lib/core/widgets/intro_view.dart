@@ -1,10 +1,11 @@
+import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/core/constants/colors.dart';
+import 'package:QuizyGo/core/widgets/ask_tips.dart';
+import 'package:QuizyGo/core/widgets/name_text_feild.dart';
+import 'package:QuizyGo/core/widgets/custom_button.dart';
+import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
-import 'package:quizygo/core/constants/colors.dart';
-import 'package:quizygo/core/widgets/name_text_feild.dart';
-import 'package:quizygo/core/widgets/start_ask_button.dart';
-import 'package:quizygo/core/widgets/tips.dart';
 
 class IntroView extends StatelessWidget {
   const IntroView(
@@ -58,11 +59,55 @@ class IntroView extends StatelessWidget {
                   fontWeight: FontWeight.w900,
                 ),
               ),
-              const SizedBox(height: 32),
-              NameTextFeild(
-                  controller: BlocProvider.of<AnswerCubit>(context).userName),
               const SizedBox(height: 16),
-              StartAskButton(
+              PopupMenuButton(
+                child: Center(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        S.of(context).language,
+                        style: const TextStyle(
+                          fontSize: 24,
+                          color: Colors.red,
+                        ),
+                      ),
+                      const Icon(
+                        Icons.arrow_downward_sharp,
+                        color: Colors.red,
+                      )
+                    ],
+                  ),
+                ),
+                itemBuilder: (context) => [
+                  PopupMenuItem(
+                    value: 'ar',
+                    child: Text(S.of(context).arabic),
+                  ),
+                  PopupMenuItem(
+                    value: 'en',
+                    child: Text(S.of(context).english),
+                  ),
+                ],
+                onSelected: (value) {
+                  switch (value) {
+                    case "ar":
+                      BlocProvider.of<AnswerCubit>(context)
+                          .changeLanguage(isArabic: true);
+                      break;
+                    case "en":
+                      BlocProvider.of<AnswerCubit>(context)
+                          .changeLanguage(isArabic: false);
+                      break;
+                  }
+                },
+              ),
+              const SizedBox(height: 8),
+              NameTextFeild(
+                  controller:
+                      BlocProvider.of<AnswerCubit>(context).userNameCtrl),
+              const SizedBox(height: 16),
+              CustomButton(
                 onPressed: onPressed,
               ),
               const SizedBox(height: 16),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/core/constants/colors.dart';
-import 'package:quizygo/core/widgets/appbar_logo.dart';
-import 'package:quizygo/core/widgets/menu_button.dart';
-import 'package:quizygo/features/ask/partners/presentation/widgets/partner_ask_body.dart';
+import 'package:QuizyGo/core/constants/colors.dart';
+import 'package:QuizyGo/core/widgets/appbar_logo.dart';
+import 'package:QuizyGo/features/menu/presentation/menu_button.dart';
+import 'package:QuizyGo/features/ask/partners/presentation/widgets/partner_ask_body.dart';
 
 class PartnerAskView extends StatelessWidget {
   const PartnerAskView({super.key});

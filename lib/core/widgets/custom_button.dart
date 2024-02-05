@@ -1,11 +1,11 @@
+import 'package:QuizyGo/core/constants/colors.dart';
+import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:quizygo/core/constants/colors.dart';
-import 'package:quizygo/generated/l10n.dart';
 
-class StartAskButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
 
-  const StartAskButton({super.key, required this.onPressed});
+  const CustomButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

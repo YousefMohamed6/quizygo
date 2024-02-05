@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:quizygo/core/constants/partner.dart';
-import 'package:quizygo/core/url_launcher.dart';
-import 'package:quizygo/features/share/presentation/widgets/share_button.dart';
-import 'package:quizygo/generated/l10n.dart';
+import 'package:QuizyGo/core/constants/keys.dart';
+import 'package:QuizyGo/core/constants/partner.dart';
+import 'package:QuizyGo/core/url_launcher.dart';
+import 'package:QuizyGo/features/share/presentation/widgets/share_button.dart';
+import 'package:QuizyGo/generated/l10n.dart';
 
 class ShareToFaceBookButton extends StatelessWidget {
-  const ShareToFaceBookButton({super.key, required this.quizLink});
+  const ShareToFaceBookButton(
+      {super.key,
+      required this.quizLink,
+      required this.isFriends,
+      required this.documentId});
   final String quizLink;
+  final String documentId;
+
+  final bool isFriends;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -16,10 +24,10 @@ class ShareToFaceBookButton extends StatelessWidget {
         iconPath: Partner.imagesPartnerFacebook,
         onPressed: () async {
           await urlLauncher(
-              url: "https://www.facebook.com/sharer/sharer.php?u=$quizLink");
+              url:
+                  "https://www.facebook.com/sharer/sharer.php?u=${isFriends ? kFriendMessage : kPartnerMessage}$documentId$quizLink");
         },
       ),
     );
   }
 }
-

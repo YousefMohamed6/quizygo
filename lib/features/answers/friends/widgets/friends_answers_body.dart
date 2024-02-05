@@ -1,21 +1,22 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
-import 'package:quizygo/core/widgets/answer_tips.dart';
-import 'package:quizygo/core/widgets/intro_view.dart';
-import 'package:quizygo/features/ask/friends/presentation/friends_ask_view.dart';
-import 'package:quizygo/generated/l10n.dart';
+import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/core/widgets/answer_tips.dart';
+import 'package:QuizyGo/core/widgets/intro_view.dart';
+import 'package:QuizyGo/features/ask/friends/presentation/friends_ask_view.dart';
+import 'package:QuizyGo/generated/l10n.dart';
 
 class FriendsAnswersBody extends StatelessWidget {
   const FriendsAnswersBody({super.key});
 
   @override
   Widget build(BuildContext context) {
+    String answerName = BlocProvider.of<AnswerCubit>(context).answerName;
     return IntroView(
       formKey: BlocProvider.of<AnswerCubit>(context).formKey,
       title: S.of(context).testFriendIntro,
-      subTitle: "${S.of(context).FriendSubTitleAnswer} Yousef",
-      tipsType: const AnswerTips(friendName: "Yousef"),
+      subTitle: "${S.of(context).FriendSubTitleAnswer} $answerName",
+      tipsType: AnswerTips(answerName: answerName),
       onPressed: () {
         var formKey = BlocProvider.of<AnswerCubit>(context).formKey;
         if (formKey.currentState!.validate()) {

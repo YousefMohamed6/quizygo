@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
-import 'package:quizygo/core/constants/colors.dart';
-import 'package:quizygo/core/constants/keys.dart';
-import 'package:quizygo/features/share/presentation/widgets/share_contanier_view.dart';
+import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/core/constants/colors.dart';
+import 'package:QuizyGo/core/constants/keys.dart';
+import 'package:QuizyGo/features/get%20Answers/get_answers.dart';
+import 'package:QuizyGo/features/share/presentation/widgets/share_contanier_view.dart';
 
 class ShareLinkViewBody extends StatelessWidget {
   const ShareLinkViewBody({super.key});
@@ -12,8 +13,7 @@ class ShareLinkViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     String documentId = BlocProvider.of<AnswerCubit>(context).documentId;
     String userName =
-        BlocProvider.of<AnswerCubit>(context).myAnswers[kUserName]!;
-    bool isFriends = BlocProvider.of<AnswerCubit>(context).isFriends;
+        BlocProvider.of<AnswerCubit>(context).myAnswers[kUserName];
     return Center(
       child: Container(
         padding: const EdgeInsets.all(16),
@@ -26,9 +26,8 @@ class ShareLinkViewBody extends StatelessWidget {
         ),
         child: ShareContainerView(
           userName: userName,
-          quizLink: isFriends
-              ? "https://www.quizygo-2024.wep.app/Friends/$documentId"
-              : "https://www.quizygo-2024.wep.app/Partner/$documentId",
+          quizLink: kBaseUrl + GetAnswers.id ,
+          documentId: documentId,
         ),
       ),
     );

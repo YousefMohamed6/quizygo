@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
-import 'package:quizygo/features/ask/friends/presentation/friends_ask_view.dart';
-import 'package:quizygo/features/ask/partners/presentation/partner_ask_view.dart';
-import 'package:quizygo/features/home/presentation/home_view.dart';
-import 'package:quizygo/features/intro/friends/presentation/friends_intro_view.dart';
-import 'package:quizygo/features/intro/partners/presentation/partner_view.dart';
-import 'package:quizygo/features/menu/presentation/views/about_us.dart';
-import 'package:quizygo/features/menu/presentation/views/contact.dart';
-import 'package:quizygo/features/menu/presentation/views/private_policy.dart';
-import 'package:quizygo/features/share/presentation/share_view.dart';
-import 'package:quizygo/generated/l10n.dart';
+import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/features/answers/friends/friends_answer.dart';
+import 'package:QuizyGo/features/answers/partner/partner_answer.dart';
+import 'package:QuizyGo/features/ask/friends/presentation/friends_ask_view.dart';
+import 'package:QuizyGo/features/ask/partners/presentation/partner_ask_view.dart';
+import 'package:QuizyGo/features/get%20Answers/get_answers.dart';
+import 'package:QuizyGo/features/home/presentation/home_view.dart';
+import 'package:QuizyGo/features/intro/friends/presentation/friends_intro_view.dart';
+import 'package:QuizyGo/features/intro/partners/presentation/partner_view.dart';
+import 'package:QuizyGo/features/menu/presentation/views/about_us.dart';
+import 'package:QuizyGo/features/menu/presentation/views/contact.dart';
+import 'package:QuizyGo/features/menu/presentation/views/private_policy.dart';
+import 'package:QuizyGo/features/share/presentation/share_view.dart';
+import 'package:QuizyGo/features/show%20score/show_score.dart';
+import 'package:QuizyGo/generated/l10n.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp._();
@@ -53,6 +57,10 @@ class MyApp extends StatelessWidget {
               FriendsAskView.id: (context) => const FriendsAskView(),
               PartnerAskView.id: (context) => const PartnerAskView(),
               ShareLinkView.id: (context) => const ShareLinkView(),
+              FriendsAnswer.id: (context) => const FriendsAnswer(),
+              PartnerAnswer.id: (context) => const PartnerAnswer(),
+              GetAnswers.id: (context) => const GetAnswers(),
+              ShowScore.id: (context) => const ShowScore(),
             },
           );
         });

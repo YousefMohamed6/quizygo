@@ -1,8 +1,8 @@
-import 'package:quizygo/core/constants/friends.dart';
+import 'package:QuizyGo/core/constants/friends.dart';
 
 class Partner {
   Partner._();
-  static const Map<String, List<String>> quetionsAndAnswerEn = {
+  static const Map<String, List<String>> quetionsAndAnswersEn = {
     "1": [
       "What kind of restaurants do you prefer?",
       "Fancy",
@@ -109,7 +109,7 @@ class Partner {
       "Summer",
     ],
   };
-  static const Map<String, List<String>> quetionsAndAnswerAr = {
+  static const Map<String, List<String>> quetionsAndAnswersAr = {
     "1": [
       "أي نوع من المطاعم تفضل؟",
       "الفاخرة",

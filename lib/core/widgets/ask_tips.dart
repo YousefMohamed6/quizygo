@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
-import 'package:quizygo/core/widgets/tips_text.dart';
-import 'package:quizygo/generated/l10n.dart';
+import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/core/widgets/tips_text.dart';
+import 'package:QuizyGo/generated/l10n.dart';
 
 class AskTips extends StatelessWidget {
   const AskTips({super.key});

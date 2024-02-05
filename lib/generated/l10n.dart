@@ -50,30 +50,30 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Real partner 🗝❤`
+  /// `Real Partner 🗝❤`
   String get testPartner {
     return Intl.message(
-      'Real partner 🗝❤',
+      'Real Partner 🗝❤',
       name: 'testPartner',
       desc: '',
       args: [],
     );
   }
 
-  /// `How well dose you partner know you ?`
+  /// `How well dose your partner know you ?`
   String get subTitlePartener {
     return Intl.message(
-      'How well dose you partner know you ?',
+      'How well dose your partner know you ?',
       name: 'subTitlePartener',
       desc: '',
       args: [],
     );
   }
 
-  /// `Test your friends ✌🏻❤`
+  /// `Test your Friends ✌🏻❤`
   String get testFriend {
     return Intl.message(
-      'Test your friends ✌🏻❤',
+      'Test your Friends ✌🏻❤',
       name: 'testFriend',
       desc: '',
       args: [],
@@ -140,11 +140,61 @@ class S {
     );
   }
 
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Score`
+  String get score {
+    return Intl.message(
+      'Score',
+      name: 'score',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `link Sharing Page`
+  String get linkSharingPage {
+    return Intl.message(
+      'link Sharing Page',
+      name: 'linkSharingPage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Score Board Of `
+  String get scoreBoardOf {
+    return Intl.message(
+      'Score Board Of ',
+      name: 'scoreBoardOf',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Enter your Name`
   String get validation {
     return Intl.message(
       'Enter your Name',
       name: 'validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the id of friend or Partner`
+  String get enterId {
+    return Intl.message(
+      'Enter the id of friend or Partner',
+      name: 'enterId',
       desc: '',
       args: [],
     );
@@ -170,11 +220,21 @@ class S {
     );
   }
 
-  /// `❓ Answer any 15 questions about yourself.`
+  /// `❓ Answer 15 questions about yourself.`
   String get answer {
     return Intl.message(
-      '❓ Answer any 15 questions about yourself.',
+      '❓ Answer 15 questions about yourself.',
       name: 'answer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Answer 15 questions about your Friend or Partner.`
+  String get answerid {
+    return Intl.message(
+      'Answer 15 questions about your Friend or Partner.',
+      name: 'answerid',
       desc: '',
       args: [],
     );
@@ -200,10 +260,10 @@ class S {
     );
   }
 
-  /// `🥇 Check the score of your Friends & Family at\n your quiz-link!`
+  /// `🥇 Check the score of your Friends & Family at your quiz-link!`
   String get checkFriend {
     return Intl.message(
-      '🥇 Check the score of your Friends & Family at\n your quiz-link!',
+      '🥇 Check the score of your Friends & Family at your quiz-link!',
       name: 'checkFriend',
       desc: '',
       args: [],
@@ -240,10 +300,10 @@ class S {
     );
   }
 
-  /// `language         `
+  /// `Language`
   String get language {
     return Intl.message(
-      'language         ',
+      'Language',
       name: 'language',
       desc: '',
       args: [],
@@ -320,21 +380,31 @@ class S {
     );
   }
 
-  /// `Copy link`
-  String get copylink {
+  /// `link Copied`
+  String get copyLink {
     return Intl.message(
-      'Copy link',
-      name: 'copylink',
+      'link Copied',
+      name: 'copyLink',
       desc: '',
       args: [],
     );
   }
 
-  /// `link Copied`
-  String get copyLinkMessage {
+  /// `Id Copied`
+  String get copyId {
     return Intl.message(
-      'link Copied',
-      name: 'copyLinkMessage',
+      'Id Copied',
+      name: 'copyId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start new Quiz`
+  String get copyErrorMessage {
+    return Intl.message(
+      'Start new Quiz',
+      name: 'copyErrorMessage',
       desc: '',
       args: [],
     );
@@ -410,11 +480,21 @@ class S {
     );
   }
 
-  /// `Answer questions about your friend`
+  /// `Answer questions about your Friend`
   String get answerFriend {
     return Intl.message(
-      'Answer questions about your friend',
+      'Answer questions about your Friend',
       name: 'answerFriend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Answer questions about your Partner`
+  String get answerPartner {
+    return Intl.message(
+      'Answer questions about your Partner',
+      name: 'answerPartner',
       desc: '',
       args: [],
     );
@@ -440,11 +520,31 @@ class S {
     );
   }
 
+  /// `view Result`
+  String get showScoreboard {
+    return Intl.message(
+      'view Result',
+      name: 'showScoreboard',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Your score:`
   String get yourScore {
     return Intl.message(
       'Your score:',
       name: 'yourScore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your level:`
+  String get yourLevel {
+    return Intl.message(
+      'Your level:',
+      name: 'yourLevel',
       desc: '',
       args: [],
     );
@@ -505,6 +605,36 @@ class S {
     return Intl.message(
       'How well you know ',
       name: 'FriendSubTitleAnswer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the id from share message`
+  String get enterid {
+    return Intl.message(
+      'Enter the id from share message',
+      name: 'enterid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Enter Correct id`
+  String get correctId {
+    return Intl.message(
+      'Please Enter Correct id',
+      name: 'correctId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Score Found`
+  String get noScore {
+    return Intl.message(
+      'No Score Found',
+      name: 'noScore',
       desc: '',
       args: [],
     );

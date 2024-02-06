@@ -1,6 +1,4 @@
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
-import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/core/url_launcher.dart';
 import 'package:QuizyGo/features/home/presentation/widgets/custom_image.dart';
 import 'package:QuizyGo/features/home/presentation/widgets/title_and_subtitle.dart';
 import 'package:QuizyGo/features/intro_ask/friends/presentation/friends_intro_view.dart';
@@ -22,10 +20,10 @@ class FriendsQuetionView extends StatelessWidget {
         CustomImage(
           path: "assats/images/friends.png",
           onPressed: () async {
+            BlocProvider.of<AnswerCubit>(context).restView();
             BlocProvider.of<AnswerCubit>(context)
                 .addQuetionType(isFriends: true);
-            BlocProvider.of<AnswerCubit>(context).restView();
-            await urlLauncher(url: kBaseUrl + FriendsIntroView.id);
+            Navigator.pushNamed(context, FriendsIntroView.id);
           },
         ),
       ],

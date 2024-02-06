@@ -1,10 +1,10 @@
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
-import 'package:QuizyGo/features/intro_answers/friends/friends_answer.dart';
-import 'package:QuizyGo/features/intro_answers/partner/partner_answer.dart';
 import 'package:QuizyGo/features/ask/friends/presentation/friends_ask_view.dart';
 import 'package:QuizyGo/features/ask/partners/presentation/partner_ask_view.dart';
 import 'package:QuizyGo/features/get%20Answers/get_answers.dart';
 import 'package:QuizyGo/features/home/presentation/home_view.dart';
+import 'package:QuizyGo/features/intro_answers/friends/friends_answer.dart';
+import 'package:QuizyGo/features/intro_answers/partner/partner_answer.dart';
 import 'package:QuizyGo/features/intro_ask/friends/presentation/friends_intro_view.dart';
 import 'package:QuizyGo/features/intro_ask/partners/presentation/partner_view.dart';
 import 'package:QuizyGo/features/menu/presentation/views/about_us.dart';
@@ -40,7 +40,6 @@ class MyApp extends StatelessWidget {
               GlobalCupertinoLocalizations.delegate,
             ],
             supportedLocales: S.delegate.supportedLocales,
-            home: const HomeView(),
             initialRoute: HomeView.id,
             // applies this theme if the device theme is light mode
             theme: ThemeData.light(),

@@ -8,7 +8,6 @@ import 'package:QuizyGo/features/share/presentation/share_view.dart';
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 
 class MenuButton extends StatelessWidget {
   const MenuButton({super.key});
@@ -16,10 +15,9 @@ class MenuButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
-      iconSize: 32,
-      icon: const Icon(
-        FontAwesomeIcons.bars,
-        color: Colors.red,
+      icon: Image.asset(
+        "assats/images/menu.png",
+        height: MediaQuery.sizeOf(context).height * 0.032,
       ),
       onSelected: (value) async {
         switch (value) {

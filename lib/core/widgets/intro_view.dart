@@ -1,8 +1,8 @@
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/constants/colors.dart';
 import 'package:QuizyGo/core/widgets/ask_tips.dart';
-import 'package:QuizyGo/core/widgets/name_text_feild.dart';
 import 'package:QuizyGo/core/widgets/custom_button.dart';
+import 'package:QuizyGo/core/widgets/name_text_feild.dart';
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -67,15 +67,16 @@ class IntroView extends StatelessWidget {
                     children: [
                       Text(
                         S.of(context).language,
-                        style: const TextStyle(
-                          fontSize: 24,
+                        style: TextStyle(
+                          fontSize: MediaQuery.sizeOf(context).height * 0.030,
                           color: Colors.red,
                         ),
                       ),
-                      const Icon(
-                        Icons.arrow_downward_sharp,
-                        color: Colors.red,
-                      )
+                      const SizedBox(width: 8),
+                      Image.asset(
+                        "assats/images/arrow.png",
+                        height: MediaQuery.sizeOf(context).height * 0.024,
+                      ),
                     ],
                   ),
                 ),

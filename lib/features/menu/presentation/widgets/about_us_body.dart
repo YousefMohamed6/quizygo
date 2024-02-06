@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
-import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/core/url_launcher.dart';
+import 'package:QuizyGo/features/menu/presentation/widgets/about_us_information.dart';
 import 'package:QuizyGo/features/menu/presentation/widgets/email.dart';
+import 'package:flutter/material.dart';
 
 class AboutUsBody extends StatelessWidget {
   const AboutUsBody({super.key});
@@ -46,76 +44,6 @@ class AboutUsBody extends StatelessWidget {
           const AboutUsInformation(),
         ],
       ),
-    );
-  }
-}
-
-class AboutUsInformation extends StatelessWidget {
-  const AboutUsInformation({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: Colors.white,
-      ),
-      child: const Column(
-        children: [
-          SizedBox(height: 32),
-          SocialMediaAccounts(),
-          SizedBox(height: 32),
-          Divider(
-            thickness: 1,
-            color: Colors.black,
-          ),
-          SizedBox(height: 32),
-        ],
-      ),
-    );
-  }
-}
-
-class SocialMediaAccounts extends StatelessWidget {
-  const SocialMediaAccounts({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Account(
-          onPressed: () async {
-            await urlLauncher(url: kFacebook);
-          },
-          icon: const Icon(
-            FontAwesomeIcons.facebook,
-            size: 36,
-            color: Colors.blue,
-          ),
-        ),
-        Account(
-          onPressed: () async {
-            await urlLauncher(url: kTiktok);
-          },
-          icon: const Icon(
-            FontAwesomeIcons.tiktok,
-            size: 36,
-          ),
-        )
-      ],
-    );
-  }
-}
-
-class Account extends StatelessWidget {
-  const Account({super.key, required this.onPressed, required this.icon});
-  final VoidCallback onPressed;
-  final Widget icon;
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: onPressed,
-      icon: icon,
     );
   }
 }

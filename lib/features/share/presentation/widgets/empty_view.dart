@@ -20,7 +20,7 @@ class EmptyView extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: 64),
         const Logo(),
         const SizedBox(height: 16),
         Text(
@@ -28,7 +28,7 @@ class EmptyView extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: MediaQuery.sizeOf(context).height * 0.024,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w500,
           ),
         ),
         const SizedBox(height: 16),

@@ -6,6 +6,7 @@ import 'package:QuizyGo/features/share/presentation/share_view.dart';
 import 'package:QuizyGo/features/show%20score/show_score.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class FriendsAskBody extends StatelessWidget {
   const FriendsAskBody({super.key});
@@ -16,12 +17,10 @@ class FriendsAskBody extends StatelessWidget {
       buildWhen: (previous, current) => current is NavigateToNextQuetion,
       listener: (context, state) {
         if (state is ShareLink) {
-          Navigator.pushNamedAndRemoveUntil(
-              context, ShareLinkView.id, (route) => false);
+          context.pushNamed(ShareLinkView.id);
         }
         if (state is ShowScoreBoard) {
-          Navigator.pushNamedAndRemoveUntil(
-              context, ShowScore.id, (route) => false);
+          context.pushNamed(ShowScore.id);
         }
       },
       builder: (context, state) {

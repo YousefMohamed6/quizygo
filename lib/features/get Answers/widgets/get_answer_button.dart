@@ -9,11 +9,11 @@ class GetAnswerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomButton(
-      onPressed: () {
-        var formKey = BlocProvider.of<GetAnswersCubit>(context).formKey;
-        if (formKey.currentState!.validate()) {
-          BlocProvider.of<GetAnswersCubit>(context).getAnswersFromFireBase();
-        }
+      onPressed: () async {
+        String documentId = Uri.base.queryParameters['id'] ?? "";
+        debugPrint(documentId);
+        await BlocProvider.of<GetAnswersCubit>(context)
+            .getAnswersFromFireBase(documentId: documentId);
       },
     );
   }

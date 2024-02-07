@@ -56,8 +56,7 @@
         "medium": "Medium",
         "high": "High",
         "FriendSubTitleAnswer": "How well you know ",
-        "enterid": "Enter the id from share message",
-        "correctId": "Please Enter Correct id",
+        "correctId": "Quizlink is Exparied ,please create new quiz",
         "noScore": "No Score Found",
         "welcome": "Welcome to the QuizGo website",
         "noShareLink": "share link is not found create new quiz"

@@ -1,15 +1,14 @@
-import 'package:flutter/material.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/share_to_facebook.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/share_to_messanger.dart';
+import 'package:flutter/material.dart';
 
 class ShareFaceAndMassenger extends StatelessWidget {
-  const ShareFaceAndMassenger(
-      {super.key,
-      required this.quizLink,
-      required this.isFriends,
-      required this.documentId});
+  const ShareFaceAndMassenger({
+    super.key,
+    required this.quizLink,
+    required this.isFriends,
+  });
   final String quizLink;
-  final String documentId;
 
   final bool isFriends;
   @override
@@ -19,7 +18,6 @@ class ShareFaceAndMassenger extends StatelessWidget {
         ShareToFaceBookButton(
           quizLink: quizLink,
           isFriends: isFriends,
-          documentId: documentId,
         ),
         const SizedBox(width: 8),
         ShareToMessangerButton(quizLink: quizLink)

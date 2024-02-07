@@ -52,16 +52,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Start new Quiz"),
         "copyId": MessageLookupByLibrary.simpleMessage("Id Copied"),
         "copyLink": MessageLookupByLibrary.simpleMessage("link Copied"),
-        "correctId":
-            MessageLookupByLibrary.simpleMessage("Please Enter Correct id"),
+        "correctId": MessageLookupByLibrary.simpleMessage(
+            "Quizlink is Exparied ,please create new quiz"),
         "createQuiz":
             MessageLookupByLibrary.simpleMessage("Create your own quiz"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterId": MessageLookupByLibrary.simpleMessage(
             "Enter the id of friend or Partner"),
         "enterName": MessageLookupByLibrary.simpleMessage("Enter Your Name ✍️"),
-        "enterid": MessageLookupByLibrary.simpleMessage(
-            "Enter the id from share message"),
         "guessFriend": MessageLookupByLibrary.simpleMessage(
             "🤔 Your friends & Family will try to guess the right answers."),
         "guessPartner": MessageLookupByLibrary.simpleMessage(

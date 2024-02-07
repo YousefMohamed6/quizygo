@@ -8,6 +8,7 @@ import 'package:QuizyGo/features/share/presentation/share_view.dart';
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class MenuButton extends StatelessWidget {
   const MenuButton({super.key});
@@ -22,16 +23,16 @@ class MenuButton extends StatelessWidget {
       onSelected: (value) async {
         switch (value) {
           case "home":
-            Navigator.popAndPushNamed(context, HomeView.id);
+            await context.pushNamed(HomeView.id);
             break;
           case "about":
-            Navigator.popAndPushNamed(context, AboutUs.id);
+            await context.pushNamed(AboutUs.id);
             break;
           case "contact":
-            Navigator.popAndPushNamed(context, Contact.id);
+            await context.pushNamed(Contact.id);
             break;
           case "Privacy":
-            Navigator.popAndPushNamed(context, PrivatePolicy.id);
+            await context.pushNamed(PrivatePolicy.id);
             break;
           case "share":
             try {
@@ -40,7 +41,7 @@ class MenuButton extends StatelessWidget {
               await BlocProvider.of<AnswerCubit>(context).getUserName();
             } catch (_) {}
             // ignore: use_build_context_synchronously
-            Navigator.popAndPushNamed(context, ShareLinkView.id);
+            await context.pushNamed(ShareLinkView.id);
             break;
         }
       },

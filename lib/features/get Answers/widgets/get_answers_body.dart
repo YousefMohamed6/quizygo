@@ -6,6 +6,7 @@ import 'package:QuizyGo/features/get%20Answers/widgets/get_answer_initial.dart';
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class GetAnswersBody extends StatelessWidget {
   const GetAnswersBody({super.key});
@@ -23,8 +24,7 @@ class GetAnswersBody extends StatelessWidget {
           BlocProvider.of<AnswerCubit>(context).isArabic = state.model.isArabic;
           BlocProvider.of<AnswerCubit>(context).theAnswers =
               state.model.answers;
-          Navigator.pushNamed(
-              context,
+          context.goNamed(
               state.model.isFriends
                   ? FriendsIntroAnswer.id
                   : PartnerIntroAnswer.id);

@@ -1,3 +1,5 @@
+import 'package:QuizyGo/core/constants/keys.dart';
+import 'package:QuizyGo/core/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class EMail extends StatelessWidget {
@@ -7,10 +9,12 @@ class EMail extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       child: Text(
-        "QuizyGo@gmail.com",
+        kEmail,
         style: TextStyle(fontSize: MediaQuery.sizeOf(context).width * 0.016),
       ),
-      onPressed: () {},
+      onPressed: () async {
+        await urlLauncher(url: "mailto:$kEmail?Subject=QuizyGo Problem");
+      },
     );
   }
 }

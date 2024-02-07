@@ -5,6 +5,7 @@ import 'package:QuizyGo/features/intro_ask/friends/presentation/friends_intro_vi
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class FriendsQuetionView extends StatelessWidget {
   const FriendsQuetionView({super.key});
@@ -23,7 +24,7 @@ class FriendsQuetionView extends StatelessWidget {
             BlocProvider.of<AnswerCubit>(context).restView();
             BlocProvider.of<AnswerCubit>(context)
                 .addQuetionType(isFriends: true);
-            Navigator.pushNamed(context, FriendsIntroView.id);
+            await context.pushNamed(FriendsIntroView.id);
           },
         ),
       ],

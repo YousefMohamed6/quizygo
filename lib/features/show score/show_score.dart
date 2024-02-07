@@ -6,7 +6,7 @@ import 'package:QuizyGo/features/show%20score/widgets/show_score_body.dart';
 
 class ShowScore extends StatelessWidget {
   const ShowScore({super.key});
-  static const String id = "/Show Score";
+  static const String id = "/Score";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

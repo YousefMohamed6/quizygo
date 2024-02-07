@@ -27,7 +27,7 @@ class ShareLinkViewBody extends StatelessWidget {
         alignment: Alignment.center,
         child: ShareContainerView(
           userName: userName,
-          quizLink: kBaseUrl + GetAnswers.id,
+          quizLink: "$kBaseUrl${GetAnswers.id}?id=$documentId",
           documentId: documentId,
         ),
       ),

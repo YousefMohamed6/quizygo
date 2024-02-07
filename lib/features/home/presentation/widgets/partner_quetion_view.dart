@@ -5,6 +5,7 @@ import 'package:QuizyGo/features/intro_ask/partners/presentation/partner_view.da
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class PartnerQuetionView extends StatelessWidget {
   const PartnerQuetionView({super.key});
@@ -23,7 +24,7 @@ class PartnerQuetionView extends StatelessWidget {
             BlocProvider.of<AnswerCubit>(context).restView();
             BlocProvider.of<AnswerCubit>(context)
                 .addQuetionType(isFriends: false);
-                Navigator.pushNamed(context, PartnerIntroView.id);
+            await context.pushNamed(PartnerIntroView.id);
           },
         ),
       ],

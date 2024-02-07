@@ -610,20 +610,10 @@ class S {
     );
   }
 
-  /// `Enter the id from share message`
-  String get enterid {
-    return Intl.message(
-      'Enter the id from share message',
-      name: 'enterid',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Please Enter Correct id`
+  /// `Quizlink is Exparied ,please create new quiz`
   String get correctId {
     return Intl.message(
-      'Please Enter Correct id',
+      'Quizlink is Exparied ,please create new quiz',
       name: 'correctId',
       desc: '',
       args: [],

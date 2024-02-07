@@ -10,13 +10,13 @@ class GetAnswersCubit extends Cubit<GetAnswersState> {
   GetAnswersCubit() : super(GetAnswersInitial());
   final TextEditingController documentCtrl = TextEditingController();
   final formKey = GlobalKey<FormState>();
-  Future<void> getAnswersFromFireBase() async {
+  Future<void> getAnswersFromFireBase({required String documentId}) async {
     emit(GetAnswersLoading());
     try {
       CollectionReference myAnswers =
           FirebaseFirestore.instance.collection(kCollection);
       DocumentSnapshot<Object?> yourAnswer =
-          await myAnswers.doc(documentCtrl.text).get();
+          await myAnswers.doc(documentId).get();
       Map<String, dynamic> data = yourAnswer.data() as Map<String, dynamic>;
       QuetionModel quetionModel = QuetionModel.fromFirebase(data: data);
       emit(GetAnswersSucsses(model: quetionModel));

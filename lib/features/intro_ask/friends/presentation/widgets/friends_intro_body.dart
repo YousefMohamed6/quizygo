@@ -4,6 +4,7 @@ import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/widgets/intro_view.dart';
 import 'package:QuizyGo/features/ask/friends/presentation/friends_ask_view.dart';
 import 'package:QuizyGo/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
 
 class FriendsIntroBody extends StatelessWidget {
   const FriendsIntroBody({super.key});
@@ -14,13 +15,13 @@ class FriendsIntroBody extends StatelessWidget {
       formKey: BlocProvider.of<AnswerCubit>(context).formKey,
       title: S.of(context).testFriendIntro,
       subTitle: S.of(context).testFriendSubTitleIntro,
-      onPressed: () {
+      onPressed: () async{
         var formKey = BlocProvider.of<AnswerCubit>(context).formKey;
         if (formKey.currentState!.validate()) {
           BlocProvider.of<AnswerCubit>(context).addUserName();
           BlocProvider.of<AnswerCubit>(context).addLanguageType();
           BlocProvider.of<AnswerCubit>(context).isFriends = true;
-          Navigator.pushNamed(context, FriendsAskView.id);
+          await context.pushNamed(FriendsAskView.id);
         }
       },
     );

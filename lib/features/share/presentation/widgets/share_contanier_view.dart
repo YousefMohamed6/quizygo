@@ -1,7 +1,5 @@
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
-import 'package:QuizyGo/core/constants/keys.dart';
 import 'package:QuizyGo/features/Scoreboard/scoreboard_view.dart';
-import 'package:QuizyGo/features/get%20Answers/get_answers.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/copy_view.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/empty_view.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/facebook_and_messanger_share.dart';
@@ -24,7 +22,6 @@ class ShareContainerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isFriends = BlocProvider.of<AnswerCubit>(context).isFriends;
-
     return documentId.isEmpty
         ? const EmptyView()
         : Column(
@@ -50,29 +47,9 @@ class ShareContainerView extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               CopyView(
-                textController: documentId,
+                textController: quizLink,
                 onPressed: () async {
-                  var prefs =
-                      await BlocProvider.of<AnswerCubit>(context).getPrefs();
-                  String documentId = prefs.getString(kDocumentId)!;
-                  await Clipboard.setData(ClipboardData(text: documentId));
-                  // ignore: use_build_context_synchronously
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      // ignore: use_build_context_synchronously
-                      content: Text(S.of(context).copyId),
-                      showCloseIcon: true,
-                      duration: const Duration(seconds: 1),
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(height: 8),
-              CopyView(
-                textController: kBaseUrl + GetAnswers.id,
-                onPressed: () async {
-                  await Clipboard.setData(
-                      const ClipboardData(text: kBaseUrl + GetAnswers.id));
+                  await Clipboard.setData(ClipboardData(text: quizLink));
                   // ignore: use_build_context_synchronously
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
@@ -86,19 +63,19 @@ class ShareContainerView extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               ShareToWhatsAppButton(
-                  quizLink: quizLink,
-                  isFriends: isFriends,
-                  documentId: kIdFormat + documentId),
+                quizLink: quizLink,
+                isFriends: isFriends,
+              ),
               const SizedBox(height: 8),
               ShareFaceAndMassenger(
-                  quizLink: quizLink,
-                  isFriends: isFriends,
-                  documentId: kIdFormat + documentId),
+                quizLink: quizLink,
+                isFriends: isFriends,
+              ),
               const SizedBox(height: 8),
               ShareToTwitterButton(
-                  quizLink: quizLink,
-                  isFriends: isFriends,
-                  documentId: kIdFormat + documentId),
+                quizLink: quizLink,
+                isFriends: isFriends,
+              ),
               const SizedBox(height: 8),
               const ScoreBoardView(),
             ],

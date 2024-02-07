@@ -49,16 +49,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "copyErrorMessage":
             MessageLookupByLibrary.simpleMessage("انشاء اختبار جديد"),
         "copyId": MessageLookupByLibrary.simpleMessage("تم نسخ المعرف"),
-        "correctId":
-            MessageLookupByLibrary.simpleMessage("من فضلك تحقق من المعرف"),
+        "correctId": MessageLookupByLibrary.simpleMessage(
+            "هذا الرابط منتهي انشاء رابط جديد"),
         "createQuiz":
             MessageLookupByLibrary.simpleMessage("إنشئ اختبارك الخاص"),
         "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
         "enterId": MessageLookupByLibrary.simpleMessage(
             "أدخل المعرف الخاص بصديقك او شريكك"),
         "enterName": MessageLookupByLibrary.simpleMessage("✍️ أدخل اسمك"),
-        "enterid": MessageLookupByLibrary.simpleMessage(
-            "ادخل المعرف من رسالة المشاركة"),
         "guessFriend": MessageLookupByLibrary.simpleMessage(
             "🤔 سيحاول اصدقائك وعائلتك تخمين الاجوبة الصحيحة."),
         "guessPartner": MessageLookupByLibrary.simpleMessage(

@@ -9,7 +9,7 @@ class CustomText extends StatelessWidget {
       text,
       textAlign: TextAlign.center,
       style: TextStyle(
-        fontSize: MediaQuery.sizeOf(context).height * 0.024,
+        fontSize: MediaQuery.sizeOf(context).height * 0.030,
         fontWeight: FontWeight.bold,
       ),
     );

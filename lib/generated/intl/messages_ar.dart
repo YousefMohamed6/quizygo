@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Congrats": MessageLookupByLibrary.simpleMessage("تهاني"),
         "FriendSubTitleAnswer":
-            MessageLookupByLibrary.simpleMessage("كيف تعرف جيدا "),
+            MessageLookupByLibrary.simpleMessage("ما مدي معرفتك ب"),
         "ShareMessagePartner": MessageLookupByLibrary.simpleMessage(
             "شارك هذا الاختبار مع شريكك لمعرفة الدرجة التي سيحصل عليها شريكك"),
         "ShareMessagefriend": MessageLookupByLibrary.simpleMessage(
@@ -48,14 +48,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "contact": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "copyErrorMessage":
             MessageLookupByLibrary.simpleMessage("انشاء اختبار جديد"),
-        "copyId": MessageLookupByLibrary.simpleMessage("تم نسخ المعرف"),
         "correctId": MessageLookupByLibrary.simpleMessage(
             "هذا الرابط منتهي انشاء رابط جديد"),
         "createQuiz":
             MessageLookupByLibrary.simpleMessage("إنشئ اختبارك الخاص"),
         "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
-        "enterId": MessageLookupByLibrary.simpleMessage(
-            "أدخل المعرف الخاص بصديقك او شريكك"),
         "enterName": MessageLookupByLibrary.simpleMessage("✍️ أدخل اسمك"),
         "guessFriend": MessageLookupByLibrary.simpleMessage(
             "🤔 سيحاول اصدقائك وعائلتك تخمين الاجوبة الصحيحة."),

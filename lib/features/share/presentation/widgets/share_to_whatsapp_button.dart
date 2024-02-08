@@ -1,4 +1,3 @@
-import 'package:QuizyGo/core/constants/keys.dart';
 import 'package:QuizyGo/core/url_launcher.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/share_button.dart';
 import 'package:QuizyGo/generated/l10n.dart';
@@ -22,7 +21,7 @@ class ShareToWhatsAppButton extends StatelessWidget {
       onPressed: () async {
         await urlLauncher(
             url:
-                "https://wa.me/?text=${isFriends ? kFriendMessage : kPartnerMessage}\n$quizLink");
+                "https://wa.me/?text=${isFriends ? S.of(context).ShareMessagefriend : S.of(context).ShareMessagefriend}\n$quizLink");
       },
     );
   }

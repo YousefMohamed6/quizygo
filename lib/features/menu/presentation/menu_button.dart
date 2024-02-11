@@ -1,13 +1,10 @@
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/widgets/language_menu.dart';
 import 'package:QuizyGo/features/home/presentation/home_view.dart';
 import 'package:QuizyGo/features/menu/presentation/views/about_us.dart';
 import 'package:QuizyGo/features/menu/presentation/views/contact.dart';
 import 'package:QuizyGo/features/menu/presentation/views/private_policy.dart';
-import 'package:QuizyGo/features/share/presentation/share_view.dart';
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class MenuButton extends StatelessWidget {
@@ -33,15 +30,6 @@ class MenuButton extends StatelessWidget {
             break;
           case "Privacy":
             await context.pushNamed(PrivatePolicy.id);
-            break;
-          case "share":
-            try {
-              await BlocProvider.of<AnswerCubit>(context).getDocumentId();
-              // ignore: use_build_context_synchronously
-              await BlocProvider.of<AnswerCubit>(context).getUserName();
-            } catch (_) {}
-            // ignore: use_build_context_synchronously
-            await context.pushNamed(ShareLinkView.id);
             break;
         }
       },
@@ -84,11 +72,6 @@ class MenuButton extends StatelessWidget {
             value: 'language',
             padding: EdgeInsets.zero,
             child: LanguageMenu(),
-          ),
-          PopupMenuItem(
-            value: 'share',
-            padding: const EdgeInsets.only(left: 24),
-            child: Text(S.of(context).linkSharingPage),
           ),
         ];
       },

@@ -1,6 +1,6 @@
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
-import 'package:QuizyGo/features/ask/friends/presentation/friends_ask_view.dart';
-import 'package:QuizyGo/features/ask/partners/presentation/partner_ask_view.dart';
+import 'package:QuizyGo/features/ask/presentation/friends/presentation/friends_ask_view.dart';
+import 'package:QuizyGo/features/ask/presentation/partners/presentation/partner_ask_view.dart';
 import 'package:QuizyGo/features/get%20Answers/get_answers.dart';
 import 'package:QuizyGo/features/home/presentation/home_view.dart';
 import 'package:QuizyGo/features/intro_answers/friends/friends_answer.dart';
@@ -55,15 +55,6 @@ class MyApp extends StatelessWidget {
 }
 
 final GoRouter _routerConfig = GoRouter(
-  redirect: (context, state) {
-    var path = state.path;
-    if (path != HomeView.id) {
-      return path;
-    } else {
-      return HomeView.id;
-    }
-  },
-  initialLocation: HomeView.id,
   routes: [
     GoRoute(
       name: HomeView.id,
@@ -126,9 +117,9 @@ final GoRouter _routerConfig = GoRouter(
       builder: (context, state) => const GetAnswers(),
     ),
     GoRoute(
-      name: ShowScore.id,
-      path: ShowScore.id,
-      builder: (context, state) => const ShowScore(),
+      name: ShowScoreView.id,
+      path: ShowScoreView.id,
+      builder: (context, state) => const ShowScoreView(),
     ),
   ],
 );

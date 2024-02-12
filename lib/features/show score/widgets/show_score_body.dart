@@ -1,18 +1,21 @@
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/constants/colors.dart';
+import 'package:QuizyGo/core/constants/keys.dart';
 import 'package:QuizyGo/features/get%20Answers/widgets/logo.dart';
 import 'package:QuizyGo/features/menu/presentation/widgets/custom_text.dart';
 import 'package:QuizyGo/features/show%20score/widgets/create_new_quiz.dart';
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class ShowScoreBody extends StatelessWidget {
   const ShowScoreBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    int correctAnswer = BlocProvider.of<AnswerCubit>(context).correctAnswer;
+    String correctAnswer =
+        GoRouterState.of(context).uri.queryParameters[kCorrectAnswers]!;
     String level = BlocProvider.of<AnswerCubit>(context).checkLevel(
       correctAnswer: correctAnswer,
       context: context,

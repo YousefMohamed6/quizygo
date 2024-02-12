@@ -14,3 +14,7 @@ final class GetAnswersSucsses extends GetAnswersState {
 }
 
 final class GetAnswersFailure extends GetAnswersState {}
+
+final class FriendAnswer extends GetAnswersState {}
+
+final class PartnerAnswer extends GetAnswersState {}

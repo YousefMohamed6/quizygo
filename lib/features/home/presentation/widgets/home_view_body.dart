@@ -1,6 +1,6 @@
+import 'package:QuizyGo/features/home/presentation/widgets/friends%20_view.dart';
+import 'package:QuizyGo/features/home/presentation/widgets/partner_view.dart';
 import 'package:flutter/material.dart';
-import 'package:QuizyGo/features/home/presentation/widgets/friends_quetion%20_view.dart';
-import 'package:QuizyGo/features/home/presentation/widgets/partner_quetion_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -9,9 +9,9 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: const [
-        FriendsQuetionView(),
+        FriendsView(),
         SizedBox(height: 16),
-        PartnerQuetionView(),
+        PartnerView(),
         SizedBox(height: 48),
       ],
     );

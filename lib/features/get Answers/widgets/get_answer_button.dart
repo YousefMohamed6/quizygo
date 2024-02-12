@@ -1,3 +1,5 @@
+import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/core/constants/keys.dart';
 import 'package:QuizyGo/core/widgets/custom_button.dart';
 import 'package:QuizyGo/features/get%20Answers/mangement/cubit/get_answers_cubit.dart';
 import 'package:flutter/material.dart';
@@ -9,11 +11,10 @@ class GetAnswerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomButton(
-      onPressed: () async {
-        String documentId = Uri.base.queryParameters['id'] ?? "";
-        debugPrint(documentId);
-        await BlocProvider.of<GetAnswersCubit>(context)
-            .getAnswersFromFireBase(documentId: documentId);
+      onPressed: () {
+        BlocProvider.of<AnswerCubit>(context).documentId =
+            Uri.base.queryParameters[kDocumentId]!;
+        BlocProvider.of<GetAnswersCubit>(context).getAnswersFromFireBase();
       },
     );
   }

@@ -1,7 +1,8 @@
-import "package:flutter/material.dart";
-import "package:flutter_bloc/flutter_bloc.dart";
 import "package:QuizyGo/anwser_cubit/anwser_cubit.dart";
 import "package:QuizyGo/core/widgets/image_and_answer.dart";
+import "package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart";
+import "package:flutter/material.dart";
+import "package:flutter_bloc/flutter_bloc.dart";
 
 class ImageCard extends StatelessWidget {
   const ImageCard({
@@ -15,34 +16,33 @@ class ImageCard extends StatelessWidget {
   final Color? onPressedColor;
   @override
   Widget build(BuildContext context) {
-    List<String> answers = BlocProvider.of<AnswerCubit>(context).theAnswers;
     return BlocBuilder<AnswerCubit, AnswerState>(
       builder: (context, state) {
-        if (answers.isNotEmpty) {
-          return GestureDetector(
-            onTap: () async {
-              BlocProvider.of<AnswerCubit>(context)
-                  .checkCorrectAnswer(currentAnswer: answer);
-            },
-            child: ImageAndAnswer(
-              answer: answer,
-              imagePath: imagePath,
-              onPressedColor: onPressedColor,
-            ),
-          );
-        } else {
-          return GestureDetector(
-            onTap: () async {
-              BlocProvider.of<AnswerCubit>(context)
-                  .createAnswer(currentAnswer: answer);
-            },
-            child: ImageAndAnswer(
-              answer: answer,
-              imagePath: imagePath,
-              onPressedColor: onPressedColor,
-            ),
-          );
-        }
+        return GestureDetector(
+          onTap: () {
+            var documentData =
+                BlocProvider.of<AnswerCubit>(context).documentData;
+            var answers = BlocProvider.of<AnswerCubit>(context).answers;
+            var documentId = BlocProvider.of<AnswerCubit>(context).documentId;
+            var userName =
+                BlocProvider.of<AnswerCubit>(context).userNameCtrl.text;
+            state is Answer
+                ? BlocProvider.of<AskCubit>(context).checkCorrectAnswer(
+                    currentAnswer: answer,
+                    answers: answers,
+                    userName: userName,
+                    documentId: documentId,
+                  )
+                : BlocProvider.of<AskCubit>(context).createAnswer(
+                    currentAnswer: answer,
+                    documentData: documentData,
+                  );
+          },
+          child: ImageAndAnswer(
+            answer: answer,
+            imagePath: imagePath,
+          ),
+        );
       },
     );
   }

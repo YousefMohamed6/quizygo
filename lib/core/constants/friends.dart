@@ -2,7 +2,7 @@ import 'package:QuizyGo/core/constants/partner.dart';
 
 class Friends {
   Friends._();
-  static const Map<String, List<String>> quetionsAndAnswersEn = {
+  static const Map<String, List<String>> quetionAndAnswersEn = {
     "1": [
       "What experience do you want to have?",
       "Diving",
@@ -11,14 +11,14 @@ class Friends {
       "Mountaineering"
     ],
     "2": [
-      "You wish to travel to ",
+      "you wish to travel to ",
       "Bail",
       "Maldives",
       "Kenya",
       "Dubai",
     ],
     "3": [
-      "Your favorite character in SpongeBob",
+      "your favorite character in SpongeBob",
       "SpongeBob",
       "Mr.Krabs",
       "Plankton",
@@ -53,7 +53,7 @@ class Friends {
       "Milk",
     ],
     "8": [
-      "Your favourite mode of travel",
+      "your favourite mode of travel",
       "Train",
       "Bus",
       "Plane",
@@ -67,7 +67,7 @@ class Friends {
       "Aurora",
     ],
     "10": [
-      "Your favorite noodles flavour",
+      "your favorite noodles flavour",
       "Meat",
       "Chicken",
       "Vegetables",
@@ -95,14 +95,14 @@ class Friends {
       "New Classic",
     ],
     "14": [
-      "Your favorite ice cream flavour",
+      "your favorite ice cream flavour",
       "Vanilla",
       "Chocolate",
       "Mango",
       "Strawberry",
     ],
     "15": [
-      "Your favorite style",
+      "your favorite style",
       "Classic",
       "Casual",
       "Sport",

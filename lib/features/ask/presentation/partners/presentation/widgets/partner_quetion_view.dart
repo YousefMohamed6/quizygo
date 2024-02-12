@@ -1,0 +1,19 @@
+import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/core/constants/partner.dart';
+import 'package:QuizyGo/core/widgets/quetion_view.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+class PartnerQuetionsView extends StatelessWidget {
+  const PartnerQuetionsView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    bool isArabic = BlocProvider.of<AnswerCubit>(context).isArabic;
+    return QuetionsView(
+      quetionAndChoices:
+          isArabic ? Partner.quetionAndAnswersAr : Partner.quetionAndAnswersEn,
+      quetionImage: Partner.images,
+    );
+  }
+}

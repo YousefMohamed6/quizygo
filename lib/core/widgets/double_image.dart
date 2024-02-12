@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/constants/colors.dart';
 import 'package:QuizyGo/core/widgets/image_card.dart';
+import 'package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DoubleImage extends StatelessWidget {
   const DoubleImage({
@@ -23,10 +23,10 @@ class DoubleImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String currentAnswer = BlocProvider.of<AnswerCubit>(context).currentAnswer;
-    return BlocBuilder<AnswerCubit, AnswerState>(
+    String currentAnswer = BlocProvider.of<AskCubit>(context).currentAnswer;
+    return BlocBuilder<AskCubit, AskState>(
       builder: (context, state) {
-        if (state is CorrectAnswer) {
+        if (state is ChangeAnswerColor) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

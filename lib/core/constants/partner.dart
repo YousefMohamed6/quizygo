@@ -2,7 +2,7 @@ import 'package:QuizyGo/core/constants/friends.dart';
 
 class Partner {
   Partner._();
-  static const Map<String, List<String>> quetionsAndAnswersEn = {
+  static const Map<String, List<String>> quetionAndAnswersEn = {
     "1": [
       "What kind of restaurants do you prefer?",
       "Fancy",
@@ -18,28 +18,28 @@ class Partner {
       "High places",
     ],
     "3": [
-      "Your favorite style",
+      "your favorite style",
       "Classic",
       "Casual",
       "Sporty",
       "Bohemian",
     ],
     "4": [
-      "You like most",
+      "you like most",
       "Food",
       "Cars",
       "Money",
       "Traveling",
     ],
     "5": [
-      "You prefer",
+      "you prefer",
       "Meat",
       "Chicken",
       "Seafood",
       "Vegetables",
     ],
     "6": [
-      "You like to watch",
+      "you like to watch",
       "Sunset",
       "Sunrise",
       "Stars",
@@ -60,28 +60,28 @@ class Partner {
       "Meditation",
     ],
     "9": [
-      "You like to practice",
+      "you like to practice",
       "Swimming",
       "Football",
       "Basketball",
       "Boxing",
     ],
     "10": [
-      "You are more interested in news about",
+      "you are more interested in news about",
       "Art",
       "Sports",
       "Politics",
       "Fashion"
     ],
     "11": [
-      "Your favorite color",
+      "your favorite color",
       "Black",
       "Blue",
       "Pink",
       "White",
     ],
     "12": [
-      "You wish to travel to ",
+      "you wish to travel to ",
       "Bail",
       "Maldives",
       "Kenya",
@@ -95,21 +95,21 @@ class Partner {
       "Stay at Home",
     ],
     "14": [
-      "Your favorite type of chocolate",
+      "your favorite type of chocolate",
       "Dark",
       "White",
       "Milk",
       "Nuts",
     ],
     "15": [
-      "Your favorite season",
+      "your favorite season",
       "Winter",
       "Autumn",
       "Spring",
       "Summer",
     ],
   };
-  static const Map<String, List<String>> quetionsAndAnswersAr = {
+  static const Map<String, List<String>> quetionAndAnswersAr = {
     "1": [
       "أي نوع من المطاعم تفضل؟",
       "الفاخرة",

@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-class PartnerQuetionView extends StatelessWidget {
-  const PartnerQuetionView({super.key});
+class PartnerView extends StatelessWidget {
+  const PartnerView({super.key});
 
   @override
   Widget build(BuildContext context) {

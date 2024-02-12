@@ -6,7 +6,7 @@ const String kCollection = "Answers";
 const String kLanguage = "isArabic";
 const String kQuetionType = "isFriends";
 const String kUserName = "userName";
-const String kDocumentId = "documentId";
+const String kDocumentId = "id";
 const String kIdFormat = "\nId=> ";
 const String kScoreBoard = "scoreBoard";
 const String kBaseUrl = "https://QuizyGo-2024.web.app";

@@ -1,6 +1,6 @@
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/widgets/intro_view.dart';
-import 'package:QuizyGo/features/ask/partners/presentation/partner_ask_view.dart';
+import 'package:QuizyGo/features/ask/presentation/partners/presentation/partner_ask_view.dart';
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -25,6 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "Congrats": MessageLookupByLibrary.simpleMessage("تهاني"),
         "FriendSubTitleAnswer":
             MessageLookupByLibrary.simpleMessage("ما مدي معرفتك ب"),
+        "ShareLinkPartner": MessageLookupByLibrary.simpleMessage(
+            "هل تعرف شريكك حقا؟\nالعب هذا الاختبار لترى إذا كنت تعرف شريكك جيدًا\nاضغط علي هذا الرابط لبدء الاختبار"),
+        "ShareLinkfriend": MessageLookupByLibrary.simpleMessage(
+            "هل تعرف صديقك حقا؟\nالعب هذا الاختبار لترى إذا كنت تعرف صديقك جيدًا\nاضغط علي هذا الرابط لبدء الاختبار"),
         "ShareMessagePartner": MessageLookupByLibrary.simpleMessage(
             "شارك هذا الاختبار مع شريكك لمعرفة الدرجة التي سيحصل عليها شريكك"),
         "ShareMessagefriend": MessageLookupByLibrary.simpleMessage(
@@ -107,7 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "validation": MessageLookupByLibrary.simpleMessage("✍️ أدخل اسمك"),
         "welcome":
             MessageLookupByLibrary.simpleMessage("مرحبا بك في موقع كويز جو"),
-        "yourLevel": MessageLookupByLibrary.simpleMessage(":مستواك"),
-        "yourScore": MessageLookupByLibrary.simpleMessage(":نتيجتك")
+        "yourLevel": MessageLookupByLibrary.simpleMessage(" :مستواك"),
+        "yourScore": MessageLookupByLibrary.simpleMessage(" :نتيجتك")
       };
 }

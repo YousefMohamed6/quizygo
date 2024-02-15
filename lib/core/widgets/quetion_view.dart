@@ -1,4 +1,6 @@
 import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
+import 'package:QuizyGo/core/constants/friends.dart';
+import 'package:QuizyGo/core/constants/partner.dart';
 import 'package:QuizyGo/core/widgets/double_image.dart';
 import 'package:QuizyGo/core/widgets/quetiontext.dart';
 import 'package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart';
@@ -13,21 +15,35 @@ class QuetionsView extends StatelessWidget {
   });
   final Map<String, List<String>> quetionAndChoices;
   final Map<String, List<String>> quetionImage;
-
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AnswerCubit, AnswerState>(
       builder: (context, state) {
         String numbuerOfQuetion =
             BlocProvider.of<AskCubit>(context).numberOfQuetion.toString();
+        bool isArabic = BlocProvider.of<AnswerCubit>(context).isArabic;
+        bool isFriends = BlocProvider.of<AnswerCubit>(context).isFriends;
         String quetionText = quetionAndChoices[numbuerOfQuetion]![0];
-        if (state is Answer) {
+        if (state is Answer && !isArabic) {
           if (quetionText.contains("your")) {
-            quetionText = quetionText.replaceAll("your", state.userName);
-          } else if (quetionText.contains("you")) {
+            quetionText = quetionText.replaceAll("your", "${state.userName}'s");
+          }
+          if (quetionText.contains("you")) {
             quetionText = quetionText.replaceAll("you", state.userName);
           }
+          if (quetionText.contains("are")) {
+            quetionText = quetionText.replaceAll("are", "is");
+          }
+        } else if (state is Answer && isArabic && isFriends) {
+          quetionText = Friends.quetionsAr[numbuerOfQuetion]![0];
+          quetionText = quetionText.replaceAll("1", state.userName);
+        } else if (state is Answer && isArabic && !isFriends) {
+          quetionText = Partner.quetionsAr[numbuerOfQuetion]![0];
+          quetionText = quetionText.replaceAll("1", state.userName);
+        } else {
+          quetionText = quetionAndChoices[numbuerOfQuetion]![0];
         }
+
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

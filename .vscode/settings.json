@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/.*": true
+    },
+    "terminal.integrated.mouseWheelZoom": true,
+    "window.zoomLevel": 0.6
+}

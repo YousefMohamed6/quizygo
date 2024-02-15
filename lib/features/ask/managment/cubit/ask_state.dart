@@ -11,6 +11,17 @@ final class AskFailure extends AskState {}
 
 final class ShowScore extends AskState {}
 
+final class ShareLink extends AskState {
+  final String documentId;
+  final String isFriends;
+  final String userName;
+
+  ShareLink(
+      {required this.documentId,
+      required this.isFriends,
+      required this.userName});
+}
+
 final class AddResultFailure extends AskState {}
 
 final class ChangeAnswerColor extends AskState {

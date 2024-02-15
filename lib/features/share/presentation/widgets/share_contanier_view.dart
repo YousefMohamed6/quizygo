@@ -1,4 +1,3 @@
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/features/Scoreboard/scoreboard_view.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/copy_view.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/facebook_and_messanger_share.dart';
@@ -7,20 +6,21 @@ import 'package:QuizyGo/features/share/presentation/widgets/share_to_whatsapp_bu
 import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ShareContainerView extends StatelessWidget {
-  const ShareContainerView(
-      {super.key,
-      required this.userName,
-      required this.quizLink,
-      required this.documentId});
+  const ShareContainerView({
+    super.key,
+    required this.userName,
+    required this.quizLink,
+    required this.documentId,
+    required this.isFriends,
+  });
   final String userName;
   final String quizLink;
   final String documentId;
+  final bool isFriends;
   @override
   Widget build(BuildContext context) {
-    bool isFriends = BlocProvider.of<AnswerCubit>(context).isFriends;
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,

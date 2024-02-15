@@ -4,6 +4,7 @@ import 'package:QuizyGo/core/widgets/custom_button.dart';
 import 'package:QuizyGo/features/get%20Answers/mangement/cubit/get_answers_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class GetAnswerButton extends StatelessWidget {
   const GetAnswerButton({super.key});
@@ -13,7 +14,7 @@ class GetAnswerButton extends StatelessWidget {
     return CustomButton(
       onPressed: () {
         BlocProvider.of<AnswerCubit>(context).documentId =
-            Uri.base.queryParameters[kDocumentId]!;
+            GoRouterState.of(context).uri.queryParameters[kDocumentId]!;
         BlocProvider.of<GetAnswersCubit>(context).getAnswersFromFireBase();
       },
     );

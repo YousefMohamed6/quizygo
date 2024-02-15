@@ -460,6 +460,26 @@ class S {
     );
   }
 
+  /// `Are you really know your friend?\nPlay this quiz to see if you know your friend well❤\nClick on this link to start the quiz`
+  String get ShareLinkfriend {
+    return Intl.message(
+      'Are you really know your friend?\nPlay this quiz to see if you know your friend well❤\nClick on this link to start the quiz',
+      name: 'ShareLinkfriend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you really know your partner?\nPlay this quiz to see if you know your partner well❤\nClick on this link to start the quiz`
+  String get ShareLinkPartner {
+    return Intl.message(
+      'Are you really know your partner?\nPlay this quiz to see if you know your partner well❤\nClick on this link to start the quiz',
+      name: 'ShareLinkPartner',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Your Quiz link is ready!`
   String get quizReady {
     return Intl.message(
@@ -520,10 +540,10 @@ class S {
     );
   }
 
-  /// `view Result`
+  /// `View Result`
   String get showScoreboard {
     return Intl.message(
-      'view Result',
+      'View Result',
       name: 'showScoreboard',
       desc: '',
       args: [],

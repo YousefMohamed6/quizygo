@@ -25,6 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "Congrats": MessageLookupByLibrary.simpleMessage("Congrats"),
         "FriendSubTitleAnswer":
             MessageLookupByLibrary.simpleMessage("How well you know "),
+        "ShareLinkPartner": MessageLookupByLibrary.simpleMessage(
+            "Are you really know your partner?\nPlay this quiz to see if you know your partner well❤\nClick on this link to start the quiz"),
+        "ShareLinkfriend": MessageLookupByLibrary.simpleMessage(
+            "Are you really know your friend?\nPlay this quiz to see if you know your friend well❤\nClick on this link to start the quiz"),
         "ShareMessagePartner": MessageLookupByLibrary.simpleMessage(
             "Share this quiz with your partner to see what score your partner will get"),
         "ShareMessagefriend": MessageLookupByLibrary.simpleMessage(
@@ -88,7 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shareTwitter":
             MessageLookupByLibrary.simpleMessage("Share on Twitter"),
         "shareWhats": MessageLookupByLibrary.simpleMessage("Share on WhatsApp"),
-        "showScoreboard": MessageLookupByLibrary.simpleMessage("view Result"),
+        "showScoreboard": MessageLookupByLibrary.simpleMessage("View Result"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start now"),
         "subTitlePartener": MessageLookupByLibrary.simpleMessage(

@@ -16,6 +16,7 @@ class ShowScoreBody extends StatelessWidget {
   Widget build(BuildContext context) {
     String correctAnswer =
         GoRouterState.of(context).uri.queryParameters[kCorrectAnswers]!;
+    String userName = GoRouterState.of(context).uri.queryParameters[kUserName]!;
     String level = BlocProvider.of<AnswerCubit>(context).checkLevel(
       correctAnswer: correctAnswer,
       context: context,
@@ -39,15 +40,27 @@ class ShowScoreBody extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             const SizedBox(height: 8),
-            CustomText(text: S.of(context).Congrats),
+            CustomText(
+              text: "${S.of(context).Congrats} $userName",
+              fontWeight: FontWeight.bold,
+            ),
             const SizedBox(height: 8),
-            CustomText(text: "${S.of(context).yourScore} $correctAnswer/15"),
+            CustomText(
+              text: "${S.of(context).yourScore} $correctAnswer/15",
+              fontWeight: FontWeight.bold,
+            ),
             const SizedBox(height: 8),
-            CustomText(text: "${S.of(context).yourLevel} $level"),
+            CustomText(
+              text: "${S.of(context).yourLevel} $level",
+              fontWeight: FontWeight.bold,
+            ),
             const SizedBox(height: 16),
             const Logo(),
             const SizedBox(height: 16),
-            CustomText(text: S.of(context).chellange),
+            CustomText(
+              text: S.of(context).chellange,
+              fontWeight: FontWeight.bold,
+            ),
             const SizedBox(height: 8),
             const CreateNewQuizButton(),
             const SizedBox(height: 8),

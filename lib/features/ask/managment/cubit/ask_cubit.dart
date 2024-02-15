@@ -1,7 +1,5 @@
 import 'package:QuizyGo/core/constants/colors.dart';
 import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/core/url_launcher.dart';
-import 'package:QuizyGo/features/share/presentation/share_view.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -74,9 +72,14 @@ class AskCubit extends Cubit<AskState> {
       await answersRef.add(myAnswers).then(
         (value) async {
           String userName = documentData[kUserName];
-          await urlLauncher(
-            url:
-                "$kBaseUrl${ShareLinkView.id}?$kDocumentId=${value.id}&$kUserName=$userName",
+          String documentId = value.id;
+          String isFriends = documentData[kQuetionType].toString();
+          emit(
+            ShareLink(
+              documentId: documentId,
+              isFriends: isFriends,
+              userName: userName,
+            ),
           );
         },
       );

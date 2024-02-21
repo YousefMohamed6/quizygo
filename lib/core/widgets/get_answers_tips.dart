@@ -1,6 +1,6 @@
-import 'package:QuizyGo/core/widgets/tips_text.dart';
-import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/widgets/tips_text.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class GetAnswerTips extends StatelessWidget {
   const GetAnswerTips({super.key});

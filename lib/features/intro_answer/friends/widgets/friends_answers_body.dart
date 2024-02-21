@@ -1,11 +1,11 @@
-import 'package:QuizyGo/core/widgets/answer_tips.dart';
-import 'package:QuizyGo/core/widgets/intro_view.dart';
-import 'package:QuizyGo/features/ask/presentation/friends/presentation/friends_ask_view.dart';
-import 'package:QuizyGo/generated/l10n.dart';
-import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quizygo/core/app_managment/quiz_cubit.dart';
+import 'package:quizygo/core/widgets/answer_tips.dart';
+import 'package:quizygo/core/widgets/intro_view.dart';
+import 'package:quizygo/features/ask/presentation/friends/presentation/friends_ask_view.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class FriendsAnswersBody extends StatelessWidget {
   const FriendsAnswersBody({super.key});
@@ -13,7 +13,7 @@ class FriendsAnswersBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String userName = BlocProvider.of<QuizCubit>(context).answerName;
-    return IntroView(
+    return CustomIntroView(
       formKey: BlocProvider.of<QuizCubit>(context).formKey,
       title: S.of(context).testFriendIntro,
       subTitle: "${S.of(context).FriendSubTitleAnswer} $userName",

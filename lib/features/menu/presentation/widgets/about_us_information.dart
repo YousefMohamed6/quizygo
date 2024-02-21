@@ -1,5 +1,5 @@
-import 'package:QuizyGo/features/menu/presentation/widgets/social_media_account.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/features/menu/presentation/widgets/social_media_account.dart';
 
 class AboutUsInformation extends StatelessWidget {
   const AboutUsInformation({super.key});

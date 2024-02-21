@@ -1,8 +1,8 @@
-import "package:QuizyGo/core/widgets/image_and_answer.dart";
-import "package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart";
-import "package:QuizyGo/quiz_cubit/quiz_cubit.dart";
 import "package:flutter/material.dart";
 import "package:flutter_bloc/flutter_bloc.dart";
+import "package:quizygo/core/app_managment/quiz_cubit.dart";
+import "package:quizygo/core/widgets/image_and_answer.dart";
+import "package:quizygo/features/ask/managment/cubit/ask_cubit.dart";
 
 class ImageCard extends StatelessWidget {
   const ImageCard({
@@ -20,22 +20,7 @@ class ImageCard extends StatelessWidget {
       builder: (context, state) {
         return GestureDetector(
           onTap: () {
-            var documentData = BlocProvider.of<QuizCubit>(context).documentData;
-            var answers = BlocProvider.of<QuizCubit>(context).answers;
-            var documentId = BlocProvider.of<QuizCubit>(context).documentId;
-            var userName =
-                BlocProvider.of<QuizCubit>(context).userNameCtrl.text;
-            state is Answer
-                ? BlocProvider.of<AskCubit>(context).checkCorrectAnswer(
-                    currentAnswer: answer,
-                    answers: answers,
-                    userName: userName,
-                    documentId: documentId,
-                  )
-                : BlocProvider.of<AskCubit>(context).createAnswer(
-                    currentAnswer: answer,
-                    documentData: documentData,
-                  );
+            onAnswerPressed(context, state);
           },
           child: ImageAndAnswer(
             answer: answer,
@@ -44,5 +29,29 @@ class ImageCard extends StatelessWidget {
         );
       },
     );
+  }
+
+  void onAnswerPressed(BuildContext context, QuizState state) async {
+    var documentData = BlocProvider.of<QuizCubit>(context).documentData;
+    var answers = BlocProvider.of<QuizCubit>(context).answers;
+    var documentId = BlocProvider.of<QuizCubit>(context).documentId;
+    var userName = BlocProvider.of<QuizCubit>(context).userNameCtrl.text;
+    var isFriends = BlocProvider.of<QuizCubit>(context).isFriends;
+    var isArabic = BlocProvider.of<QuizCubit>(context).isArabic;
+    state is Answer
+        ? BlocProvider.of<AskCubit>(context).checkCorrectAnswer(
+            currentAnswer: answer,
+            answers: answers,
+            userName: userName,
+            documentId: documentId,
+            isFriends: isFriends,
+            isArabic: isArabic,
+          )
+        : await BlocProvider.of<AskCubit>(context).createAnswer(
+            currentAnswer: answer,
+            documentData: documentData,
+            isFriends: isFriends,
+            isArabic: isArabic,
+          );
   }
 }

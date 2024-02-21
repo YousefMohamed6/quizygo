@@ -1,9 +1,9 @@
-import 'package:QuizyGo/core/constants/colors.dart';
-import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/features/share/managment/share_cubit/share_cubit.dart';
-import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
+import 'package:quizygo/core/uitls/app_keys.dart';
+import 'package:quizygo/features/share/managment/share_cubit/share_cubit.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class ShowScoreBoardButton extends StatelessWidget {
   const ShowScoreBoardButton({super.key});
@@ -28,7 +28,8 @@ class ShowScoreBoardButton extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          String documentId = Uri.base.queryParameters[kDocumentId]!;
+          String documentId =
+              Uri.base.queryParameters[KeysManager.kDocumentId]!;
           BlocProvider.of<ShareCubit>(context)
               .getScores(documentId: documentId);
         },

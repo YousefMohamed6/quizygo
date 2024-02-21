@@ -1,12 +1,12 @@
-import 'package:QuizyGo/core/uitls/app_assets.dart';
-import 'package:QuizyGo/features/home/presentation/widgets/custom_image.dart';
-import 'package:QuizyGo/features/home/presentation/widgets/title_and_subtitle.dart';
-import 'package:QuizyGo/features/intro_ask/partners/presentation/partner_view.dart';
-import 'package:QuizyGo/generated/l10n.dart';
-import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quizygo/core/app_managment/quiz_cubit.dart';
+import 'package:quizygo/core/uitls/app_assets.dart';
+import 'package:quizygo/features/home/presentation/widgets/custom_image.dart';
+import 'package:quizygo/features/home/presentation/widgets/title_and_subtitle.dart';
+import 'package:quizygo/features/intro_ask/partners/presentation/partner_view.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class PartnerView extends StatelessWidget {
   const PartnerView({super.key});
@@ -21,11 +21,11 @@ class PartnerView extends StatelessWidget {
         ),
         CustomImage(
           path: AssetsManager.partnerLogo,
-          onPressed: () async {
+          onPressed: () {
             BlocProvider.of<QuizCubit>(context).restView();
             BlocProvider.of<QuizCubit>(context)
                 .addQuetionType(isFriends: false);
-            context.goNamed(PartnerIntroView.id);
+            context.goNamed(PartnerIntroAsk.id);
           },
         ),
       ],

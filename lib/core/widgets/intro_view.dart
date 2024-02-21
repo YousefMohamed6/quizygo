@@ -1,14 +1,14 @@
-import 'package:QuizyGo/core/constants/colors.dart';
-import 'package:QuizyGo/core/widgets/ask_tips.dart';
-import 'package:QuizyGo/core/widgets/custom_button.dart';
-import 'package:QuizyGo/core/widgets/language_menu_view.dart';
-import 'package:QuizyGo/core/widgets/name_text_feild.dart';
-import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizygo/core/app_managment/quiz_cubit.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
+import 'package:quizygo/core/widgets/ask_tips.dart';
+import 'package:quizygo/core/widgets/custom_button.dart';
+import 'package:quizygo/core/widgets/language_menu_view.dart';
+import 'package:quizygo/core/widgets/name_text_feild.dart';
 
-class IntroView extends StatelessWidget {
-  const IntroView(
+class CustomIntroView extends StatelessWidget {
+  const CustomIntroView(
       {super.key,
       required this.formKey,
       required this.title,

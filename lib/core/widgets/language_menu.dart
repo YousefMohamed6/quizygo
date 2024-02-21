@@ -1,7 +1,7 @@
-import 'package:QuizyGo/generated/l10n.dart';
-import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizygo/core/app_managment/quiz_cubit.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class LanguageMenu extends StatelessWidget {
   const LanguageMenu({super.key});

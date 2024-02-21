@@ -1,11 +1,11 @@
-import 'package:QuizyGo/features/Scoreboard/scoreboard_view.dart';
-import 'package:QuizyGo/features/share/presentation/widgets/copy_view.dart';
-import 'package:QuizyGo/features/share/presentation/widgets/facebook_and_messanger_share.dart';
-import 'package:QuizyGo/features/share/presentation/widgets/share_to_twitter_button.dart';
-import 'package:QuizyGo/features/share/presentation/widgets/share_to_whatsapp_button.dart';
-import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quizygo/features/Scoreboard/scoreboard_view.dart';
+import 'package:quizygo/features/share/presentation/widgets/copy_view.dart';
+import 'package:quizygo/features/share/presentation/widgets/facebook_and_messanger_share.dart';
+import 'package:quizygo/features/share/presentation/widgets/share_to_twitter_button.dart';
+import 'package:quizygo/features/share/presentation/widgets/share_to_whatsapp_button.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class ShareContainerView extends StatelessWidget {
   const ShareContainerView({

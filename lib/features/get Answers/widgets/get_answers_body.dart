@@ -1,12 +1,12 @@
-import 'package:QuizyGo/features/get%20Answers/mangement/cubit/get_answers_cubit.dart';
-import 'package:QuizyGo/features/get%20Answers/widgets/get_answer_initial.dart';
-import 'package:QuizyGo/features/intro_answers/friends/friends_answer.dart';
-import 'package:QuizyGo/features/intro_answers/partner/partner_answer.dart';
-import 'package:QuizyGo/generated/l10n.dart';
-import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quizygo/core/app_managment/quiz_cubit.dart';
+import 'package:quizygo/features/get%20Answers/mangement/cubit/get_answers_cubit.dart';
+import 'package:quizygo/features/get%20Answers/widgets/get_answer_initial.dart';
+import 'package:quizygo/features/intro_answer/friends/friends_answer.dart';
+import 'package:quizygo/features/intro_answer/partner/partner_answer.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class GetAnswersBody extends StatelessWidget {
   const GetAnswersBody({super.key});

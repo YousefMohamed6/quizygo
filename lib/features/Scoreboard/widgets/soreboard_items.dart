@@ -1,6 +1,6 @@
-import 'package:QuizyGo/features/Scoreboard/widgets/table_item.dart';
-import 'package:QuizyGo/model/friend_model.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/app_models/friend_model.dart';
+import 'package:quizygo/features/Scoreboard/widgets/table_item.dart';
 
 class ScoreBoardItems extends StatelessWidget {
   const ScoreBoardItems({super.key, required this.allScores});

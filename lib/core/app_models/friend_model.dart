@@ -1,4 +1,4 @@
-import 'package:QuizyGo/core/constants/keys.dart';
+import 'package:quizygo/core/uitls/app_keys.dart';
 
 class ScoreModel {
   final String friendName;
@@ -8,8 +8,8 @@ class ScoreModel {
 
   factory ScoreModel.fromjson(Map<String, dynamic> data) {
     return ScoreModel._(
-      friendName: data[kFriendName],
-      correctAnswers: data[kCorrectAnswers],
+      friendName: data[KeysManager.kFriendName],
+      correctAnswers: data[KeysManager.kCorrectAnswers],
     );
   }
 }

@@ -1,8 +1,8 @@
-import 'package:QuizyGo/core/constants/colors.dart';
-import 'package:QuizyGo/core/widgets/get_answers_tips.dart';
-import 'package:QuizyGo/features/get%20Answers/widgets/get_answer_button.dart';
-import 'package:QuizyGo/features/get%20Answers/widgets/logo.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
+import 'package:quizygo/core/widgets/get_answers_tips.dart';
+import 'package:quizygo/features/get%20Answers/widgets/get_answer_button.dart';
+import 'package:quizygo/features/get%20Answers/widgets/logo.dart';
 
 class GetAnswerInitial extends StatelessWidget {
   const GetAnswerInitial({super.key});

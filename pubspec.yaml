@@ -1,4 +1,4 @@
-name: QuizyGo
+name: quizygo
 description: Play With Friends or your Partner.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -40,6 +40,7 @@ dependencies:
   font_awesome_icon_class: ^0.0.6
   go_router: ^13.1.0
   intl: ^0.18.1
+  meta: ^1.11.0
   shared_preferences: ^2.2.2
   url_launcher: ^6.2.1
   url_strategy: ^0.2.0

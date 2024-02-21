@@ -1,9 +1,9 @@
-import 'package:QuizyGo/core/constants/colors.dart';
-import 'package:QuizyGo/features/Scoreboard/widgets/soreboard_items.dart';
-import 'package:QuizyGo/features/Scoreboard/widgets/table_item.dart';
-import 'package:QuizyGo/generated/l10n.dart';
-import 'package:QuizyGo/model/friend_model.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/app_models/friend_model.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
+import 'package:quizygo/features/Scoreboard/widgets/soreboard_items.dart';
+import 'package:quizygo/features/Scoreboard/widgets/table_item.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class ScoreBoardTable extends StatelessWidget {
   const ScoreBoardTable(

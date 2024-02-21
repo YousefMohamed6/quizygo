@@ -1,11 +1,11 @@
-import 'package:QuizyGo/core/constants/friends.dart';
-import 'package:QuizyGo/core/constants/partner.dart';
-import 'package:QuizyGo/core/widgets/double_image.dart';
-import 'package:QuizyGo/core/widgets/quetiontext.dart';
-import 'package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart';
-import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizygo/core/app_data/friends_data.dart';
+import 'package:quizygo/core/app_data/partner_data.dart';
+import 'package:quizygo/core/app_managment/quiz_cubit.dart';
+import 'package:quizygo/core/widgets/double_image.dart';
+import 'package:quizygo/core/widgets/quetiontext.dart';
+import 'package:quizygo/features/ask/managment/cubit/ask_cubit.dart';
 
 class QuetionsView extends StatelessWidget {
   const QuetionsView({
@@ -35,10 +35,10 @@ class QuetionsView extends StatelessWidget {
             quetionText = quetionText.replaceAll("are", "is");
           }
         } else if (state is Answer && isArabic && isFriends) {
-          quetionText = Friends.quetionsAr[numbuerOfQuetion]![0];
+          quetionText = FriendsData.customQuetionsAr[numbuerOfQuetion]![0];
           quetionText = quetionText.replaceAll("1", state.userName);
         } else if (state is Answer && isArabic && !isFriends) {
-          quetionText = Partner.quetionsAr[numbuerOfQuetion]![0];
+          quetionText = PartnerData.quetionsAr[numbuerOfQuetion]![0];
           quetionText = quetionText.replaceAll("1", state.userName);
         } else {
           quetionText = quetionAndChoices[numbuerOfQuetion]![0];

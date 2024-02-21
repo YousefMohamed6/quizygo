@@ -1,10 +1,9 @@
 // import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
-// import 'package:QuizyGo/core/constants/colors.dart';
-// import 'package:QuizyGo/core/constants/keys.dart';
-// import 'package:QuizyGo/generated/l10n.dart';
+// import 'package:quizygo/anwser_cubit/anwser_cubit.dart';
+// import 'package:quizygo/core/uitls/app_colors.dart';// import 'package:quizygo/core/constants/keys.dart';
+// import 'package:quizygo/generated/l10n.dart';
 
 // class CopyLinkButton extends StatelessWidget {
 //   const CopyLinkButton(

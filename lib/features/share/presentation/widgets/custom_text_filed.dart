@@ -1,5 +1,5 @@
-import 'package:QuizyGo/core/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
 
 class CustomTextFiled extends StatelessWidget {
   const CustomTextFiled({super.key, required this.textController});

@@ -1,9 +1,9 @@
-import 'package:QuizyGo/core/constants/colors.dart';
-import 'package:QuizyGo/core/widgets/answer_view.dart';
-import 'package:QuizyGo/core/widgets/image_view.dart';
-import 'package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
+import 'package:quizygo/core/widgets/answer_view.dart';
+import 'package:quizygo/core/widgets/image_view.dart';
+import 'package:quizygo/features/ask/managment/cubit/ask_cubit.dart';
 
 class ImageAndAnswer extends StatelessWidget {
   const ImageAndAnswer({

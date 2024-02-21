@@ -1,9 +1,9 @@
-import 'package:QuizyGo/core/constants/partner.dart';
-import 'package:QuizyGo/core/widgets/quetion_view.dart';
-import 'package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart';
-import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizygo/core/app_data/partner_data.dart';
+import 'package:quizygo/core/app_managment/quiz_cubit.dart';
+import 'package:quizygo/core/widgets/quetion_view.dart';
+import 'package:quizygo/features/ask/managment/cubit/ask_cubit.dart';
 
 class PartnerQuetionsView extends StatelessWidget {
   const PartnerQuetionsView({super.key});
@@ -15,9 +15,9 @@ class PartnerQuetionsView extends StatelessWidget {
       builder: (context, state) {
         return QuetionsView(
           quetionAndChoices: isArabic
-              ? Partner.quetionAndAnswersAr
-              : Partner.quetionAndAnswersEn,
-          quetionImage: Partner.images,
+              ? PartnerData.quetionsAndAnswersAr
+              : PartnerData.quetionsAndAnswersEn,
+          quetionImage: PartnerData.images,
         );
       },
     );

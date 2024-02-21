@@ -1,9 +1,9 @@
-import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/core/uitls/url_launcher.dart';
-import 'package:QuizyGo/features/share/presentation/widgets/share_button.dart';
-import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quizygo/core/uitls/app_keys.dart';
+import 'package:quizygo/core/uitls/url_launcher.dart';
+import 'package:quizygo/features/share/presentation/widgets/share_button.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class ShareToTwitterButton extends StatelessWidget {
   const ShareToTwitterButton({
@@ -21,8 +21,9 @@ class ShareToTwitterButton extends StatelessWidget {
       textColor: Colors.white,
       iconPath: "assats/images/twitter.png",
       onPressed: () async {
-        var userName =
-            GoRouterState.of(context).uri.queryParameters[kUserName]!;
+        var userName = GoRouterState.of(context)
+            .uri
+            .queryParameters[KeysManager.kUserName]!;
         var message = isFriends
             ? S.of(context).ShareLinkfriend
             : S.of(context).ShareLinkPartner;

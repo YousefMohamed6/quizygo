@@ -1,6 +1,6 @@
-import 'package:QuizyGo/features/share/presentation/widgets/share_to_facebook.dart';
-import 'package:QuizyGo/features/share/presentation/widgets/share_to_messanger.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/features/share/presentation/widgets/share_to_facebook.dart';
+import 'package:quizygo/features/share/presentation/widgets/share_to_messanger.dart';
 
 class ShareFaceAndMassenger extends StatelessWidget {
   const ShareFaceAndMassenger({

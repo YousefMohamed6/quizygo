@@ -1,11 +1,11 @@
-import 'package:QuizyGo/core/widgets/language_menu.dart';
-import 'package:QuizyGo/features/home/presentation/home_view.dart';
-import 'package:QuizyGo/features/menu/presentation/views/about_us.dart';
-import 'package:QuizyGo/features/menu/presentation/views/contact.dart';
-import 'package:QuizyGo/features/menu/presentation/views/private_policy.dart';
-import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quizygo/core/widgets/language_menu.dart';
+import 'package:quizygo/features/home/presentation/home_view.dart';
+import 'package:quizygo/features/menu/presentation/views/about_us.dart';
+import 'package:quizygo/features/menu/presentation/views/contact.dart';
+import 'package:quizygo/features/menu/presentation/views/private_policy.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class MenuButton extends StatelessWidget {
   const MenuButton({super.key});
@@ -20,16 +20,16 @@ class MenuButton extends StatelessWidget {
       onSelected: (value) async {
         switch (value) {
           case "home":
-             context.goNamed(HomeView.id);
+            context.goNamed(HomeView.id);
             break;
           case "about":
-             context.goNamed(AboutUs.id);
+            context.goNamed(AboutUs.id);
             break;
           case "contact":
-             context.goNamed(Contact.id);
+            context.goNamed(Contact.id);
             break;
           case "Privacy":
-             context.goNamed(PrivatePolicy.id);
+            context.goNamed(PrivatePolicy.id);
             break;
         }
       },

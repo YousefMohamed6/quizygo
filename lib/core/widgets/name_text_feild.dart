@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:QuizyGo/core/constants/colors.dart';
-import 'package:QuizyGo/generated/l10n.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class NameTextFeild extends StatelessWidget {
   const NameTextFeild(

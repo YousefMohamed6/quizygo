@@ -1,8 +1,8 @@
-import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/core/uitls/url_launcher.dart';
-import 'package:QuizyGo/features/menu/presentation/widgets/account_item.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
+import 'package:quizygo/core/uitls/app_keys.dart';
+import 'package:quizygo/core/uitls/url_launcher.dart';
+import 'package:quizygo/features/menu/presentation/widgets/account_item.dart';
 
 class SocialMediaAccounts extends StatelessWidget {
   const SocialMediaAccounts({super.key});
@@ -14,7 +14,7 @@ class SocialMediaAccounts extends StatelessWidget {
       children: [
         Account(
           onPressed: () async {
-            await urlLauncher(url: kFacebook);
+            await urlLauncher(url: KeysManager.kFacebook);
           },
           icon: const Icon(
             FontAwesomeIcons.facebook,
@@ -24,7 +24,7 @@ class SocialMediaAccounts extends StatelessWidget {
         ),
         Account(
           onPressed: () async {
-            await urlLauncher(url: kTiktok);
+            await urlLauncher(url: KeysManager.kTiktok);
           },
           icon: const Icon(
             FontAwesomeIcons.tiktok,

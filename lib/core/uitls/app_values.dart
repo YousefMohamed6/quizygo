@@ -1,4 +1,5 @@
 abstract class ValueManager {
+  static const double v8 = 8;
   static const double v16 = 16;
   static const double v18 = 18;
   static const double v20 = 20;

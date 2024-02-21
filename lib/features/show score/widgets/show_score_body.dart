@@ -1,22 +1,24 @@
-import 'package:QuizyGo/core/constants/colors.dart';
-import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/features/get%20Answers/widgets/logo.dart';
-import 'package:QuizyGo/features/menu/presentation/widgets/custom_text.dart';
-import 'package:QuizyGo/features/show%20score/widgets/create_new_quiz.dart';
-import 'package:QuizyGo/generated/l10n.dart';
-import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quizygo/core/app_managment/quiz_cubit.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
+import 'package:quizygo/core/uitls/app_keys.dart';
+import 'package:quizygo/features/get%20Answers/widgets/logo.dart';
+import 'package:quizygo/features/menu/presentation/widgets/custom_text.dart';
+import 'package:quizygo/features/show%20score/widgets/create_new_quiz.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class ShowScoreBody extends StatelessWidget {
   const ShowScoreBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    String correctAnswer =
-        GoRouterState.of(context).uri.queryParameters[kCorrectAnswers]!;
-    String userName = GoRouterState.of(context).uri.queryParameters[kUserName]!;
+    String correctAnswer = GoRouterState.of(context)
+        .uri
+        .queryParameters[KeysManager.kCorrectAnswers]!;
+    String userName =
+        GoRouterState.of(context).uri.queryParameters[KeysManager.kUserName]!;
     String level = BlocProvider.of<QuizCubit>(context).checkLevel(
       correctAnswer: correctAnswer,
       context: context,

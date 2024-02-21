@@ -1,7 +1,7 @@
-import 'package:QuizyGo/core/uitls/app_value.dart';
-import 'package:QuizyGo/features/home/presentation/widgets/friends%20_view.dart';
-import 'package:QuizyGo/features/home/presentation/widgets/partner_view.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/uitls/app_values.dart';
+import 'package:quizygo/features/home/presentation/widgets/friends_view.dart';
+import 'package:quizygo/features/home/presentation/widgets/partner_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

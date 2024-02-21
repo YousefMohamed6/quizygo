@@ -1,9 +1,9 @@
-import 'package:QuizyGo/core/constants/colors.dart';
-import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/features/get%20Answers/get_answers.dart';
-import 'package:QuizyGo/features/share/presentation/widgets/share_contanier_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
+import 'package:quizygo/core/uitls/app_keys.dart';
+import 'package:quizygo/features/get%20Answers/get_answers.dart';
+import 'package:quizygo/features/share/presentation/widgets/share_contanier_view.dart';
 
 class ShareLinkViewBody extends StatelessWidget {
   const ShareLinkViewBody({super.key});
@@ -11,10 +11,12 @@ class ShareLinkViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String documentId =
-        GoRouterState.of(context).uri.queryParameters[kDocumentId]!;
-    String userName = GoRouterState.of(context).uri.queryParameters[kUserName]!;
-    String isFriends =
-        GoRouterState.of(context).uri.queryParameters[kQuetionType]!;
+        GoRouterState.of(context).uri.queryParameters[KeysManager.kDocumentId]!;
+    String userName =
+        GoRouterState.of(context).uri.queryParameters[KeysManager.kUserName]!;
+    String isFriends = GoRouterState.of(context)
+        .uri
+        .queryParameters[KeysManager.kQuetionType]!;
     return Center(
       child: Container(
         padding: const EdgeInsets.all(16),
@@ -28,7 +30,7 @@ class ShareLinkViewBody extends StatelessWidget {
         alignment: Alignment.center,
         child: ShareContainerView(
           userName: userName,
-          quizLink: "$kBaseUrl${GetAnswers.id}?id=$documentId",
+          quizLink: "${KeysManager.kBaseUrl}${GetAnswers.id}?id=$documentId",
           documentId: documentId,
           isFriends: isFriends == "true" ? true : false,
         ),

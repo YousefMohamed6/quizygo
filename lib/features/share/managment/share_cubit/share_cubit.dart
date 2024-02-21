@@ -1,8 +1,8 @@
-import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/model/friend_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:quizygo/core/app_models/friend_model.dart';
+import 'package:quizygo/core/uitls/app_keys.dart';
 
 part 'share_state.dart';
 
@@ -11,11 +11,13 @@ class ShareCubit extends Cubit<ShareState> {
   Future<void> getScores({required String documentId}) async {
     emit(GetScoreLoading());
     CollectionReference myAnswers =
-        FirebaseFirestore.instance.collection(kCollection);
+        FirebaseFirestore.instance.collection(KeysManager.kCollection);
     List<ScoreModel> allScores = [];
     try {
-      var collectionScore =
-          await myAnswers.doc(documentId).collection(kScoreBoard).get();
+      var collectionScore = await myAnswers
+          .doc(documentId)
+          .collection(KeysManager.kScoreBoard)
+          .get();
       for (var element in collectionScore.docs) {
         allScores.add(ScoreModel.fromjson(element.data()));
       }

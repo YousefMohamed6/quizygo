@@ -1,7 +1,7 @@
-import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/generated/l10n.dart';
-import 'package:QuizyGo/model/friend_model.dart';
-import 'package:QuizyGo/model/quetion_model.dart';
+import 'package:quizygo/core/app_models/friend_model.dart';
+import 'package:quizygo/core/app_models/quetion_model.dart';
+import 'package:quizygo/core/uitls/app_keys.dart';
+import 'package:quizygo/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -38,17 +38,12 @@ class QuizCubit extends Cubit<QuizState> {
 
   void addQuetionType({required bool isFriends}) {
     this.isFriends = isFriends;
-    documentData.addAll({kQuetionType: this.isFriends});
+    documentData.addAll({KeysManager.kQuetionType: this.isFriends});
   }
 
   void addUserName() {
     //add User Name
-    documentData.addAll({kUserName: userNameCtrl.text});
-  }
-
-  void addLanguageType() {
-    //add language type
-    documentData.addAll({kLanguage: isArabic});
+    documentData.addAll({KeysManager.kUserName: userNameCtrl.text});
   }
 
   void restView() {
@@ -62,7 +57,6 @@ class QuizCubit extends Cubit<QuizState> {
   }
 
   void addData({required QuetionModel model}) {
-    isArabic = model.isArabic;
     isFriends = model.isFriends;
     answers = model.answers;
     answerName = model.userName;

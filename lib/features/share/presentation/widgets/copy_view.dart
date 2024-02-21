@@ -1,6 +1,6 @@
-import 'package:QuizyGo/features/share/presentation/widgets/custom_text_filed.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
+import 'package:quizygo/features/share/presentation/widgets/custom_text_filed.dart';
 
 class CopyView extends StatelessWidget {
   const CopyView(

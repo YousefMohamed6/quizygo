@@ -1,10 +1,10 @@
-import 'package:QuizyGo/core/constants/colors.dart';
-import 'package:QuizyGo/core/widgets/appbar_logo.dart';
-import 'package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart';
-import 'package:QuizyGo/features/ask/presentation/partners/presentation/widgets/partner_ask_body.dart';
-import 'package:QuizyGo/features/menu/presentation/menu_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quizygo/core/uitls/app_colors.dart';
+import 'package:quizygo/core/widgets/appbar_logo.dart';
+import 'package:quizygo/features/ask/managment/cubit/ask_cubit.dart';
+import 'package:quizygo/features/ask/presentation/partners/presentation/widgets/partner_ask_body.dart';
+import 'package:quizygo/features/menu/presentation/menu_button.dart';
 
 class PartnerAskView extends StatelessWidget {
   const PartnerAskView({super.key});

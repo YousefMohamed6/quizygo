@@ -1,8 +1,8 @@
-import 'package:QuizyGo/core/constants/partner.dart';
-import 'package:QuizyGo/core/uitls/url_launcher.dart';
-import 'package:QuizyGo/features/share/presentation/widgets/share_button.dart';
-import 'package:QuizyGo/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/uitls/app_assets.dart';
+import 'package:quizygo/core/uitls/url_launcher.dart';
+import 'package:quizygo/features/share/presentation/widgets/share_button.dart';
+import 'package:quizygo/generated/l10n.dart';
 
 class ShareToFaceBookButton extends StatelessWidget {
   const ShareToFaceBookButton({
@@ -19,7 +19,7 @@ class ShareToFaceBookButton extends StatelessWidget {
       child: ShareButton(
         title: S.of(context).shareOn,
         buttonColor: const Color.fromRGBO(21, 101, 192, 1),
-        iconPath: Partner.imagesPartnerFacebook,
+        iconPath: PartnerAssets.imagesPartnerFacebook,
         onPressed: () async {
           await urlLauncher(
               url: "https://www.facebook.com/sharer/sharer.php?u=$quizLink");

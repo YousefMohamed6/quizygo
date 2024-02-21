@@ -1,6 +1,6 @@
-import 'package:QuizyGo/core/widgets/numbers_of_quetion.dart';
-import 'package:QuizyGo/features/ask/presentation/partners/presentation/widgets/partner_quetion_view.dart';
 import 'package:flutter/material.dart';
+import 'package:quizygo/core/widgets/numbers_of_quetion.dart';
+import 'package:quizygo/features/ask/presentation/partners/presentation/widgets/partner_quetion_view.dart';
 
 class PartnerInitialBody extends StatelessWidget {
   const PartnerInitialBody({super.key});

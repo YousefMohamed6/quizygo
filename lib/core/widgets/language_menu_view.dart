@@ -1,6 +1,6 @@
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/constants/colors.dart';
 import 'package:QuizyGo/generated/l10n.dart';
+import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -49,11 +49,11 @@ class LanguageMenuView extends StatelessWidget {
         onSelected: (value) {
           switch (value) {
             case "ar":
-              BlocProvider.of<AnswerCubit>(context)
+              BlocProvider.of<QuizCubit>(context)
                   .changeLanguage(isArabic: true);
               break;
             case "en":
-              BlocProvider.of<AnswerCubit>(context)
+              BlocProvider.of<QuizCubit>(context)
                   .changeLanguage(isArabic: false);
               break;
           }

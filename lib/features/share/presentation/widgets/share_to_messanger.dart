@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:QuizyGo/core/url_launcher.dart';
+import 'package:QuizyGo/core/uitls/url_launcher.dart';
 import 'package:QuizyGo/features/share/presentation/widgets/share_button.dart';
 import 'package:QuizyGo/generated/l10n.dart';
 

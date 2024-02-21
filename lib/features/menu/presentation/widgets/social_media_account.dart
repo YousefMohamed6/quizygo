@@ -1,5 +1,5 @@
 import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/core/url_launcher.dart';
+import 'package:QuizyGo/core/uitls/url_launcher.dart';
 import 'package:QuizyGo/features/menu/presentation/widgets/account_item.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';

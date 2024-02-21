@@ -1,6 +1,6 @@
-import "package:QuizyGo/anwser_cubit/anwser_cubit.dart";
 import "package:QuizyGo/core/widgets/image_and_answer.dart";
 import "package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart";
+import "package:QuizyGo/quiz_cubit/quiz_cubit.dart";
 import "package:flutter/material.dart";
 import "package:flutter_bloc/flutter_bloc.dart";
 
@@ -16,16 +16,15 @@ class ImageCard extends StatelessWidget {
   final Color? onPressedColor;
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AnswerCubit, AnswerState>(
+    return BlocBuilder<QuizCubit, QuizState>(
       builder: (context, state) {
         return GestureDetector(
           onTap: () {
-            var documentData =
-                BlocProvider.of<AnswerCubit>(context).documentData;
-            var answers = BlocProvider.of<AnswerCubit>(context).answers;
-            var documentId = BlocProvider.of<AnswerCubit>(context).documentId;
+            var documentData = BlocProvider.of<QuizCubit>(context).documentData;
+            var answers = BlocProvider.of<QuizCubit>(context).answers;
+            var documentId = BlocProvider.of<QuizCubit>(context).documentId;
             var userName =
-                BlocProvider.of<AnswerCubit>(context).userNameCtrl.text;
+                BlocProvider.of<QuizCubit>(context).userNameCtrl.text;
             state is Answer
                 ? BlocProvider.of<AskCubit>(context).checkCorrectAnswer(
                     currentAnswer: answer,

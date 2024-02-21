@@ -20,16 +20,16 @@ class MenuButton extends StatelessWidget {
       onSelected: (value) async {
         switch (value) {
           case "home":
-            await context.pushNamed(HomeView.id);
+             context.goNamed(HomeView.id);
             break;
           case "about":
-            await context.pushNamed(AboutUs.id);
+             context.goNamed(AboutUs.id);
             break;
           case "contact":
-            await context.pushNamed(Contact.id);
+             context.goNamed(Contact.id);
             break;
           case "Privacy":
-            await context.pushNamed(PrivatePolicy.id);
+             context.goNamed(PrivatePolicy.id);
             break;
         }
       },

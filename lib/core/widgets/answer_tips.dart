@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/widgets/tips_text.dart';
 import 'package:QuizyGo/generated/l10n.dart';
+import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AnswerTips extends StatelessWidget {
   const AnswerTips({super.key, required this.answerName});
   final String answerName;
   @override
   Widget build(BuildContext context) {
-    bool isFriend = BlocProvider.of<AnswerCubit>(context).isFriends;
+    bool isFriend = BlocProvider.of<QuizCubit>(context).isFriends;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

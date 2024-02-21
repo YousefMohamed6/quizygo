@@ -1,6 +1,6 @@
 import 'package:QuizyGo/core/constants/colors.dart';
 import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/core/url_launcher.dart';
+import 'package:QuizyGo/core/uitls/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:QuizyGo/generated/l10n.dart';
 class CreateNewQuizButton extends StatelessWidget {

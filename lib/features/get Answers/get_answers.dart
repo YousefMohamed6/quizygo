@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class GetAnswers extends StatelessWidget {
   const GetAnswers({super.key});
-  static const String id = "/AnswerQuiz";
+  static const String id = "/Answer/Quiz";
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

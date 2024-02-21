@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TitleAndSubTitle extends StatelessWidget {
-  const TitleAndSubTitle(
+class CustomTitleAndSubTitle extends StatelessWidget {
+  const CustomTitleAndSubTitle(
       {super.key, required this.title, required this.subtitle});
   final String title;
   final String subtitle;

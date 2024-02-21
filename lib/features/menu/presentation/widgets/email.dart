@@ -1,5 +1,5 @@
 import 'package:QuizyGo/core/constants/keys.dart';
-import 'package:QuizyGo/core/url_launcher.dart';
+import 'package:QuizyGo/core/uitls/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class EMail extends StatelessWidget {

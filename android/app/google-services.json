@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "464910363203",
-    "project_id": "quizygo-2024",
-    "storage_bucket": "quizygo-2024.appspot.com"
+    "project_number": "1029615673124",
+    "project_id": "quizgo-40135",
+    "storage_bucket": "quizgo-40135.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:464910363203:android:7860398b20e55883d882f6",
+        "mobilesdk_app_id": "1:1029615673124:android:2ca11ba16d2f0666cdddb1",
         "android_client_info": {
           "package_name": "com.example.quizygo"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD0ZNFmaovDgw08cRSvTjgfik9egIXkjpw"
+          "current_key": "AIzaSyAOsWTaNFaYULYs3Rdov_lyvZ5FI2EWK48"
         }
       ],
       "services": {

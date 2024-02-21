@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBiNixi1403RhSKSrtAKQOY5n_5xxaWdTM',
-    appId: '1:464910363203:web:e1511e4c78c10401d882f6',
-    messagingSenderId: '464910363203',
-    projectId: 'quizygo-2024',
-    authDomain: 'quizygo-2024.firebaseapp.com',
-    storageBucket: 'quizygo-2024.appspot.com',
-    measurementId: 'G-SX9Y3KWSP7',
+    apiKey: 'AIzaSyADk9aBW4iEWDQBYKBpdaRxaOno1fS4h5I',
+    appId: '1:1029615673124:web:cf642374ee825795cdddb1',
+    messagingSenderId: '1029615673124',
+    projectId: 'quizgo-40135',
+    authDomain: 'quizgo-40135.firebaseapp.com',
+    storageBucket: 'quizgo-40135.appspot.com',
+    measurementId: 'G-0M32FJBRB2',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD0ZNFmaovDgw08cRSvTjgfik9egIXkjpw',
-    appId: '1:464910363203:android:7860398b20e55883d882f6',
-    messagingSenderId: '464910363203',
-    projectId: 'quizygo-2024',
-    storageBucket: 'quizygo-2024.appspot.com',
+    apiKey: 'AIzaSyAOsWTaNFaYULYs3Rdov_lyvZ5FI2EWK48',
+    appId: '1:1029615673124:android:2ca11ba16d2f0666cdddb1',
+    messagingSenderId: '1029615673124',
+    projectId: 'quizgo-40135',
+    storageBucket: 'quizgo-40135.appspot.com',
   );
 }

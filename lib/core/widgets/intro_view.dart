@@ -1,9 +1,9 @@
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/constants/colors.dart';
 import 'package:QuizyGo/core/widgets/ask_tips.dart';
 import 'package:QuizyGo/core/widgets/custom_button.dart';
 import 'package:QuizyGo/core/widgets/language_menu_view.dart';
 import 'package:QuizyGo/core/widgets/name_text_feild.dart';
+import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -63,8 +63,7 @@ class IntroView extends StatelessWidget {
               const LanguageMenuView(),
               const SizedBox(height: 8),
               NameTextFeild(
-                  controller:
-                      BlocProvider.of<AnswerCubit>(context).userNameCtrl),
+                  controller: BlocProvider.of<QuizCubit>(context).userNameCtrl),
               const SizedBox(height: 16),
               CustomButton(
                 onPressed: onPressed,

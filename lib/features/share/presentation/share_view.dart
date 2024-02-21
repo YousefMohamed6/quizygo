@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ShareLinkView extends StatelessWidget {
   const ShareLinkView({super.key});
-  static const String id = "/ShareLink";
+  static const String id = "/Share/Link";
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

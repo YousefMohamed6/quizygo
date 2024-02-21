@@ -1,9 +1,9 @@
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/constants/keys.dart';
 import 'package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart';
 import 'package:QuizyGo/features/ask/presentation/friends/presentation/widgets/friends_initial_body.dart';
 import 'package:QuizyGo/features/share/presentation/share_view.dart';
 import 'package:QuizyGo/features/show%20score/show_score.dart';
+import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -19,7 +19,7 @@ class FriendsAskBody extends StatelessWidget {
           int correctAnswers =
               BlocProvider.of<AskCubit>(context).correctAnswers;
           String userName =
-              BlocProvider.of<AnswerCubit>(context).userNameCtrl.text;
+              BlocProvider.of<QuizCubit>(context).userNameCtrl.text;
           context.goNamed(ShowScoreView.id, queryParameters: {
             kCorrectAnswers: correctAnswers.toString(),
             kUserName: userName,

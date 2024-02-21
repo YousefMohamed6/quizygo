@@ -1,4 +1,3 @@
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/features/ask/presentation/friends/presentation/friends_ask_view.dart';
 import 'package:QuizyGo/features/ask/presentation/partners/presentation/partner_ask_view.dart';
 import 'package:QuizyGo/features/get%20Answers/get_answers.dart';
@@ -13,6 +12,7 @@ import 'package:QuizyGo/features/menu/presentation/views/private_policy.dart';
 import 'package:QuizyGo/features/share/presentation/share_view.dart';
 import 'package:QuizyGo/features/show%20score/show_score.dart';
 import 'package:QuizyGo/generated/l10n.dart';
+import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -26,12 +26,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AnswerCubit, AnswerState>(
+    return BlocBuilder<QuizCubit, QuizState>(
       buildWhen: (previous, current) => current is ChangeLanguage,
       builder: (context, state) {
         return MaterialApp.router(
           title: 'َQuizyGo',
-          locale: BlocProvider.of<AnswerCubit>(context).isArabic
+          locale: BlocProvider.of<QuizCubit>(context).isArabic
               ? const Locale("ar")
               : const Locale("en"),
           localizationsDelegates: const [
@@ -123,18 +123,3 @@ final GoRouter _routerConfig = GoRouter(
     ),
   ],
 );
-// {
-//               HomeView.id: (context) => const HomeView(),
-//               FriendsIntroView.id: (context) => const FriendsIntroView(),
-//               PartnerIntroView.id: (context) => const PartnerIntroView(),
-//               AboutUs.id: (context) => const AboutUs(),
-//               Contact.id: (context) => const Contact(),
-//               PrivatePolicy.id: (context) => const PrivatePolicy(),
-//               FriendsAskView.id: (context) => const FriendsAskView(),
-//               PartnerAskView.id: (context) => const PartnerAskView(),
-//               ShareLinkView.id: (context) => const ShareLinkView(),
-//               FriendsIntroAnswer.id: (context) => const FriendsIntroAnswer(),
-//               PartnerIntroAnswer.id: (context) => const PartnerIntroAnswer(),
-//               GetAnswers.id: (context) => const GetAnswers(),
-//               ShowScore.id: (context) => const ShowScore(),
-//             },

@@ -1,9 +1,9 @@
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/core/constants/friends.dart';
 import 'package:QuizyGo/core/constants/partner.dart';
 import 'package:QuizyGo/core/widgets/double_image.dart';
 import 'package:QuizyGo/core/widgets/quetiontext.dart';
 import 'package:QuizyGo/features/ask/managment/cubit/ask_cubit.dart';
+import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,12 +17,12 @@ class QuetionsView extends StatelessWidget {
   final Map<String, List<String>> quetionImage;
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AnswerCubit, AnswerState>(
+    return BlocBuilder<QuizCubit, QuizState>(
       builder: (context, state) {
         String numbuerOfQuetion =
             BlocProvider.of<AskCubit>(context).numberOfQuetion.toString();
-        bool isArabic = BlocProvider.of<AnswerCubit>(context).isArabic;
-        bool isFriends = BlocProvider.of<AnswerCubit>(context).isFriends;
+        bool isArabic = BlocProvider.of<QuizCubit>(context).isArabic;
+        bool isFriends = BlocProvider.of<QuizCubit>(context).isFriends;
         String quetionText = quetionAndChoices[numbuerOfQuetion]![0];
         if (state is Answer && !isArabic) {
           if (quetionText.contains("your")) {

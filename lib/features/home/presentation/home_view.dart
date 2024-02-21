@@ -11,9 +11,12 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const AppBarLogo(),
-          actions: const [MenuButton()],
-          backgroundColor: ColorManager.primary),
+        title: const AppBarLogo(),
+        actions: const [
+          MenuButton(),
+        ],
+        backgroundColor: ColorManager.primary,
+      ),
       body: const HomeViewBody(),
     );
   }

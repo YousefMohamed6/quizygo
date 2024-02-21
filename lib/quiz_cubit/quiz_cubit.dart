@@ -5,10 +5,10 @@ import 'package:QuizyGo/model/quetion_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-part 'anwser_state.dart';
+part 'quiz_state.dart';
 
-class AnswerCubit extends Cubit<AnswerState> {
-  AnswerCubit() : super(AnswerInitial());
+class QuizCubit extends Cubit<QuizState> {
+  QuizCubit() : super(QuizInitial());
   TextEditingController userNameCtrl = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
@@ -54,7 +54,7 @@ class AnswerCubit extends Cubit<AnswerState> {
   void restView() {
     userNameCtrl.clear();
     documentData.clear();
-    emit(AnswerInitial());
+    emit(QuizInitial());
   }
 
   void answerQuiz({required String userName}) {

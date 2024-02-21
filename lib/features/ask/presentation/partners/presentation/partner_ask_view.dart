@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PartnerAskView extends StatelessWidget {
   const PartnerAskView({super.key});
-  static const String id = "/PartnerAsk";
+  static const String id = "/Partner/Ask";
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

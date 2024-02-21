@@ -1,5 +1,5 @@
-import 'package:QuizyGo/anwser_cubit/anwser_cubit.dart';
 import 'package:QuizyGo/generated/l10n.dart';
+import 'package:QuizyGo/quiz_cubit/quiz_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,13 +25,11 @@ class LanguageMenu extends StatelessWidget {
       onSelected: (value) {
         switch (value) {
           case "ar":
-            BlocProvider.of<AnswerCubit>(context)
-                .changeLanguage(isArabic: true);
+            BlocProvider.of<QuizCubit>(context).changeLanguage(isArabic: true);
             Navigator.pop(context);
             break;
           case "en":
-            BlocProvider.of<AnswerCubit>(context)
-                .changeLanguage(isArabic: false);
+            BlocProvider.of<QuizCubit>(context).changeLanguage(isArabic: false);
             Navigator.pop(context);
             break;
         }
